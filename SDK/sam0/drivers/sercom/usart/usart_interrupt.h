@@ -174,4 +174,3 @@ enum status_code usart_get_job_status(
 #endif
 
 #endif /* USART_INTERRUPT_H_INCLUDED */
-

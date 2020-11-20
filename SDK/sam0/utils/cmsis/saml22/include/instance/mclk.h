@@ -68,10 +68,10 @@
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance parameters for MCLK peripheral ========== */
-#define MCLK_BUPDIV_IMPLEMENTED     1       
-#define MCLK_CTRLA_MCSEL_GCLK       1       
-#define MCLK_CTRLA_MCSEL_OSC8M      0       
-#define MCLK_MCLK_CLK_APB_NUM       3       
+#define MCLK_BUPDIV_IMPLEMENTED     1
+#define MCLK_CTRLA_MCSEL_GCLK       1
+#define MCLK_CTRLA_MCSEL_OSC8M      0
+#define MCLK_MCLK_CLK_APB_NUM       3
 #define MCLK_SYSTEM_CLOCK           1000000  // System Clock Frequency at Reset
 
 #endif /* _SAML22_MCLK_INSTANCE_ */

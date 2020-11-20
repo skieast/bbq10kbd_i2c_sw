@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR SPI_FLASH */
 /* ========================================================================== */
-/** \addtogroup SAMB11_SPI_FLASH SPI Flash Controller 
+/** \addtogroup SAMB11_SPI_FLASH SPI Flash Controller
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- SPI_FLASH_MODE_CTRL : (SPI_FLASH Offset: 0x00) (R/W 8) SPI Flash Mode Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  MODE:2;                    /**< bit:   0..1  SPI Modes                                */
     uint8_t  BYPASS_CS_PRE:1;           /**< bit:      2  Bypass CS PRE state                      */
@@ -100,7 +100,7 @@ typedef union {
 
 /* -------- SPI_FLASH_TRANSACTION_CTRL : (SPI_FLASH Offset: 0x04) (R/W 32) Transaction Control (Cleared after each transaction completes) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CMD_COUNT:3;               /**< bit:   0..2  Number of bytes to be transferred or received */
     uint32_t :4;                        /**< bit:   3..6  Reserved */
@@ -128,7 +128,7 @@ typedef union {
 
 /* -------- SPI_FLASH_READ_CTRL : (SPI_FLASH Offset: 0x08) (R/W 32) Read Control (Cleared after each transaction completes) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RDATA_COUNT:24;            /**< bit:  0..23  Number of data bytes to be read from flash */
     uint32_t :8;                        /**< bit: 24..31  Reserved */
@@ -148,7 +148,7 @@ typedef union {
 
 /* -------- SPI_FLASH_CMD_BUFFER0 : (SPI_FLASH Offset: 0x0c) (R/W 32) Command Buffer 0 (Bytes 3 - 0) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CMD_BUFFER0:32;            /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -167,7 +167,7 @@ typedef union {
 
 /* -------- SPI_FLASH_CMD_BUFFER1 : (SPI_FLASH Offset: 0x10) (R/W 32) Command Buffer 1 (Bytes 7 - 4) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CMD_BUFFER1:32;            /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -186,7 +186,7 @@ typedef union {
 
 /* -------- SPI_FLASH_DIRECTION : (SPI_FLASH Offset: 0x14) (R/W 8) Read/Write bit for Bytes 7 - 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  DIRECTION:8;               /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -205,7 +205,7 @@ typedef union {
 
 /* -------- SPI_FLASH_IRQ_STATUS : (SPI_FLASH Offset: 0x18) (/W 8) IRQ Status (Write 0 to bit to clear, Read clears interupts) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  FLASH_TRANS_DONE:1;        /**< bit:      0  Current Flash Transaction Done           */
     uint8_t  AHB_ERROR_RESPONSE:1;      /**< bit:      1  AHB Error Response                       */
@@ -229,7 +229,7 @@ typedef union {
 
 /* -------- SPI_FLASH_DMA_START_ADDRESS : (SPI_FLASH Offset: 0x1c) (R/W 32) DMA Starting Address -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t DMA_START_ADDRESS:32;      /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -248,7 +248,7 @@ typedef union {
 
 /* -------- SPI_FLASH_CONFIG : (SPI_FLASH Offset: 0x20) (R/W 16) SPI Flash Configuration -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t ENDIANNESS:1;              /**< bit:      0  1 for Little Endian                      */
     uint16_t REVERSE_CMD_BUFFER:1;      /**< bit:      1  Reverse bits of every byte in cmd_buffer */
@@ -288,7 +288,7 @@ typedef union {
 
 /* -------- SPI_FLASH_TX_CONTROL : (SPI_FLASH Offset: 0x24) (R/W 16) TX Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t DRIVE_0_ON_TX:1;           /**< bit:      0  Drive 0 on TX while reading              */
     uint16_t DRIVE_1_ON_TX:1;           /**< bit:      1  Drive 1 on TX while reading              */
@@ -324,7 +324,7 @@ typedef union {
 
 /* -------- SPI_FLASH_STATUS : (SPI_FLASH Offset: 0x28) (R/ 16) Misc Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t AHB_MASTER_STATE:2;        /**< bit:   0..1  AHB Master State                         */
     uint16_t :2;                        /**< bit:   2..3  Reserved */

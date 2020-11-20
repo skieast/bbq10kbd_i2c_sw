@@ -68,7 +68,7 @@ void i2c_master_get_config_defaults(
 {
 	/* Sanity check */
 	Assert(config);
-	
+
 	config->clock_source    = I2C_CLK_INPUT_3;
 	config->clock_divider   = 0x10;
 	config->pin_number_pad0 = PIN_LP_GPIO_8;
@@ -132,7 +132,7 @@ enum status_code i2c_master_init(
 	Assert(module);
 	Assert(module->hw);
 	Assert(config);
-	
+
 	module->hw = hw;
 
 	/* Sanity check arguments. */
@@ -201,7 +201,7 @@ static enum status_code _i2c_master_read_packet(
 	Assert(module);
 	Assert(module->hw);
 	Assert(config);
-	
+
 	uint16_t counter = 0;
 	uint32_t status  = 0;
 	I2c *const i2c_module    = (module->hw);
@@ -347,7 +347,7 @@ static enum status_code _i2c_master_write_packet(
 	Assert(module);
 	Assert(module->hw);
 	Assert(packet);
-	
+
 	I2c *const i2c_module = (module->hw);
 	uint16_t counter = 0;
 	uint32_t status  = 0;
@@ -363,14 +363,14 @@ static enum status_code _i2c_master_write_packet(
 	i2c_module->I2C_ONBUS.reg = I2C_ONBUS_ONBUS_ENABLE_1;
 
 	/* Address I2C slave in case of Master mode enabled */
-	i2c_module->TRANSMIT_DATA.reg = I2C_TRANSMIT_DATA_ADDRESS_FLAG_1 | 
+	i2c_module->TRANSMIT_DATA.reg = I2C_TRANSMIT_DATA_ADDRESS_FLAG_1 |
 			((packet->address) << 1) | I2C_TRANSFER_WRITE;
 	do {
 		status = i2c_module->TRANSMIT_STATUS.reg;
 		if (status & I2C_TRANSMIT_STATUS_TX_FIFO_NOT_FULL_Msk) {
 			i2c_module->TRANSMIT_DATA.reg = packet->data[counter++];
 		}
-	} while (counter < length); 
+	} while (counter < length);
 
 	/* Now check whether the core has sent the data out and free the bus */
 	while (!(status & I2C_TRANSMIT_STATUS_TX_FIFO_EMPTY)) {
@@ -489,7 +489,7 @@ void i2c_master_send_stop(struct i2c_master_module *const module)
 	/* Sanity check */
 	Assert(module);
 	Assert(module->hw);
-	
+
 	I2c *const i2c_module = (module->hw);
 
 	/* Send stop command */
@@ -563,7 +563,7 @@ enum status_code i2c_master_write_address(
 	/* Write byte to slave. */
 	i2c_wait_for_idle(i2c_module);
 
-	i2c_module->TRANSMIT_DATA.reg = I2C_TRANSMIT_DATA_ADDRESS_FLAG_1 | 
+	i2c_module->TRANSMIT_DATA.reg = I2C_TRANSMIT_DATA_ADDRESS_FLAG_1 |
 			(address << 1) | command;
 
 	return STATUS_OK;

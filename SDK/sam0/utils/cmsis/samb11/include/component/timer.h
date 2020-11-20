@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR TIMER */
 /* ========================================================================== */
-/** \addtogroup SAMB11_TIMER ARM General Purpose Timer 
+/** \addtogroup SAMB11_TIMER ARM General Purpose Timer
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- TIMER_CTRL : (TIMER Offset: 0x00) (R/W 8) Timer Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enable Timer Operation                   */
     uint8_t  EXTERNAL_INPUT_ENABLE:1;   /**< bit:      1  Select external input as enable          */
@@ -92,7 +92,7 @@ typedef union {
 
 /* -------- TIMER_VALUE : (TIMER Offset: 0x04) (R/W 32) Current Value -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t VALUE:32;                  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -111,7 +111,7 @@ typedef union {
 
 /* -------- TIMER_RELOAD : (TIMER Offset: 0x08) (R/W 32) Reload Value -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RELOAD:32;                 /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -130,7 +130,7 @@ typedef union {
 
 /* -------- TIMER_INTSTATUSCLEAR : (TIMER Offset: 0x0c) (R/W 8) Timer Interrupt, write 1 to clear -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  INTSTATUSCLEAR:1;          /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -150,7 +150,7 @@ typedef union {
 
 /* -------- TIMER_PID4 : (TIMER Offset: 0xfd0) (R/ 8) Peripheral ID Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_C_CODE:4;           /**< bit:   0..3  JEP 106 C Code                           */
     uint8_t  BLOCK_COUNT:4;             /**< bit:   4..7  Block Count                              */
@@ -173,7 +173,7 @@ typedef union {
 
 /* -------- TIMER_PID5 : (TIMER Offset: 0xfd4) (R/ 8) Peripheral ID Register 5 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PID5:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -192,7 +192,7 @@ typedef union {
 
 /* -------- TIMER_PID6 : (TIMER Offset: 0xfd8) (R/ 8) Peripheral ID Register 6 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PID6:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -211,7 +211,7 @@ typedef union {
 
 /* -------- TIMER_PID7 : (TIMER Offset: 0xfdc) (R/ 8) Peripheral ID Register 7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PID7:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -230,7 +230,7 @@ typedef union {
 
 /* -------- TIMER_PID0 : (TIMER Offset: 0xfe0) (R/ 8) Peripheral ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:8;             /**< bit:   0..7  Part Number Bits 7:0                     */
   } bit;                                /**< Structure used for bit  access */
@@ -249,7 +249,7 @@ typedef union {
 
 /* -------- TIMER_PID1 : (TIMER Offset: 0xfe4) (R/ 8) Peripheral ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:4;             /**< bit:   0..3  Part Number Bits 11:8                    */
     uint8_t  JEP106_ID_3_0:4;           /**< bit:   4..7  JEP106 ID Bits 3:0                       */
@@ -272,7 +272,7 @@ typedef union {
 
 /* -------- TIMER_PID2 : (TIMER Offset: 0xfe8) (R/ 8) Peripheral ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_ID_6_4:3;           /**< bit:   0..2  JEP106 ID Bits 6:4                       */
     uint8_t  JEDEC_USED:1;              /**< bit:      3  JEDEC Used                               */
@@ -299,7 +299,7 @@ typedef union {
 
 /* -------- TIMER_PID3 : (TIMER Offset: 0xfec) (R/ 8) Peripheral ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CUSTOMER_MOD_NUMBER:4;     /**< bit:   0..3  Customer Modification Number             */
     uint8_t  ECO_REV_NUMBER:4;          /**< bit:   4..7  ECO Revision Number                      */
@@ -322,7 +322,7 @@ typedef union {
 
 /* -------- TIMER_CID0 : (TIMER Offset: 0xff0) (R/ 8) Component ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID0:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -341,7 +341,7 @@ typedef union {
 
 /* -------- TIMER_CID1 : (TIMER Offset: 0xff4) (R/ 8) Component ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID1:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -360,7 +360,7 @@ typedef union {
 
 /* -------- TIMER_CID2 : (TIMER Offset: 0xff8) (R/ 8) Component ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID2:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -379,7 +379,7 @@ typedef union {
 
 /* -------- TIMER_CID3 : (TIMER Offset: 0xffc) (R/ 8) Component ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID3:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */

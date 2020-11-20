@@ -86,7 +86,7 @@ extern "C" {
  *
  * The SAM devices contain a number of Brown Out Detector (BOD) modules.
  * Each BOD monitors the supply voltage for any dips that go below the set
- * threshold for the module. In case of a BOD detection the BOD will either 
+ * threshold for the module. In case of a BOD detection the BOD will either
  * reset the system or raise a hardware interrupt so that a safe power-down
  * sequence can be attempted.
  *

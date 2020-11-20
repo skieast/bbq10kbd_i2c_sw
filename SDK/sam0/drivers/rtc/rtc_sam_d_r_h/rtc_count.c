@@ -781,4 +781,3 @@ enum status_code rtc_count_frequency_correction(
 
 	return STATUS_OK;
 }
-

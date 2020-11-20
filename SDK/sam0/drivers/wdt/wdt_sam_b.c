@@ -50,7 +50,7 @@ struct wdt_module *_wdt_instances[WDT_INST_NUM];
 static void wdt_isr_handler(void)
 {
 	struct wdt_module *module = NULL;
-	
+
 	if (WDT0->WDOGMIS.reg) {
 		module = _wdt_instances[0];
 		if (!(module->hw->WDOGCONTROL.reg & WDT_WDOGCONTROL_RESEN)) {
@@ -127,7 +127,7 @@ enum status_code wdt_set_config(struct wdt_module *const module, Wdt * const hw,
 	if (config->load_value == 0) {
 		return STATUS_ERR_BAD_DATA;
 	}
-	
+
 	if (module->hw == WDT0) {
 		system_clock_peripheral_disable(PERIPHERAL_WDT0);
 	} else if (module->hw ==WDT1) {
@@ -143,14 +143,14 @@ enum status_code wdt_set_config(struct wdt_module *const module, Wdt * const hw,
 		module->hw->WDOGCONTROL.reg |= WDT_WDOGCONTROL_RESEN;
 	}
 	module->hw->WDOGCONTROL.reg |= WDT_WDOGCONTROL_INTEN;
-	
+
 	/* Lock register */
 	if (config->write_access == false) {
 		module->hw->WDOGLOCK.reg = WDT_WDOGLOCK_ENABLE_STATUS;
 	}
-	
+
 	system_register_isr(RAM_ISR_TABLE_NMI_INDEX, (uint32_t)wdt_isr_handler);
-	
+
 	/* Enable WDT clock */
 	if (module->hw == WDT0) {
 		_wdt_instances[0] = module;

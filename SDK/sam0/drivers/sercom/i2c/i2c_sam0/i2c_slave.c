@@ -110,7 +110,7 @@ static enum status_code _i2c_slave_set_config(
 	if (config->scl_stretch_only_after_ack_bit || (config->transfer_speed == I2C_SLAVE_SPEED_HIGH_SPEED)) {
 		tmp_ctrla |= SERCOM_I2CM_CTRLA_SCLSM;
 	}
-	
+
 	tmp_ctrla |= ((uint32_t)config->sda_hold_time |
 			config->transfer_speed |
 			(config->scl_low_timeout << SERCOM_I2CS_CTRLA_LOWTOUTEN_Pos) |
@@ -173,7 +173,7 @@ enum status_code i2c_slave_init(
 	}
 
 	uint32_t sercom_index = _sercom_get_sercom_inst_index(module->hw);
-	uint32_t pm_index, gclk_index; 
+	uint32_t pm_index, gclk_index;
 #if (SAML21) || (SAML22) || (SAMC20) || (SAMC21) || (SAMR30)
 #if (SAML21) || (SAMR30)
 	if (sercom_index == 5) {
@@ -191,13 +191,13 @@ enum status_code i2c_slave_init(
 	pm_index     = sercom_index + PM_APBCMASK_SERCOM0_Pos;
 	gclk_index   = sercom_index + SERCOM0_GCLK_ID_CORE;
 #endif
-	
+
 	/* Turn on module in PM */
 #if (SAML21) || (SAMR30)
 	if (sercom_index == 5) {
 		system_apb_clock_set_mask(SYSTEM_CLOCK_APB_APBD, 1 << pm_index);
 	} else {
-		system_apb_clock_set_mask(SYSTEM_CLOCK_APB_APBC, 1 << pm_index);	
+		system_apb_clock_set_mask(SYSTEM_CLOCK_APB_APBC, 1 << pm_index);
 	}
 #else
 	system_apb_clock_set_mask(SYSTEM_CLOCK_APB_APBC, 1 << pm_index);
@@ -569,7 +569,7 @@ enum status_code i2c_slave_read_packet_wait(
  * \note This function is only available for 7-bit slave addressing.
  *
  * Waits for the master to issue a start condition on the bus.
- * 
+ *
  * \note This function does not check for errors in the last transfer,
  * this will be discovered when reading or writing.
  *

@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR I2C */
 /* ========================================================================== */
-/** \addtogroup SAMB11_I2C I2C Master/Slave Controller 
+/** \addtogroup SAMB11_I2C I2C Master/Slave Controller
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- I2C_TRANSMIT_DATA : (I2C Offset: 0x00) (/W 16) Writes one byte to I2C Transmit Data FIFO.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t TX_DATA:8;                 /**< bit:   0..7  Represents either Tx Data, or Address and Direction if address flag is set.  */
     uint16_t ADDRESS_FLAG:1;            /**< bit:      8  Specifies that tx_data field is used for address and direction. */
@@ -88,7 +88,7 @@ typedef union {
 
 /* -------- I2C_RECEIVE_DATA : (I2C Offset: 0x04) (R/ 8) Read one byte from I2C Receive Data FIFO.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_BYTE:8;                 /**< bit:   0..7  Oldest data in receive FIFO.             */
   } bit;                                /**< Structure used for bit  access */
@@ -107,7 +107,7 @@ typedef union {
 
 /* -------- I2C_TRANSMIT_STATUS : (I2C Offset: 0x08) (R/ 8) Status of the I2C transmitter. Each field can generate an interrupt if corresponding bit in  the Tx interrupt mask register is set.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_FIFO_NOT_FULL:1;        /**< bit:      0  Active High indication when Tx FIFO can still accepts at least one more character. */
     uint8_t  TX_FIFO_0P25_EMPTY:1;      /**< bit:      1  Active High indication when Tx FIFO is at least quarter empty. Reset when more.  */
@@ -147,7 +147,7 @@ typedef union {
 
 /* -------- I2C_RECEIVE_STATUS : (I2C Offset: 0x0c) (R/ 8) Status of the I2C receiver. Each field can generate an interrupt if corresponding bit in  the Rx interrupt mask register is set.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_FIFO_NOT_EMPTY:1;       /**< bit:      0  Active High indication when data is available in Rx FIFO */
     uint8_t  RX_FIFO_0P25_FULL:1;       /**< bit:      1  Active High indication when FIFO is at least quarter full. Reset when less.  */
@@ -187,7 +187,7 @@ typedef union {
 
 /* -------- I2C_CLOCK_SOURCE_SELECT : (I2C Offset: 0x10) (R/W 8) Clock Source Select -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CLOCK:2;                   /**< bit:   0..1  Clock Used to Generate Divided Clock     */
     uint8_t  :6;                        /**< bit:   2..7  Reserved */
@@ -215,7 +215,7 @@ typedef union {
 
 /* -------- I2C_MODULE_ENABLE : (I2C Offset: 0x14) (R/W 8) I2C Enable -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enables I2C Operation                    */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -235,7 +235,7 @@ typedef union {
 
 /* -------- I2C_CLK_DIVIDER : (I2C Offset: 0x18) (R/W 16) Register sets the divide ratio used to generate the sck clock from the module's input clock.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t I2C_DIVIDE_RATIO:16;       /**< bit:  0..15  Clock Divide Ratio. The input clock signal is divided by (n+1) where n is the value set in  this field.  The minimum division is by 2; a value of 0 is illegal.  */
   } bit;                                /**< Structure used for bit  access */
@@ -254,7 +254,7 @@ typedef union {
 
 /* -------- I2C_MASTER_MODE : (I2C Offset: 0x1c) (R/W 8) Selects I2C Master or Slave Mode.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  MASTER_ENABLE:1;           /**< bit:      0  Active High I2C Master Mode Enable       */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -278,7 +278,7 @@ typedef union {
 
 /* -------- I2C_ONBUS : (I2C Offset: 0x20) (R/W 8) Enable/Disable transactions when in Master Mode.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ONBUS_ENABLE:1;            /**< bit:      0  Active High Enable to initiate transactions when in Master Mode. */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -302,7 +302,7 @@ typedef union {
 
 /* -------- I2C_SLAVE_ADDRESS : (I2C Offset: 0x24) (R/W 8) Configures the I2C slave Address.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ADDRESS:7;                 /**< bit:   0..6  I2C Slave Address                        */
     uint8_t  :1;                        /**< bit:      7  Reserved */
@@ -322,7 +322,7 @@ typedef union {
 
 /* -------- I2C_STATUS : (I2C Offset: 0x28) (R/ 8) Status of I2C Module.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  I2C_ACTIVE:1;              /**< bit:      0  Active High indicatation that the I2C Module is active. While set, I2C configuration  should not be modified.  */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -342,7 +342,7 @@ typedef union {
 
 /* -------- I2C_TX_INTERRUPT_MASK : (I2C Offset: 0x2c) (R/W 8) Enable or Disable the generation of interrupts by the tx_status register.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_FIFO_NOT_FULL_MASK:1;   /**< bit:      0  Active High Enable of tx_fifo_not_full interrupt  */
     uint8_t  TX_FIFO_0P25_EMPTY_MASK:1;  /**< bit:      1  Active High Enable of tx_fifo_0p25_empty interrupt  */
@@ -377,7 +377,7 @@ typedef union {
 
 /* -------- I2C_RX_INTERRUPT_MASK : (I2C Offset: 0x30) (R/W 8) Enable or Disable the generation of interrupts by the rx_status register.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_FIFO_NOT_EMPTY_MASK:1;  /**< bit:      0  Active High Enable of rx_fifo_not_empty interrupt  */
     uint8_t  RX_FIFO_0P25_FULL_MASK:1;  /**< bit:      1  Active High Enable of rx_fifo_0p25_full interrupt  */
@@ -416,7 +416,7 @@ typedef union {
 
 /* -------- I2C_FLUSH : (I2C Offset: 0x34) (/W 8) Writing to this address  flushes the contents of both the Tx and Rx FIFOs. The value written has no effect. Flushing the Tx FIFO will abort ongoing transactions when the current byte has been transmitted.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  I2C_FLUSH:1;               /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */

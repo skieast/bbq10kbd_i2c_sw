@@ -68,7 +68,7 @@ void i2c_slave_get_config_defaults(
 {
 	/* Sanity check */
 	Assert(config);
-	
+
 	config->clock_source    = I2C_CLK_INPUT_3;
 	config->clock_divider   = 0x10;
 	config->pin_number_pad0 = PIN_LP_GPIO_8;
@@ -143,13 +143,13 @@ enum status_code i2c_slave_init(
 	Assert(config);
 
 	module->hw = hw;
-	
+
 	/* Sanity check arguments. */
 	if ((module == NULL) || (config == NULL))
 		return STATUS_ERR_INVALID_ARG;
 
 	i2c_disable(module->hw);
-	
+
 	if (module->hw == I2C0)
 		system_peripheral_reset(PERIPHERAL_I2C0_CORE);
 	else if (module->hw == I2C1) {
@@ -260,7 +260,7 @@ enum status_code i2c_slave_write_packet_wait(
 	}
 
 	i2c_wait_for_idle(i2c_module);
-	
+
 	/* Flush the FIFO */
 	i2c_module->I2C_FLUSH.reg = 1;
 

@@ -59,7 +59,7 @@ struct gpio_module _gpio_instances[3];
  * wakeup source calling this function will trigger the wakeup of ARM.
  * Rising edge on AO_GPIO wakes-up the ARM and falling edge will trigger the
  * sleep. It is recommended to configure AO_GPIO as rising edge, on rising edge
- * interrupt this function, configures the AO_GPIO as falling edge. As long as it 
+ * interrupt this function, configures the AO_GPIO as falling edge. As long as it
  * is held high; device will be awake and awaiting a falling edge on this pin.
  * Falling edge on the pin, triggers the interrupt and this function configures the pin
  * as rising edge and enable sleep. So, configuring rising edge using gpio_register_callback
@@ -96,9 +96,9 @@ void gpio_get_config_defaults(struct gpio_config *const config)
  *  Writes out a given configuration of a gpio pin configuration to the hardware
  *  module. If the configuration is NULL then it releases the gpio pin.
  *
- *  \note Normally internal pull-up or pull-down is used for input. If the input pin 
- *  is not connected, then pin will be in Hi-z state. Enabling pull-up or down will lead to 
- *  defined state on input line. The Pull-up/down circuit is common for input as well as output. 
+ *  \note Normally internal pull-up or pull-down is used for input. If the input pin
+ *  is not connected, then pin will be in Hi-z state. Enabling pull-up or down will lead to
+ *  defined state on input line. The Pull-up/down circuit is common for input as well as output.
  *  Also certain gpio pin is used by FW and not available for user application. Please \ref gpio_pin
  *  for list of gpio_pin available.
  *
@@ -156,7 +156,7 @@ enum status_code gpio_pin_set_config(const uint8_t gpio_pin,
 		} else if(config->direction == GPIO_PIN_DIR_OUTPUT) {
 			if (gpio_pin < 16) {
 				GPIO0->OUTENSET.reg = (1 << gpio_pin);
-			} 
+			}
 			else if (gpio_pin < 32) {
 				GPIO1->OUTENSET.reg = (1 << (gpio_pin % 16));
 			}
@@ -164,7 +164,7 @@ enum status_code gpio_pin_set_config(const uint8_t gpio_pin,
 				GPIO2->OUTENSET.reg = (1 << (gpio_pin % 16));
 			}
 		}
-	
+
 		if ((gpio_pin == PIN_AO_GPIO_0) || (gpio_pin == PIN_AO_GPIO_1) ||
 				(gpio_pin == PIN_AO_GPIO_2)) {
 			/* Only Pull-Up option is supported */
@@ -351,7 +351,7 @@ void gpio_pin_set_output_level(const uint8_t gpio_pin, const bool level)
  *
  *  Toggles the current output level of a gpio pin.
  *
- *  \param[in] gpio_pin  Index of the GPIO pin to toggle. 
+ *  \param[in] gpio_pin  Index of the GPIO pin to toggle.
  *	gpio_pin index 0 to 15 is controlled by GPIO0 controller.
  *	gpio_pin index 16 to 31 is controlled by GPIO1 controller.
  *	gpio_pin index 32 to 47 is controlled by GPIO2 controller.
@@ -368,7 +368,7 @@ void gpio_pin_toggle_output_level(const uint8_t gpio_pin)
 }
 
 /**
- *  \brief Inverts the logical output level set using DATAOUT register 
+ *  \brief Inverts the logical output level set using DATAOUT register
  *  This inversion applicable only for LP_GPIO_x
  *  \param[in] gpio_pin  Index of the GPIO pin to invert the output level.
  *  \param[in] invert    Invert the output level on GPIO pin.
@@ -567,7 +567,7 @@ void gpio_unregister_callback(uint8_t gpio_pin,
  * \param[in]  gpio_pin   GPIO pin
  *	gpio_pin index 0 to 15 is controlled by GPIO0 controller.
  *	gpio_pin index 16 to 31 is controlled by GPIO1 controller.
- *	gpio_pin index 32 to 47 is controlled by GPIO2 controller. 
+ *	gpio_pin index 32 to 47 is controlled by GPIO2 controller.
  */
 void gpio_enable_callback(uint8_t gpio_pin)
 {
@@ -600,7 +600,7 @@ void gpio_enable_callback(uint8_t gpio_pin)
  * \param[in]  gpio_pin   GPIO pin
  *	gpio_pin index 0 to 15 is controlled by GPIO0 controller.
  *	gpio_pin index 16 to 31 is controlled by GPIO1 controller.
- *	gpio_pin index 32 to 47 is controlled by GPIO2 controller. 
+ *	gpio_pin index 32 to 47 is controlled by GPIO2 controller.
  */
 void gpio_disable_callback(uint8_t gpio_pin)
 {
@@ -721,4 +721,3 @@ void gpio_init(void)
 	system_register_isr(RAM_ISR_TABLE_PORT1_COMB_INDEX, (uint32_t)gpio_port1_isr_handler);
 	system_register_isr(RAM_ISR_TABLE_PORT2_COMB_INDEX, (uint32_t)gpio_port2_isr_handler);
 }
-

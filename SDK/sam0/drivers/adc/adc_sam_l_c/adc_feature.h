@@ -734,4 +734,3 @@ static inline void adc_set_master_slave_mode(
 /** @} */
 
 #endif /* ADC_FEATURE_H_INCLUDED */
-

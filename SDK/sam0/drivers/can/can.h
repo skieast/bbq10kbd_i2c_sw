@@ -518,7 +518,7 @@ struct can_config {
 	enum can_timeout_mode timeout_mode;
 	/** Timeout enable. */
 	bool timeout_enable;
-	/** Transceiver Delay Compensation enable. */		
+	/** Transceiver Delay Compensation enable. */
 	bool tdc_enable;
 	/** Transmitter Delay Compensation Offset : 0x0-0x7F */
 	uint8_t delay_compensation_offset;
@@ -1416,4 +1416,3 @@ static inline void can_clear_interrupt_status(
  */
 
 #endif /* CAN_H_INCLUDED */
-

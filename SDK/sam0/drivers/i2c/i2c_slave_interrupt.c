@@ -60,7 +60,7 @@ static void _i2c_slave_read(
 	/* Sanity check */
 	Assert(module);
 	Assert(module->hw);
-	
+
 	I2c *const i2c_module = module->hw;
 
 	/* Read byte from master and put in buffer. */
@@ -82,7 +82,7 @@ static void _i2c_slave_write(
 	/* Sanity check */
 	Assert(module);
 	Assert(module->hw);
-	
+
 	I2c *const i2c_module = module->hw;
 
 	/* Write byte from buffer to master */
@@ -171,7 +171,7 @@ enum status_code i2c_slave_read_packet_job(
 	Assert(packet);
 
 	I2c *const i2c_module = module->hw;
-	
+
 	/* Check if the I2C module is busy doing async operation. */
 	if (module->buffer_remaining > 0) {
 		return STATUS_BUSY;
@@ -213,9 +213,9 @@ enum status_code i2c_slave_write_packet_job(
 	Assert(module);
 	Assert(module->hw);
 	Assert(packet);
-	
+
 	I2c *const i2c_module = module->hw;
-	
+
 	if (module->buffer_remaining > 0) {
 		return STATUS_BUSY;
 	}
@@ -258,7 +258,7 @@ void _i2c_slave_rx_isr_handler(void)
 				/* Write to master complete */
 				module->callbacks[I2C_SLAVE_CALLBACK_WRITE_REQUEST](module);
 			}
-		} 
+		}
 		/* Continue buffer write/read */
 		if (module->buffer_length > 0 && module->buffer_remaining > 0) {
 				_i2c_slave_read(module);
@@ -280,7 +280,7 @@ void _i2c_slave_rx_isr_handler(void)
 			module->callbacks[I2C_SLAVE_CALLBACK_READ_COMPLETE](module);
 		}
 	}
-	
+
 	if (module->hw == I2C0) {
 		NVIC_ClearPendingIRQ(I2C0_RX_IRQn);
 	} else if (module->hw == I2C1) {
@@ -301,7 +301,7 @@ void _i2c_slave_tx_isr_handler(void)
 	/* Combine callback registered and enabled masks. */
 	uint8_t callback_mask =
 			module->enabled_callback & module->registered_callback;
-	
+
 	if (!module->buffer_length && (module->buffer_length == module->buffer_remaining)) {
 		/* First timer interrupt */
 		module->transfer_direction = I2C_TRANSFER_READ;
@@ -309,7 +309,7 @@ void _i2c_slave_tx_isr_handler(void)
 			/* Write to master complete */
 			module->callbacks[I2C_SLAVE_CALLBACK_READ_REQUEST](module);
 		}
-	} 
+	}
 	if (module->buffer_length > 0 && module->buffer_remaining > 0) {
 		_i2c_slave_write(module);
 	}
@@ -321,7 +321,7 @@ void _i2c_slave_tx_isr_handler(void)
 			module->callbacks[I2C_SLAVE_CALLBACK_READ_COMPLETE](module);
 		}
 	}
-	
+
 	if (module->hw == I2C0) {
 		NVIC_ClearPendingIRQ(I2C0_TX_IRQn);
 	} else if (module->hw == I2C1) {

@@ -67,7 +67,7 @@
  *
  * \retval STATUS_OK      If CRC32 calculation OK
  * \retval STATUS_ERR_BAD_ADDRESS  The address was not aligned with 4 bytes.
- 
+
  * \retval STATUS_ERR_IO  A bus error is detected
  */
 enum status_code dsu_crc32_cal(const uint32_t addr, const uint32_t len, uint32_t *pcrc32)
@@ -84,7 +84,7 @@ enum status_code dsu_crc32_cal(const uint32_t addr, const uint32_t len, uint32_t
 	DSU->LENGTH.reg = len;
 
 	DSU->CTRL.bit.CRC = 1;
-	while ((DSU->STATUSA.reg & DSU_STATUSA_DONE) != 1) {	
+	while ((DSU->STATUSA.reg & DSU_STATUSA_DONE) != 1) {
 	}
 
 	if (DSU->STATUSA.reg & DSU_STATUSA_BERR) {

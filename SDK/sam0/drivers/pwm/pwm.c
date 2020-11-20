@@ -102,7 +102,7 @@ static uint32_t _pwm_reg_sample_method(enum pwm_device_select device_select, boo
 			return (LPMCU_MISC_REGS_PWM2_CTRL_SAMPLE_METHOD &
 					((value) << LPMCU_MISC_REGS_PWM2_CTRL_SAMPLE_METHOD_Pos));
 		case PWM3:
-			return (LPMCU_MISC_REGS_PWM3_CTRL_SAMPLE_METHOD & 
+			return (LPMCU_MISC_REGS_PWM3_CTRL_SAMPLE_METHOD &
 					((value) << LPMCU_MISC_REGS_PWM3_CTRL_SAMPLE_METHOD_Pos));
 
 		default:

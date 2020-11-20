@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR AON_SLEEP_TIMER */
 /* ========================================================================== */
-/** \addtogroup SAMB11_AON_SLEEP_TIMER Always On Sleep Timer 
+/** \addtogroup SAMB11_AON_SLEEP_TIMER Always On Sleep Timer
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- AON_SLEEP_TIMER_CONTROL : (AON_SLEEP_TIMER Offset: 0x00) (R/W 32) Control for the Always On Sleep Timer -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RELOAD_ENABLE:1;           /**< bit:      0  Active High Reload Enable                */
     uint32_t SINGLE_COUNT_ENABLE:1;     /**< bit:      1  Rising Edge Single Count Enable          */
@@ -107,7 +107,7 @@ typedef union {
 
 /* -------- AON_SLEEP_TIMER_SINGLE_COUNT_DURATION : (AON_SLEEP_TIMER Offset: 0x04) (R/W 32) Count for the single count AND reload -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t SINGLE_COUNT_DURATION:32;  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -126,7 +126,7 @@ typedef union {
 
 /* -------- AON_SLEEP_TIMER_CURRENT_COUNT_VALUE : (AON_SLEEP_TIMER Offset: 0x0c) (R/ 32) Current count of the sleep timer -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CURRENT_COUNT_VALUE:32;    /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */

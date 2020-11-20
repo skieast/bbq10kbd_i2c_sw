@@ -64,7 +64,7 @@ enum system_reset_cause {
 	SYSTEM_RESET_CAUSE_SOFTWARE       = RSTC_RCAUSE_SYST,
 	/** The system was last reset by the watchdog timer */
 	SYSTEM_RESET_CAUSE_WDT            = RSTC_RCAUSE_WDT,
-	/** The system was last reset because the external reset 
+	/** The system was last reset because the external reset
 		line was pulled low */
 	SYSTEM_RESET_CAUSE_EXTERNAL_RESET = RSTC_RCAUSE_EXT,
 	/** The system was last reset by VDD brown out detector */

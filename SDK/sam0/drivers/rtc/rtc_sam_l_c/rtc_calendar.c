@@ -707,7 +707,7 @@ enum status_code rtc_calendar_frequency_correction(
  * \note If tamper input configured as active layer protection, RTC prescaler
  *       output automatically enabled in the function.
  */
-enum status_code rtc_tamper_set_config ( 
+enum status_code rtc_tamper_set_config (
 		struct rtc_module *const module,
 		struct rtc_tamper_config *const tamper_cfg)
 {
@@ -725,7 +725,7 @@ enum status_code rtc_tamper_set_config (
 	} else {
 		rtc_module->MODE2.CTRLA.reg &= ~RTC_MODE0_CTRLA_BKTRST;
 	}
-	
+
 	if (tamper_cfg->gp_reset_on_tamper) {
 		rtc_module->MODE2.CTRLA.reg |= RTC_MODE0_CTRLA_GPTRST;
 	} else {
@@ -756,7 +756,7 @@ enum status_code rtc_tamper_set_config (
 		if(in_cfg.action == RTC_TAMPER_INPUT_ACTION_ACTL) {
 			ctrl_b |= RTC_MODE0_CTRLB_RTCOUT;
 		}
-	
+
 		switch(tamper_id) {
 			case 0:
 				tamper_ctrl->bit.IN0ACT = in_cfg.action;

@@ -195,4 +195,3 @@
 #  define CONF_CLOCK_GCLK_8_PRESCALER             1
 #  define CONF_CLOCK_GCLK_8_OUTPUT_ENABLE         false
 #endif /* CONF_CLOCKS_H_INCLUDED */
-

@@ -260,7 +260,7 @@ enum status_code i2c_master_read_bytes(
 	module->status             = STATUS_BUSY;
 	module->send_stop = false;
 	module->send_nack = false;
-	
+
 	/* Enable interrupts */
 	i2c_module->INTENSET.reg =
 			SERCOM_I2CM_INTENSET_MB | SERCOM_I2CM_INTENSET_SB;
@@ -379,7 +379,7 @@ enum status_code i2c_master_read_packet_job_no_stop(
 }
 
 /**
- * \brief Initiates a read packet operation without sending a NACK signal and a 
+ * \brief Initiates a read packet operation without sending a NACK signal and a
  * STOP condition when done
  *
  * Reads a data packet from the specified slave address on the I<SUP>2</SUP>C bus without
@@ -446,7 +446,7 @@ enum status_code i2c_master_write_bytes(
 	module->status             = STATUS_BUSY;
 	module->send_stop = false;
 	module->send_nack = false;
-	
+
 	/* Enable interrupts */
 	i2c_module->INTENSET.reg =
 			SERCOM_I2CM_INTENSET_MB | SERCOM_I2CM_INTENSET_SB;

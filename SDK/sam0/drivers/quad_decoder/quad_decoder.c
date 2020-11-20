@@ -106,7 +106,7 @@ void quad_decoder_get_config_defaults(struct quad_decoder_config *config)
 static void quad_decoder_isr_handler(void)
 {
 	uint8_t status = LPMCU_MISC_REGS0->QUAD_DEC_IRQS.reg;
-	
+
 	if (status & LPMCU_MISC_REGS_QUAD_DEC_IRQS_QUAD_DEC0_IRQ) {
 		LPMCU_MISC_REGS0->QUAD_DEC0_CTRL.reg |=
 				LPMCU_MISC_REGS_QUAD_DEC0_CTRL_CLR_IRQ;
@@ -114,7 +114,7 @@ static void quad_decoder_isr_handler(void)
 			quad_decoder0_callback();
 		}
 	}
-	
+
 	if (status & LPMCU_MISC_REGS_QUAD_DEC_IRQS_QUAD_DEC1_IRQ) {
 		LPMCU_MISC_REGS0->QUAD_DEC1_CTRL.reg |=
 				LPMCU_MISC_REGS_QUAD_DEC1_CTRL_CLR_IRQ;

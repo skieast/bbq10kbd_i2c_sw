@@ -254,4 +254,3 @@ void adc_abort_job(
 		module_inst->remaining_conversions = 0;
 	}
 }
-

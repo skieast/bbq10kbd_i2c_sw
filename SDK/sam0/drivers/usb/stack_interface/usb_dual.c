@@ -175,4 +175,3 @@ void usb_dual_disable(void)
 			EXTINT_CALLBACK_TYPE_DETECT);
 #endif
 }
-

@@ -106,7 +106,7 @@
 #define TC2_DMAC_ID_MC_SIZE         2
 #define TC2_DMAC_ID_OVF             15       // Indexes of DMA Overflow trigger
 #define TC2_GCLK_ID                 18       // Index of Generic Clock
-#define TC2_MASTER                  0       
+#define TC2_MASTER                  0
 #define TC2_OW_NUM                  2        // Number of Output Waveforms
 #define TC2_PERIOD_EXT              0        // Period feature implemented
 #define TC2_SHADOW_EXT              0        // Shadow feature implemented

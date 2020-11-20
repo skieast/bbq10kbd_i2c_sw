@@ -216,7 +216,7 @@ enum status_code nvm_execute_command(
 	/* Turn off cache before issuing flash commands */
 	ctrlb_bak = nvm_module->CTRLB.reg;
 #if (SAMC20) || (SAMC21)
-	nvm_module->CTRLB.reg = ((ctrlb_bak &(~(NVMCTRL_CTRLB_CACHEDIS(0x2)))) 
+	nvm_module->CTRLB.reg = ((ctrlb_bak &(~(NVMCTRL_CTRLB_CACHEDIS(0x2))))
 							| NVMCTRL_CTRLB_CACHEDIS(0x1));
 #else
 	nvm_module->CTRLB.reg = ctrlb_bak | NVMCTRL_CTRLB_CACHEDIS;
@@ -867,7 +867,7 @@ static void _nvm_translate_raw_fusebits_to_struct (
 #define FUSES_BOD12_ACTION_Pos 24
 #define FUSES_BOD12_ACTION_Msk (0x3ul << FUSES_BOD12_ACTION_Pos)
 #endif
-	
+
 	fusebits->bod12_level = (uint8_t)
 			((raw_user_row[0] & FUSES_BOD12USERLEVEL_Msk)
 			>> FUSES_BOD12USERLEVEL_Pos);
@@ -1066,7 +1066,7 @@ enum status_code nvm_set_fuses(struct nvm_fusebits *fb)
 	fusebits[1] |= fb->lockbits << NVMCTRL_FUSES_REGION_LOCKS_Pos;
 
 #ifdef FEATURE_BOD12
-	
+
 #ifndef FUSES_BOD12USERLEVEL_Pos
 #define FUSES_BOD12USERLEVEL_Pos 17
 #define FUSES_BOD12USERLEVEL_Msk (0x3Ful << FUSES_BOD12USERLEVEL_Pos)
@@ -1079,9 +1079,9 @@ enum status_code nvm_set_fuses(struct nvm_fusebits *fb)
 #define FUSES_BOD12_ACTION_Pos 24
 #define FUSES_BOD12_ACTION_Msk (0x3ul << FUSES_BOD12_ACTION_Pos)
 #endif
-		
+
 	fusebits[0] &= (~FUSES_BOD12USERLEVEL_Msk);
-	fusebits[0] |= ((FUSES_BOD12USERLEVEL_Msk & ((fb->bod12_level) << 
+	fusebits[0] |= ((FUSES_BOD12USERLEVEL_Msk & ((fb->bod12_level) <<
 						FUSES_BOD12USERLEVEL_Pos)));
 
 	fusebits[0] &= (~FUSES_BOD12_DIS_Msk);

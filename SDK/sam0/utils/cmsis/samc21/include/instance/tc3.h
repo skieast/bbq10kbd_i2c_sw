@@ -108,16 +108,16 @@
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance parameters for TC3 peripheral ========== */
-#define TC3_CC_NUM                  2       
+#define TC3_CC_NUM                  2
 #define TC3_DMAC_ID_MC_0            37
 #define TC3_DMAC_ID_MC_1            38
 #define TC3_DMAC_ID_MC_LSB          37
 #define TC3_DMAC_ID_MC_MSB          38
 #define TC3_DMAC_ID_MC_SIZE         2
 #define TC3_DMAC_ID_OVF             36       // Indexes of DMA Overflow trigger
-#define TC3_EXT                     0       
-#define TC3_GCLK_ID                 31      
-#define TC3_MASTER                  0       
-#define TC3_OW_NUM                  2       
+#define TC3_EXT                     0
+#define TC3_GCLK_ID                 31
+#define TC3_MASTER                  0
+#define TC3_OW_NUM                  2
 
 #endif /* _SAMC21_TC3_INSTANCE_ */

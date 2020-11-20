@@ -165,6 +165,6 @@
 
 /* ========== Instance parameters for HMATRIXHS peripheral ========== */
 #define HMATRIXHS_CLK_AHB_ID        4        // Index of AHB Clock in MCLK.AHBMASK register (MASK may be tied to 1 depending on chip integration)
-#define HMATRIXHS_DEFINED                   
+#define HMATRIXHS_DEFINED
 
 #endif /* _SAMC20_HMATRIXHS_INSTANCE_ */

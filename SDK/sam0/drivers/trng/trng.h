@@ -453,4 +453,3 @@ static inline enum status_code trng_read(
  */
 
 #endif /* TRNG_H_INCLUDED */
-

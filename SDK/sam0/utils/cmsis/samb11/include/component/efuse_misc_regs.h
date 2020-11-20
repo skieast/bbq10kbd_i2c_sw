@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR EFUSE_MISC_REGS */
 /* ========================================================================== */
-/** \addtogroup SAMB11_EFUSE_MISC_REGS EFUSE Misc Registers 
+/** \addtogroup SAMB11_EFUSE_MISC_REGS EFUSE Misc Registers
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- EFUSE_MISC_REGS_EFUSE_GLOBAL_RESET : (EFUSE_MISC_REGS Offset: 0x00) (R/W 8) Active Low Global Reset -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  GLOBAL_RSTN:1;             /**< bit:      0  Global Reset                             */
     uint8_t  EFUSE_1_RSTN:1;            /**< bit:      1  EFUSE 1 Reset                            */
@@ -104,7 +104,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_CONTROL : (EFUSE_MISC_REGS Offset: 0x04) (R/W 32) EFUSE 1 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FORCE_LOAD:1;              /**< bit:      0  Efuse Control Force Load                 */
     uint32_t START_PROGRAM:1;           /**< bit:      1  When set to 1 will start programming EFUSE */
@@ -148,7 +148,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_CONTROL : (EFUSE_MISC_REGS Offset: 0x08) (R/W 32) EFUSE 2 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FORCE_LOAD:1;              /**< bit:      0  Efuse Control Force Load                 */
     uint32_t START_PROGRAM:1;           /**< bit:      1  When set to 1 will start programming EFUSE */
@@ -192,7 +192,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_CONTROL : (EFUSE_MISC_REGS Offset: 0x0c) (R/W 32) EFUSE 3 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FORCE_LOAD:1;              /**< bit:      0  Efuse Control Force Load                 */
     uint32_t START_PROGRAM:1;           /**< bit:      1  When set to 1 will start programming EFUSE */
@@ -236,7 +236,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_CONTROL : (EFUSE_MISC_REGS Offset: 0x10) (R/W 32) EFUSE 4 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FORCE_LOAD:1;              /**< bit:      0  Efuse Control Force Load                 */
     uint32_t START_PROGRAM:1;           /**< bit:      1  When set to 1 will start programming EFUSE */
@@ -280,7 +280,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_CONTROL : (EFUSE_MISC_REGS Offset: 0x14) (R/W 32) EFUSE 5 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FORCE_LOAD:1;              /**< bit:      0  Efuse Control Force Load                 */
     uint32_t START_PROGRAM:1;           /**< bit:      1  When set to 1 will start programming EFUSE */
@@ -324,7 +324,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_CONTROL : (EFUSE_MISC_REGS Offset: 0x18) (R/W 32) EFUSE 6 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FORCE_LOAD:1;              /**< bit:      0  Efuse Control Force Load                 */
     uint32_t START_PROGRAM:1;           /**< bit:      1  When set to 1 will start programming EFUSE */
@@ -368,7 +368,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_PROG_0 : (EFUSE_MISC_REGS Offset: 0x1c) (R/W 32) EFUSE_1_0 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_PROG_0:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -387,7 +387,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_PROG_1 : (EFUSE_MISC_REGS Offset: 0x20) (R/W 32) EFUSE_1_1 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_PROG_1:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -406,7 +406,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_PROG_2 : (EFUSE_MISC_REGS Offset: 0x24) (R/W 32) EFUSE_1_2 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_PROG_2:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -425,7 +425,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_PROG_3 : (EFUSE_MISC_REGS Offset: 0x28) (R/W 32) EFUSE_1_3 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_PROG_3:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -444,7 +444,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_STATUS_0 : (EFUSE_MISC_REGS Offset: 0x2c) (R/ 32) EFUSE_1_0 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_STATUS_0:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -463,7 +463,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_STATUS_1 : (EFUSE_MISC_REGS Offset: 0x30) (R/ 32) EFUSE_1_1 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_STATUS_1:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -482,7 +482,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_STATUS_2 : (EFUSE_MISC_REGS Offset: 0x34) (R/ 32) EFUSE_1_2 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_STATUS_2:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -501,7 +501,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_1_STATUS_3 : (EFUSE_MISC_REGS Offset: 0x38) (R/ 32) EFUSE_1_3 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_STATUS_3:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -520,7 +520,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_PROG_0 : (EFUSE_MISC_REGS Offset: 0x3c) (R/W 32) EFUSE_2_0 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_PROG_0:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -539,7 +539,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_PROG_1 : (EFUSE_MISC_REGS Offset: 0x40) (R/W 32) EFUSE_2_1 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_PROG_1:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -558,7 +558,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_PROG_2 : (EFUSE_MISC_REGS Offset: 0x44) (R/W 32) EFUSE_2_2 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_PROG_2:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -577,7 +577,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_PROG_3 : (EFUSE_MISC_REGS Offset: 0x48) (R/W 32) EFUSE_2_3 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_PROG_3:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -596,7 +596,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_STATUS_0 : (EFUSE_MISC_REGS Offset: 0x4c) (R/ 32) EFUSE_2_0 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_STATUS_0:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -615,7 +615,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_STATUS_1 : (EFUSE_MISC_REGS Offset: 0x50) (R/ 32) EFUSE_2_1 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_STATUS_1:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -634,7 +634,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_STATUS_2 : (EFUSE_MISC_REGS Offset: 0x54) (R/ 32) EFUSE_2_2 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_STATUS_2:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -653,7 +653,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_2_STATUS_3 : (EFUSE_MISC_REGS Offset: 0x58) (R/ 32) EFUSE_2_3 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_2_STATUS_3:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -672,7 +672,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_PROG_0 : (EFUSE_MISC_REGS Offset: 0x5c) (R/W 32) EFUSE_3_0 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_PROG_0:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -691,7 +691,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_PROG_1 : (EFUSE_MISC_REGS Offset: 0x60) (R/W 32) EFUSE_3_1 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_PROG_1:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -710,7 +710,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_PROG_2 : (EFUSE_MISC_REGS Offset: 0x64) (R/W 32) EFUSE_3_2 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_PROG_2:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -729,7 +729,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_PROG_3 : (EFUSE_MISC_REGS Offset: 0x68) (R/W 32) EFUSE_3_3 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_PROG_3:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -748,7 +748,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_STATUS_0 : (EFUSE_MISC_REGS Offset: 0x6c) (R/ 32) EFUSE_3_0 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_STATUS_0:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -767,7 +767,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_STATUS_1 : (EFUSE_MISC_REGS Offset: 0x70) (R/ 32) EFUSE_3_1 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_STATUS_1:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -786,7 +786,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_STATUS_2 : (EFUSE_MISC_REGS Offset: 0x74) (R/ 32) EFUSE_3_2 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_STATUS_2:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -805,7 +805,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_3_STATUS_3 : (EFUSE_MISC_REGS Offset: 0x78) (R/ 32) EFUSE_3_3 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_3_STATUS_3:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -824,7 +824,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_PROG_0 : (EFUSE_MISC_REGS Offset: 0x7c) (R/W 32) EFUSE_4_0 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_PROG_0:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -843,7 +843,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_PROG_1 : (EFUSE_MISC_REGS Offset: 0x80) (R/W 32) EFUSE_4_1 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_PROG_1:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -862,7 +862,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_PROG_2 : (EFUSE_MISC_REGS Offset: 0x84) (R/W 32) EFUSE_4_2 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_PROG_2:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -881,7 +881,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_PROG_3 : (EFUSE_MISC_REGS Offset: 0x88) (R/W 32) EFUSE_4_3 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_PROG_3:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -900,7 +900,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_STATUS_0 : (EFUSE_MISC_REGS Offset: 0x8c) (R/ 32) EFUSE_4_0 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_STATUS_0:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -919,7 +919,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_STATUS_1 : (EFUSE_MISC_REGS Offset: 0x90) (R/ 32) EFUSE_4_1 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_STATUS_1:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -938,7 +938,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_STATUS_2 : (EFUSE_MISC_REGS Offset: 0x94) (R/ 32) EFUSE_4_2 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_STATUS_2:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -957,7 +957,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_4_STATUS_3 : (EFUSE_MISC_REGS Offset: 0x98) (R/ 32) EFUSE_4_3 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_4_STATUS_3:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -976,7 +976,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_PROG_0 : (EFUSE_MISC_REGS Offset: 0x9c) (R/W 32) EFUSE_4_0 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_PROG_0:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -995,7 +995,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_PROG_1 : (EFUSE_MISC_REGS Offset: 0xa0) (R/W 32) EFUSE_5_1 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_PROG_1:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1014,7 +1014,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_PROG_2 : (EFUSE_MISC_REGS Offset: 0xa4) (R/W 32) EFUSE_5_2 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_PROG_2:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1033,7 +1033,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_PROG_3 : (EFUSE_MISC_REGS Offset: 0xa8) (R/W 32) EFUSE_5_3 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_PROG_3:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1052,7 +1052,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_STATUS_0 : (EFUSE_MISC_REGS Offset: 0xac) (R/ 32) EFUSE_5_0 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_STATUS_0:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1071,7 +1071,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_STATUS_1 : (EFUSE_MISC_REGS Offset: 0xb0) (R/ 32) EFUSE_5_1 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_STATUS_1:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1090,7 +1090,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_STATUS_2 : (EFUSE_MISC_REGS Offset: 0xb4) (R/ 32) EFUSE_5_2 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_STATUS_2:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1109,7 +1109,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_5_STATUS_3 : (EFUSE_MISC_REGS Offset: 0xb8) (R/ 32) EFUSE_5_3 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_5_STATUS_3:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1128,7 +1128,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_PROG_0 : (EFUSE_MISC_REGS Offset: 0xbc) (R/W 32) EFUSE_6_0 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_PROG_0:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1147,7 +1147,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_PROG_1 : (EFUSE_MISC_REGS Offset: 0xc0) (R/W 32) EFUSE_6_1 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_PROG_1:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1166,7 +1166,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_PROG_2 : (EFUSE_MISC_REGS Offset: 0xc4) (R/W 32) EFUSE_6_2 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_PROG_2:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1185,7 +1185,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_PROG_3 : (EFUSE_MISC_REGS Offset: 0xc8) (R/W 32) EFUSE_6_3 Program Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_PROG_3:32;         /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1204,7 +1204,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_STATUS_0 : (EFUSE_MISC_REGS Offset: 0xcc) (R/ 32) EFUSE_6_0 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_STATUS_0:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1223,7 +1223,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_STATUS_1 : (EFUSE_MISC_REGS Offset: 0xd0) (R/ 32) EFUSE_6_1 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_STATUS_1:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1242,7 +1242,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_STATUS_2 : (EFUSE_MISC_REGS Offset: 0xd4) (R/ 32) EFUSE_6_2 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_STATUS_2:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1261,7 +1261,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_6_STATUS_3 : (EFUSE_MISC_REGS Offset: 0xd8) (R/ 32) EFUSE_6_3 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_6_STATUS_3:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1280,7 +1280,7 @@ typedef union {
 
 /* -------- EFUSE_MISC_REGS_EFUSE_MISC_CTRL : (EFUSE_MISC_REGS Offset: 0xdc) (R/ 8) EFUSE 6 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  OUT_OF_RESET:1;            /**< bit:      0  Read back the status of the eFuse out of reset */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */

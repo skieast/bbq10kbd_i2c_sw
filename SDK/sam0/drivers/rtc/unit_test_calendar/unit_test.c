@@ -187,7 +187,7 @@ static void run_rtc_calendar_test(const struct test_case *test)
 	status = rtc_calendar_set_alarm(&rtc_inst, &alarm, 0);
 	test_assert_true(test, status == STATUS_OK,
 			"RTC set calendar alarm failed");
-			
+
 	/* Enable the RTC */
 	rtc_calendar_enable(&rtc_inst);
 
@@ -209,7 +209,7 @@ static void run_rtc_calendar_test(const struct test_case *test)
     	calendar_time.year   = 2014;
     	rtc_calendar_set_time(&rtc_inst, &calendar_time);
 	delay_s(5);
-        
+
 	result = rtc_calendar_is_alarm_match(&rtc_inst,0);
 	test_assert_true(test, result ==  true,
 		"RTC calendar alarm match test failed");

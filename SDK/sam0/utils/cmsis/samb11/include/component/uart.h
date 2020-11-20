@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR UART */
 /* ========================================================================== */
-/** \addtogroup SAMB11_UART UART Controller 
+/** \addtogroup SAMB11_UART UART Controller
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- UART_TRANSMIT_DATA : (UART Offset: 0x00) (/W 8) Writes one byte to UART Transmit Data FIFO.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_BYTE:8;                 /**< bit:   0..7  Writes data in transmit FIFO. If byte length is set to 7, the MSB should be set to 0.  */
   } bit;                                /**< Structure used for bit  access */
@@ -79,7 +79,7 @@ typedef union {
 
 /* -------- UART_TRANSMIT_STATUS : (UART Offset: 0x04) (R/ 8) Status of the UART transmitter. Each field can generate an interrupt if corresponding bit in  the Tx interrupt mask register is set.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_FIFO_NOT_FULL:1;        /**< bit:      0  Active High indication when Tx FIFO can still accepts at least one more character. 0: TX FIFO Full. 1: TX FIFO not Full.  */
     uint8_t  TX_FIFO_0P25_EMPTY:1;      /**< bit:      1  Active High indication when Tx FIFO is at least quarter empty. Reset when more.  */
@@ -119,7 +119,7 @@ typedef union {
 
 /* -------- UART_TX_INTERRUPT_MASK : (UART Offset: 0x08) (R/W 8) Enable or Disable the generation of interrupts by the tx_status register.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_FIFO_NOT_FULL_MASK:1;   /**< bit:      0  Active High Enable of tx_fifo_not_full interrupt  */
     uint8_t  TX_FIFO_0P25_EMPTY_MASK:1;  /**< bit:      1  Active High Enable of tx_fifo_0p25_empty interrupt  */
@@ -158,7 +158,7 @@ typedef union {
 
 /* -------- UART_RECEIVE_DATA : (UART Offset: 0x10) (R/ 8) Read one byte from UART Receive Data FIFO.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_BYTE:8;                 /**< bit:   0..7  Oldest data in receive FIFO. If byte length is set to 7, the MSB is set to 0.  */
   } bit;                                /**< Structure used for bit  access */
@@ -177,7 +177,7 @@ typedef union {
 
 /* -------- UART_RECEIVE_STATUS : (UART Offset: 0x14) (R/ 8) Status of the UART receiver. Each field can generate an interrupt if corresponding bit in  the Rx interrupt mask register is set.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_FIFO_NOT_EMPTY:1;       /**< bit:      0  Active High indication when data is available in Rx FIFO. 0: RX FIFO Empty. 1: RX FIFO contains at least one byte of data.  */
     uint8_t  RX_FIFO_0P25_FULL:1;       /**< bit:      1  Active High indication when FIFO is at least quarter full. Reset when less.  */
@@ -224,7 +224,7 @@ typedef union {
 
 /* -------- UART_RX_INTERRUPT_MASK : (UART Offset: 0x18) (R/W 8) Enable or Disable the generation of interrupts by the rx_status register.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_FIFO_NOT_EMPTY_MASK:1;  /**< bit:      0  Active High Enable of rx_fifo_not_empty interrupt  */
     uint8_t  RX_FIFO_0P25_FULL_MASK:1;  /**< bit:      1  Active High Enable of rx_fifo_0p25_full interrupt  */
@@ -270,7 +270,7 @@ typedef union {
 
 /* -------- UART_RECEIVE_TIMEOUT : (UART Offset: 0x1c) (R/W 8) Timeout counter configuration.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMEOUT_VALUE:8;           /**< bit:   0..7  Timeout counter reload value, after status register is read or character received.  Counter decrements at baud rate clock.  */
   } bit;                                /**< Structure used for bit  access */
@@ -289,7 +289,7 @@ typedef union {
 
 /* -------- UART_CONFIGURATION : (UART Offset: 0x20) (R/W 8) UART Operation Configuration Register, for both Rx and Tx.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  NUMBER_OF_BITS:1;          /**< bit:      0  Number of bits per character, not including parity */
     uint8_t  PARITY_ENABLE:1;           /**< bit:      1  Active High parity checking and generation enable */
@@ -349,7 +349,7 @@ typedef union {
 
 /* -------- UART_BAUD_RATE : (UART Offset: 0x24) (R/W 16) Baud Rate Control Register. Bits 15:3 specify the integral division of the clock (divide by n),  and bit 2:0 specify the fractional division.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t FRACTIONAL_DIVISION:3;     /**< bit:   0..2  Fractional Division Part. If non-zero, the integer part must be at least set to 3.  */
     uint16_t INTEGER_DIVISION:13;       /**< bit:  3..15  Integral Division Part. Must be at least set to 2.  */
@@ -372,7 +372,7 @@ typedef union {
 
 /* -------- UART_CLOCK_SOURCE : (UART Offset: 0x28) (R/W 8) Selects Source of UART Clock  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CLOCK_SELECT:2;            /**< bit:   0..1  Selects one of the four possible clock sources. */
     uint8_t  :6;                        /**< bit:   2..7  Reserved */

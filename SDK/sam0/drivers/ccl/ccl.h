@@ -491,4 +491,3 @@ void ccl_lut_disable(const enum ccl_lut_id number);
  */
 
 #endif /* CCL_H_INCLUDED */
-

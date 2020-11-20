@@ -271,8 +271,8 @@ enum status_code usart_read_job(
  * \param[in]  tx_data  Pointer do data buffer to transmit
  * \param[in]  length   Length of the data to transmit
  *
- * \note If using 9-bit data, the array that *tx_data point to should be defined 
- *       as uint16_t array and should be casted to uint8_t* pointer. Because it 
+ * \note If using 9-bit data, the array that *tx_data point to should be defined
+ *       as uint16_t array and should be casted to uint8_t* pointer. Because it
  *       is an address pointer, the highest byte is not discarded. For example:
  *   \code
           #define TX_LEN 3
@@ -321,7 +321,7 @@ enum status_code usart_write_buffer_job(
  * \param[in]  length   Data buffer length
  *
  * \note If using 9-bit data, the array that *rx_data point to should be defined
- *       as uint16_t array and should be casted to uint8_t* pointer. Because it 
+ *       as uint16_t array and should be casted to uint8_t* pointer. Because it
  *       is an address pointer, the highest byte is not discarded. For example:
  *   \code
            #define RX_LEN 3
@@ -663,4 +663,3 @@ void _usart_interrupt_handler(
 	}
 #endif
 }
-

@@ -127,7 +127,7 @@ typedef void (*wdt_callback_t)(void);
 /** Enum for the possible callback types for the WDT module. */
 enum wdt_callback
 {
-	/** 
+	/**
 	 * Callback type for when an early warning callback from the WDT module
 	 * is issued
 	 */

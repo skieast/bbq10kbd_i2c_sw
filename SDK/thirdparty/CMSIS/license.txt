@@ -1,4 +1,4 @@
-END USER LICENCE AGREEMENT FOR THE CORTEX MICROCONTROLLER SOFTWARE INTERFACE STANDARD (CMSIS) DELIVERABLES 
+END USER LICENCE AGREEMENT FOR THE CORTEX MICROCONTROLLER SOFTWARE INTERFACE STANDARD (CMSIS) DELIVERABLES
 
 THIS END USER LICENCE AGREEMENT ("LICENCE") IS A LEGAL AGREEMENT BETWEEN YOU (EITHER A SINGLE INDIVIDUAL, OR SINGLE LEGAL ENTITY) AND ARM LIMITED ("ARM") FOR THE USE OF THE CMSIS DELIVERABLES. ARM IS ONLY WILLING TO LICENSE THE CMSIS DELIVERABLES TO YOU ON CONDITION THAT YOU ACCEPT ALL OF THE TERMS IN THIS LICENCE. BY CLICKING "I AGREE", OR BY INSTALLING OR OTHERWISE USING OR COPYING THE CMSIS DELIVERABLES YOU INDICATE THAT YOU AGREE TO BE BOUND BY ALL THE TERMS OF THIS LICENCE. IF YOU DO NOT AGREE TO THE TERMS OF THIS LICENCE, ARM IS UNWILLING TO LICENSE YOU TO USE OF THE CMSIS DELIVERABLES AND YOU MAY NOT INSTALL, USE OR COPY THE CMSIS DELIVERABLES.
 
@@ -18,7 +18,7 @@ Notwithstanding the foregoing, the CMSIS Deliverables shall not include: (i) the
 
 “CMSIS-SVD” means the specification defining the System View Description (SVD), verification utility, and associated XML schema files.
 
-“Separate Files” means the components in the CMSIS reference implementation identified in the Schedule that demonstrate the usage of the CMSIS-CORE, CMSIS-DRIVER, CMSIS-DSP, CMSIS-PACK and CMSIS-RTOS API,  for microprocessors or device specific software applications that are for use with microprocessors. 
+“Separate Files” means the components in the CMSIS reference implementation identified in the Schedule that demonstrate the usage of the CMSIS-CORE, CMSIS-DRIVER, CMSIS-DSP, CMSIS-PACK and CMSIS-RTOS API,  for microprocessors or device specific software applications that are for use with microprocessors.
 
 1. LICENCE GRANTS.
 
@@ -94,7 +94,7 @@ The package also includes the components contained in the following directories:
 (d) ./CMSIS/RTOS - Header file template for CMSIS-RTOS implementation; and
 (e) ./Device - Template files and implementations for Cortex-M class processors.
 
-All of the above components (a– e) are licensed to you under the terms of the BSD licence, which is incorporated within or alongside the above components.  
+All of the above components (a– e) are licensed to you under the terms of the BSD licence, which is incorporated within or alongside the above components.
 (f) ./CMSIS/Driver – CMSIS-Driver header files
 (g) ./CMSIS/Pack – Example Device Family Pack
 
@@ -108,4 +108,3 @@ ARM contract reference LEC-PRE-00489- v3.0
 CONFIDENTIAL
 LEC-PRE-00489
 SP-Version: 3.0
-

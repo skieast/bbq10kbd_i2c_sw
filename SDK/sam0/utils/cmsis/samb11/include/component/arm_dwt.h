@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR ARM_DWT */
 /* ========================================================================== */
-/** \addtogroup SAMB11_ARM_DWT ARM DWT Control 
+/** \addtogroup SAMB11_ARM_DWT ARM DWT Control
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- ARM_DWT_DWT_CTRL : (ARM_DWT Offset: 0x00) (R/ 32) Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :28;                       /**< bit:  0..27  Reserved */
     uint32_t NUMCOMP:4;                 /**< bit: 28..31  Number of comparators available          */
@@ -80,7 +80,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_PCSR : (ARM_DWT Offset: 0x1c) (R/ 32) Program Counter Sample Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EIASAMPLE:32;              /**< bit:  0..31  Executed Instruction Address sample value */
   } bit;                                /**< Structure used for bit  access */
@@ -99,7 +99,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_COMP0 : (ARM_DWT Offset: 0x20) (R/W 32) DWT Compare Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t COMP:32;                   /**< bit:  0..31  Reference Value for Comparison           */
   } bit;                                /**< Structure used for bit  access */
@@ -118,7 +118,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_MASK0 : (ARM_DWT Offset: 0x24) (R/W 8) DWT Mask Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  MASK_VALUE:5;              /**< bit:   0..4  Size of the ignore mask applied to address range matching */
     uint8_t  :3;                        /**< bit:   5..7  Reserved */
@@ -137,7 +137,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_FUNCTION0 : (ARM_DWT Offset: 0x28) (R/ 32) DWT Function Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FUNCTION:4;                /**< bit:   0..3  Select action on comparator match        */
     uint32_t :20;                       /**< bit:  4..23  Reserved */
@@ -172,7 +172,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_COMP1 : (ARM_DWT Offset: 0x30) (R/W 32) DWT Compare Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t COMP:32;                   /**< bit:  0..31  Reference Value for Comparison           */
   } bit;                                /**< Structure used for bit  access */
@@ -191,7 +191,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_MASK1 : (ARM_DWT Offset: 0x34) (R/W 8) DWT Mask Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  MASK_VALUE:5;              /**< bit:   0..4  Size of the ignore mask applied to address range matching */
     uint8_t  :3;                        /**< bit:   5..7  Reserved */
@@ -210,7 +210,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_FUNCTION1 : (ARM_DWT Offset: 0x38) (R/ 32) DWT Function Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FUNCTION:4;                /**< bit:   0..3  Select action on comparator match        */
     uint32_t :20;                       /**< bit:  4..23  Reserved */
@@ -245,7 +245,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_PID4 : (ARM_DWT Offset: 0xfd0) (R/ 8) Peripheral ID Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_C_CODE:4;           /**< bit:   0..3  JEP106 C Code                            */
     uint8_t  BLOCK_COUNT:4;             /**< bit:   4..7  Block Count                              */
@@ -268,7 +268,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_PID0 : (ARM_DWT Offset: 0xfe0) (R/ 8) Peripheral ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:8;             /**< bit:   0..7  Part Number Bits 7:0                     */
   } bit;                                /**< Structure used for bit  access */
@@ -287,7 +287,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_PID1 : (ARM_DWT Offset: 0xfe4) (R/ 8) Peripheral ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:4;             /**< bit:   0..3  Part Number Bits 11:8                    */
     uint8_t  JEP106_ID_3_0:4;           /**< bit:   4..7  JEP106 ID Code Bits 3:0                  */
@@ -310,7 +310,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_PID2 : (ARM_DWT Offset: 0xfe8) (R/ 8) Peripheral ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_ID_6_4:3;           /**< bit:   0..2  JEP106 ID Code Bits 6:4                  */
     uint8_t  JEDEC_USED:1;              /**< bit:      3  JEDEC Used                               */
@@ -337,7 +337,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_PID3 : (ARM_DWT Offset: 0xfec) (R/ 8) Peripheral ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CUSTOMER_MOD_NUMBER:4;     /**< bit:   0..3  Customer Modification Number             */
     uint8_t  ECO_REV_NUMBER:4;          /**< bit:   4..7  ECO Revision Number                      */
@@ -360,7 +360,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_CID0 : (ARM_DWT Offset: 0xff0) (R/ 8) Component ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  DWT_CID0:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -379,7 +379,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_CID1 : (ARM_DWT Offset: 0xff4) (R/ 8) Component ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  DWT_CID1:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -398,7 +398,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_CID2 : (ARM_DWT Offset: 0xff8) (R/ 8) Component ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  DWT_CID2:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -417,7 +417,7 @@ typedef union {
 
 /* -------- ARM_DWT_DWT_CID3 : (ARM_DWT Offset: 0xffc) (R/ 8) Component ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  DWT_CID3:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */

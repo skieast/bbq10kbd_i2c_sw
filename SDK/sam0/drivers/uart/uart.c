@@ -373,7 +373,7 @@ enum status_code uart_init(struct uart_module *const module, Uart * const hw,
 	while (module->hw->RECEIVE_STATUS.reg & UART_RECEIVE_STATUS_RX_FIFO_NOT_EMPTY) {
 		i = module->hw->RECEIVE_DATA.reg;
 	}
-	
+
 	/* reset configuration register */
 	module->hw->UART_CONFIGURATION.reg = 0;
 
@@ -410,7 +410,7 @@ enum status_code uart_init(struct uart_module *const module, Uart * const hw,
 
 		default:
 			break;
-	}	
+	}
 	module->hw->UART_CONFIGURATION.reg = config_temp;
 
 	/* Calculate the baud rate. */
@@ -418,7 +418,7 @@ enum status_code uart_init(struct uart_module *const module, Uart * const hw,
 
 	module->hw->RX_INTERRUPT_MASK.reg = 0;	// disable int at initialization, enable it at read time
 	module->hw->TX_INTERRUPT_MASK.reg = 0;	// disable int at initialization, enable it at write time
-	
+
 	return STATUS_OK;
 }
 
@@ -440,7 +440,7 @@ enum status_code uart_write_wait(struct uart_module *const module,
 	while (!(module->hw->TRANSMIT_STATUS.reg & UART_TRANSMIT_STATUS_TX_FIFO_NOT_FULL));
 
 	module->hw->TRANSMIT_DATA.reg = tx_data;
-	
+
 	return STATUS_OK;
 }
 
@@ -461,7 +461,7 @@ enum status_code uart_read_wait(struct uart_module *const module,
 	while (!(module->hw->RECEIVE_STATUS.reg & UART_RECEIVE_STATUS_RX_FIFO_NOT_EMPTY));
 
 	*rx_data = module->hw->RECEIVE_DATA.reg;
-	
+
 	return STATUS_OK;
 }
 
@@ -478,16 +478,16 @@ enum status_code uart_read_wait(struct uart_module *const module,
 * \param[in]  module  enumeration UART hw module
 * \param[in]  tx_data  Pointer to data to transmit
 * \param[in]  length   Number of characters to transmit
-* 
+*
 * \return Status of the operation.
 * \retval STATUS_OK              If operation was completed
 */
-enum status_code uart_write_buffer_wait(struct uart_module *const module, 
+enum status_code uart_write_buffer_wait(struct uart_module *const module,
 		const uint8_t *tx_data, uint32_t length)
 {
 	while(length--)
 		uart_write_wait(module, *tx_data++);
-	
+
 	return STATUS_OK;
 }
 
@@ -513,7 +513,7 @@ enum status_code uart_read_buffer_wait(struct uart_module *const module,
 {
 	while(length--)
 		uart_read_wait(module, rx_data++);
-	
+
 	return STATUS_OK;
 }
 
@@ -825,4 +825,3 @@ void uart_disable_receive_dma(struct uart_module *const module)
 		NVIC_EnableIRQ(UART1_TX_IRQn);
 	}
 }
-

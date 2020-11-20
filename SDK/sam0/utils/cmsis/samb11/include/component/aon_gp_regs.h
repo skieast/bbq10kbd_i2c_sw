@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR AON_GP_REGS */
 /* ========================================================================== */
-/** \addtogroup SAMB11_AON_GP_REGS Always On General Purpose Registers 
+/** \addtogroup SAMB11_AON_GP_REGS Always On General Purpose Registers
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- AON_GP_REGS_AON_PINMUX_SEL : (AON_GP_REGS Offset: 0x00) (R/W 16) Controls the pinmux selection for the AO GPIOs -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t AO_GPIO_0_SEL:2;           /**< bit:   0..1  Pinmux select for AO_GPIO_0              */
     uint16_t :2;                        /**< bit:   2..3  Reserved */
@@ -90,7 +90,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_PMU_CTRL : (AON_GP_REGS Offset: 0x04) (R/W 32) Always On Misc Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t PMU_REGS_4TO1_SEL:1;       /**< bit:      0  If 1 then uses the frequency hopping table otherwise registers in PD0 */
     uint32_t PMU_RTC_CLK_EN:1;          /**< bit:      1  Enables the PMU RTC clock                */
@@ -156,7 +156,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_BLE_LP_CTRL : (AON_GP_REGS Offset: 0x08) (R/W 8) Always On BLE LP Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  WAKEUP_LP_LATCH:1;         /**< bit:      0  If set, this will latch the wakeup signal in the BLE LP block */
     uint8_t  DEEP_SLEEP_STAT_SYNC_EN:1;  /**< bit:      1  If set, this will use the sync flops for deep sleep stat */
@@ -180,7 +180,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_MISC_CTRL : (AON_GP_REGS Offset: 0x0c) (R/W 32) Always On Misc Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
     uint32_t USE_RTC_32KHZ_CLK_SLEEP_TIMER:1;  /**< bit:      1  If set, this will use the RTC version of the 32khz clock for the sleep timer */
@@ -254,7 +254,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_GLOBAL_RESET : (AON_GP_REGS Offset: 0x10) (R/W 8) Active Low Always On Reset Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  GLOBAL_RSTN:1;             /**< bit:      0  Global Reset                             */
     uint8_t  SLEEP_TIMER_RSTN:1;        /**< bit:      1  Sleep Timer Reset                        */
@@ -287,7 +287,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_PULL_ENABLE : (AON_GP_REGS Offset: 0x14) (R/W 8) Active Low Always On Pull Enable Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  AO_GPIO_0:1;               /**< bit:      0  Pull Enable for AO_GPIO_0                */
     uint8_t  AO_GPIO_1:1;               /**< bit:      1  Pull Enable for AO_GPIO_1                */
@@ -316,13 +316,13 @@ typedef union {
 #define AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO_2 AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO_2_Msk      /**< \deprecated Old style mask definition for 1 bit bitfield. Use AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO_2_Msk instead */
 #define AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO__Pos 0                                              /**< (AON_GP_REGS_AON_PULL_ENABLE Position) Pull Enable for AO_GPIO_2 */
 #define AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO__Msk (0x7u << AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO__Pos)  /**< (AON_GP_REGS_AON_PULL_ENABLE Mask) AO_GPIO_ */
-#define AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO_(value) (AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO__Msk & ((value) << AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO__Pos))  
+#define AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO_(value) (AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO__Msk & ((value) << AON_GP_REGS_AON_PULL_ENABLE_AO_GPIO__Pos))
 #define AON_GP_REGS_AON_PULL_ENABLE_MASK    0x07u                                          /**< \deprecated (AON_GP_REGS_AON_PULL_ENABLE) Register MASK  (Use AON_GP_REGS_AON_PULL_ENABLE_Msk instead)  */
 #define AON_GP_REGS_AON_PULL_ENABLE_Msk     0x07u                                          /**< (AON_GP_REGS_AON_PULL_ENABLE) Register Mask  */
 
 /* -------- AON_GP_REGS_AON_RESET_CTRL : (AON_GP_REGS Offset: 0x1c) (R/W 32) Reset Count Control for PD1, PD4, PD6 and PD7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
     uint32_t PD1_COUNT:4;               /**< bit:   4..7  Number of clock cycles to delay the PD1 reset. (also for PD7) Upper 4 MSBs only (bits 3:0 will be forced to 0) */
@@ -352,7 +352,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_BTRIM_ACTIVE : (AON_GP_REGS Offset: 0x20) (R/W 8) BTRIM settings for active mode (i.e. not in retention) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  AON_BTRIM_ACTIVE:4;        /**< bit:   0..3                                           */
     uint8_t  :4;                        /**< bit:   4..7  Reserved */
@@ -372,7 +372,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_BTRIM_RETENTION : (AON_GP_REGS Offset: 0x24) (R/W 8) BTRIM settings for retention mode -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  AON_BTRIM_RETENTION:4;     /**< bit:   0..3                                           */
     uint8_t  :4;                        /**< bit:   4..7  Reserved */
@@ -392,7 +392,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_LPMCU_SCRATCH_PAD : (AON_GP_REGS Offset: 0x40) (R/W 8) Usage for the LPMCU for any sort of status it needs to store for itself before it goes to sleep -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  AON_LPMCU_SCRATCH_PAD:8;   /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -411,7 +411,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_LPMCU_COLD_BOOT : (AON_GP_REGS Offset: 0x44) (R/W 8) To be used by ARM to determine if it is a cold boot or not -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  AON_LPMCU_COLD_BOOT:8;     /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -430,7 +430,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_AON_BO_OUT_STATUS : (AON_GP_REGS Offset: 0x80) (R/ 8) Brown Out Detected (must be cleared manually) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  AON_BO_OUT_STATUS:1;       /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -450,7 +450,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_CLEAR_BROWN_OUT_REG : (AON_GP_REGS Offset: 0x84) (R/W 8) Set to 1 to clear (hold until 0 read at aon_bo_out_status and then this must be cleared to detect another brown out condition) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CLEAR_BROWN_OUT_REG:1;     /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -470,7 +470,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_RF_PMU_REGS_0 : (AON_GP_REGS Offset: 0x400) (R/W 32) RF PMU Registers -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CLK_EDGE_SEL:1;            /**< bit:      0  Select clock edge for Vreg comparator in buck converter */
     uint32_t VOUT_CTRL_BUCK:4;          /**< bit:   1..4  Select the output voltage of the buck converter */
@@ -691,7 +691,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_RF_PMU_REGS_1 : (AON_GP_REGS Offset: 0x404) (R/W 32) RF PMU Registers -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t SADC_BIAS_RES_CTRL:4;      /**< bit:   0..3  Internal reference voltage level for sensor ADC */
     uint32_t SADC_REF_SEL:3;            /**< bit:   4..6  Reference Voltage Source for the Sensor ADC */
@@ -950,7 +950,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_RF_PMU_REGS_2 : (AON_GP_REGS Offset: 0x408) (R/W 16) RF PMU Registers -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t DIG_CORE_LDO_BYP:1;        /**< bit:      0  Bypass mode of digital core LDO which regulates from the buck converter output to the local power domains of each digital power island */
     uint16_t DIG_CORE_LDO_VCTRL:2;      /**< bit:   1..2  Voltage level of the digital core LDO when LDO is not in bypass mode */
@@ -1087,7 +1087,7 @@ typedef union {
 
 /* -------- AON_GP_REGS_MS_GPIO_MODE : (AON_GP_REGS Offset: 0x410) (R/W 8) Analog Mode Select of Mixed Signal GPIOs -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ANALOG_ENABLE_44:1;        /**< bit:      0  Active High Analog Mode Enable for Mixed Signal LP_GPIO_44 */
     uint8_t  ANALOG_ENABLE_45:1;        /**< bit:      1  Active High Analog Mode Enable for Mixed Signal LP_GPIO_45 */
@@ -1120,13 +1120,13 @@ typedef union {
 #define AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE_47 AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE_47_Msk  /**< \deprecated Old style mask definition for 1 bit bitfield. Use AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE_47_Msk instead */
 #define AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE__Pos 0                                              /**< (AON_GP_REGS_MS_GPIO_MODE Position) Active High Analog Mode Enable for Mixed Signal LP_GPIO_47 */
 #define AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE__Msk (0xFu << AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE__Pos)  /**< (AON_GP_REGS_MS_GPIO_MODE Mask) ANALOG_ENABLE_ */
-#define AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE_(value) (AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE__Msk & ((value) << AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE__Pos))  
+#define AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE_(value) (AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE__Msk & ((value) << AON_GP_REGS_MS_GPIO_MODE_ANALOG_ENABLE__Pos))
 #define AON_GP_REGS_MS_GPIO_MODE_MASK       0x0Fu                                          /**< \deprecated (AON_GP_REGS_MS_GPIO_MODE) Register MASK  (Use AON_GP_REGS_MS_GPIO_MODE_Msk instead)  */
 #define AON_GP_REGS_MS_GPIO_MODE_Msk        0x0Fu                                          /**< (AON_GP_REGS_MS_GPIO_MODE) Register Mask  */
 
 /* -------- AON_GP_REGS_IO_PADS_CONTROL : (AON_GP_REGS Offset: 0x414) (R/W 8) Controls behaviour of IO Pads in Sleep Mode -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  LATCH_ENABLE:1;            /**< bit:      0  Active High Latch Enable of IO Pads configuration parameters. When Low, Pads retain their configured state during sleep mode. */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */

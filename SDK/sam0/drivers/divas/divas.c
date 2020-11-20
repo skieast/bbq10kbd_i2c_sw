@@ -470,4 +470,3 @@ __value_in_regs uidiv_return __aeabi_uidivmod(unsigned numerator, unsigned denom
 #endif
 
 /** @} */
-

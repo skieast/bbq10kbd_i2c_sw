@@ -63,7 +63,7 @@ extern "C" {
  */
 
 /** AES interrupt callback function type. */
-typedef void (*aes_callback_t)(void); 
+typedef void (*aes_callback_t)(void);
 
 /** AES callback type. */
 enum aes_callback_type {
@@ -72,11 +72,11 @@ enum aes_callback_type {
 	/** GF Multiplication Complete callback */
 	AES_CALLBACK_GF_MULTI_COMPLETE = 1,
 };
- 
+
 /** \name Callback Configuration and Initialization
  * @{
  */
- 
+
 enum status_code aes_register_callback(
 	const aes_callback_t callback,
 	const enum aes_callback_type type);

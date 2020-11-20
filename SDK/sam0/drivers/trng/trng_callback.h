@@ -155,4 +155,3 @@ void trng_abort_job(
 #endif
 
 #endif /* TRNG_CALLBACK_H_INCLUDED */
-

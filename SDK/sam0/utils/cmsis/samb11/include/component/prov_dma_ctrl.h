@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR PROV_DMA_CTRL */
 /* ========================================================================== */
-/** \addtogroup SAMB11_PROV_DMA_CTRL 4 Channel DMA Controller 
+/** \addtogroup SAMB11_PROV_DMA_CTRL 4 Channel DMA Controller
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- PROV_DMA_CTRL_CH0_CMD_REG0 : (PROV_DMA_CTRL Offset: 0x00) (R/W 32) Channel 0 First Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_START_ADDR:32;          /**< bit:  0..31  Start Address of Read Buffer             */
   } bit;                                /**< Structure used for bit  access */
@@ -79,7 +79,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_CMD_REG1 : (PROV_DMA_CTRL Offset: 0x04) (R/W 32) Channel 0 Second Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_START_ADDR:32;          /**< bit:  0..31  Start Address of Write Buffer            */
   } bit;                                /**< Structure used for bit  access */
@@ -98,7 +98,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_CMD_REG2 : (PROV_DMA_CTRL Offset: 0x08) (R/W 16) Channel 0 Third Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t BUFFER_SIZE:13;            /**< bit:  0..12  Size (in Bytes) of Buffer to Transfer    */
     uint16_t :3;                        /**< bit: 13..15  Reserved */
@@ -118,7 +118,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_CMD_REG3 : (PROV_DMA_CTRL Offset: 0x0c) (R/W 32) Channel 0 Fourth Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CMD_SET_INT:1;             /**< bit:      0  Active High Interrupt Enable once buffer has been transfered */
     uint32_t CMD_LAST:1;                /**< bit:      1  If set, channel stops when buffer done, otherwise load from CMD_NEXT_ADDR */
@@ -145,7 +145,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_STATIC_REG0 : (PROV_DMA_CTRL Offset: 0x10) (R/W 32) Channel 0 Static Configuration Read -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB read burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -174,7 +174,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_STATIC_REG1 : (PROV_DMA_CTRL Offset: 0x14) (R/W 32) Channel 0 Static Configuration Write -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB write burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -203,7 +203,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_STATIC_REG2 : (PROV_DMA_CTRL Offset: 0x18) (R/W 32) Channel 0 Block Mode -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :16;                       /**< bit:  0..15  Reserved */
     uint32_t JOINT:1;                   /**< bit:     16  If set channel will work in joint mode   */
@@ -237,7 +237,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_STATIC_REG4 : (PROV_DMA_CTRL Offset: 0x20) (R/W 32) Channel 0 Static Configuration Peripheral -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_PERIPH_NUM:5;           /**< bit:   0..4  Number of peripheral to read from (0 if memory or no peripheral flow control) */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -272,7 +272,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_RESRICT_REG : (PROV_DMA_CTRL Offset: 0x2c) (R/ 16) Channel 0 Restrictions Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t RD_ALLOW_FULL_FIFO:1;      /**< bit:      0  Read start address does not restrict burst size */
     uint16_t WR_ALLOW_FULL_FIFO:1;      /**< bit:      1  Write start address does not restrict burst size */
@@ -313,7 +313,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_FIFO_FULLNESS_REG : (PROV_DMA_CTRL Offset: 0x38) (R/ 32) Channel 0 FIFO Fullness Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_GAP:13;                 /**< bit:  0..12  Remaining space (in bytes) in FIFO for read data */
     uint32_t :3;                        /**< bit: 13..15  Reserved */
@@ -338,7 +338,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_CH_ENABLE_REG : (PROV_DMA_CTRL Offset: 0x40) (R/W 8) Channel 0 Channel Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH0_CH_ENABLE_REG:1;       /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -358,7 +358,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_CH_START_REG : (PROV_DMA_CTRL Offset: 0x44) (/W 8) Channel 0 Channel Start Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH0_CH_START_REG:1;        /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -378,7 +378,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_CH_ACTIVE_REG : (PROV_DMA_CTRL Offset: 0x48) (R/ 8) Channel 0 Channel Active Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_RD_ACTIVE:1;            /**< bit:      0  Set if channel is enabled and all read data has been received */
     uint8_t  CH_WR_ACTIVE:1;            /**< bit:      1  Set if channel is enabled and all write data has been transfered */
@@ -402,7 +402,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_COUNT_REG : (PROV_DMA_CTRL Offset: 0x50) (R/ 32) Channel 0 Buffer Counter Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t BUFF_COUNT:12;             /**< bit:  0..11  Number of buffers transferred by channel since started */
     uint32_t :4;                        /**< bit: 12..15  Reserved */
@@ -427,7 +427,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_INT_RAWSTAT_REG : (PROV_DMA_CTRL Offset: 0xa0) (R/W 8) Channel 0 Interrupt Raw Status (Write 1 to any field to issue interrupt) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -474,7 +474,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_INT_CLEAR_REG : (PROV_DMA_CTRL Offset: 0xa4) (R/W 8) Channel 0 Interrupt Clear (Write 1 to clear) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Clear channel end interrupt. Decrements INT_COUNT register */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Clear AHB read slave error               */
@@ -521,7 +521,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_INT_ENABLE_REG : (PROV_DMA_CTRL Offset: 0xa8) (R/W 8) Channel 0 Interrupt Enable -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Enables end of channel interrupt         */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Enables AHB read slave error interrupt   */
@@ -568,7 +568,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH0_INT_STATUS_REG : (PROV_DMA_CTRL Offset: 0xac) (R/W 8) Channel 0 Interrupt Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -615,7 +615,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_CMD_REG0 : (PROV_DMA_CTRL Offset: 0x100) (R/W 32) Channel 1 First Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_START_ADDR:32;          /**< bit:  0..31  Start Address of Read Buffer             */
   } bit;                                /**< Structure used for bit  access */
@@ -634,7 +634,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_CMD_REG1 : (PROV_DMA_CTRL Offset: 0x104) (R/W 32) Channel 1 Second Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_START_ADDR:32;          /**< bit:  0..31  Start Address of Write Buffer            */
   } bit;                                /**< Structure used for bit  access */
@@ -653,7 +653,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_CMD_REG2 : (PROV_DMA_CTRL Offset: 0x108) (R/W 16) Channel 1 Third Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t BUFFER_SIZE:13;            /**< bit:  0..12  Size (in Bytes) of Buffer to Transfer    */
     uint16_t :3;                        /**< bit: 13..15  Reserved */
@@ -673,7 +673,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_CMD_REG3 : (PROV_DMA_CTRL Offset: 0x10c) (R/W 32) Channel 1 Fourth Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CMD_SET_INT:1;             /**< bit:      0  Active High Interrupt Enable once buffer has been transfered */
     uint32_t CMD_LAST:1;                /**< bit:      1  If set, channel stops when buffer done, otherwise load from CMD_NEXT_ADDR */
@@ -700,7 +700,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_STATIC_REG0 : (PROV_DMA_CTRL Offset: 0x110) (R/W 32) Channel 1 Static Configuration Read -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB read burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -729,7 +729,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_STATIC_REG1 : (PROV_DMA_CTRL Offset: 0x114) (R/W 32) Channel 1 Static Configuration Write -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB write burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -758,7 +758,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_STATIC_REG2 : (PROV_DMA_CTRL Offset: 0x118) (R/W 32) Channel 1 Block Mode -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :16;                       /**< bit:  0..15  Reserved */
     uint32_t JOINT:1;                   /**< bit:     16  If set channel will work in joint mode   */
@@ -792,7 +792,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_STATIC_REG4 : (PROV_DMA_CTRL Offset: 0x120) (R/W 32) Channel 1 Static Configuration Peripheral -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_PERIPH_NUM:5;           /**< bit:   0..4  Number of peripheral to read from (0 if memory or no peripheral flow control) */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -827,7 +827,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_RESRICT_REG : (PROV_DMA_CTRL Offset: 0x12c) (R/ 16) Channel 1 Restrictions Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t RD_ALLOW_FULL_FIFO:1;      /**< bit:      0  Read start address does not restrict burst size */
     uint16_t WR_ALLOW_FULL_FIFO:1;      /**< bit:      1  Write start address does not restrict burst size */
@@ -868,7 +868,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_FIFO_FULLNESS_REG : (PROV_DMA_CTRL Offset: 0x138) (R/ 32) Channel 1 FIFO Fullness Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_GAP:13;                 /**< bit:  0..12  Remaining space (in bytes) in FIFO for read data */
     uint32_t :3;                        /**< bit: 13..15  Reserved */
@@ -893,7 +893,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_CH_ENABLE_REG : (PROV_DMA_CTRL Offset: 0x140) (R/W 8) Channel 1 Channel Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH1_CH_ENABLE_REG:1;       /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -913,7 +913,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_CH_START_REG : (PROV_DMA_CTRL Offset: 0x144) (/W 8) Channel 1 Channel Start Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH1_CH_START_REG:1;        /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -933,7 +933,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_CH_ACTIVE_REG : (PROV_DMA_CTRL Offset: 0x148) (R/ 8) Channel 1 Channel Active Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_RD_ACTIVE:1;            /**< bit:      0  Set if channel is enabled and all read data has been received */
     uint8_t  CH_WR_ACTIVE:1;            /**< bit:      1  Set if channel is enabled and all write data has been transfered */
@@ -957,7 +957,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_COUNT_REG : (PROV_DMA_CTRL Offset: 0x150) (R/ 32) Channel 1 Buffer Counter Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t BUFF_COUNT:12;             /**< bit:  0..11  Number of buffers transferred by channel since started */
     uint32_t :4;                        /**< bit: 12..15  Reserved */
@@ -982,7 +982,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_INT_RAWSTAT_REG : (PROV_DMA_CTRL Offset: 0x1a0) (R/W 8) Channel 1 Interrupt Raw Status (Write 1 to any field to issue interrupt) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -1029,7 +1029,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_INT_CLEAR_REG : (PROV_DMA_CTRL Offset: 0x1a4) (R/W 8) Channel 1 Interrupt Clear (Write 1 to clear) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Clear channel end interrupt. Decrements INT_COUNT register */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Clear AHB read slave error               */
@@ -1076,7 +1076,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_INT_ENABLE_REG : (PROV_DMA_CTRL Offset: 0x1a8) (R/W 8) Channel 1 Interrupt Enable -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Enables end of channel interrupt         */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Enables AHB read slave error interrupt   */
@@ -1123,7 +1123,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH1_INT_STATUS_REG : (PROV_DMA_CTRL Offset: 0x1ac) (R/W 8) Channel 1 Interrupt Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -1170,7 +1170,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_CMD_REG0 : (PROV_DMA_CTRL Offset: 0x200) (R/W 32) Channel 2 First Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_START_ADDR:32;          /**< bit:  0..31  Start Address of Read Buffer             */
   } bit;                                /**< Structure used for bit  access */
@@ -1189,7 +1189,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_CMD_REG1 : (PROV_DMA_CTRL Offset: 0x204) (R/W 32) Channel 2 Second Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_START_ADDR:32;          /**< bit:  0..31  Start Address of Write Buffer            */
   } bit;                                /**< Structure used for bit  access */
@@ -1208,7 +1208,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_CMD_REG2 : (PROV_DMA_CTRL Offset: 0x208) (R/W 16) Channel 2 Third Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t BUFFER_SIZE:13;            /**< bit:  0..12  Size (in Bytes) of Buffer to Transfer    */
     uint16_t :3;                        /**< bit: 13..15  Reserved */
@@ -1228,7 +1228,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_CMD_REG3 : (PROV_DMA_CTRL Offset: 0x20c) (R/W 32) Channel 2 Fourth Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CMD_SET_INT:1;             /**< bit:      0  Active High Interrupt Enable once buffer has been transfered */
     uint32_t CMD_LAST:1;                /**< bit:      1  If set, channel stops when buffer done, otherwise load from CMD_NEXT_ADDR */
@@ -1255,7 +1255,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_STATIC_REG0 : (PROV_DMA_CTRL Offset: 0x210) (R/W 32) Channel 2 Static Configuration Read -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB read burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -1284,7 +1284,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_STATIC_REG1 : (PROV_DMA_CTRL Offset: 0x214) (R/W 32) Channel 2 Static Configuration Write -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB write burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -1313,7 +1313,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_STATIC_REG2 : (PROV_DMA_CTRL Offset: 0x218) (R/W 32) Channel 2 Block Mode -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :16;                       /**< bit:  0..15  Reserved */
     uint32_t JOINT:1;                   /**< bit:     16  If set channel will work in joint mode   */
@@ -1347,7 +1347,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_STATIC_REG4 : (PROV_DMA_CTRL Offset: 0x220) (R/W 32) Channel 2 Static Configuration Peripheral -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_PERIPH_NUM:5;           /**< bit:   0..4  Number of peripheral to read from (0 if memory or no peripheral flow control) */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -1382,7 +1382,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_RESRICT_REG : (PROV_DMA_CTRL Offset: 0x22c) (R/ 16) Channel 2 Restrictions Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t RD_ALLOW_FULL_FIFO:1;      /**< bit:      0  Read start address does not restrict burst size */
     uint16_t WR_ALLOW_FULL_FIFO:1;      /**< bit:      1  Write start address does not restrict burst size */
@@ -1423,7 +1423,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_FIFO_FULLNESS_REG : (PROV_DMA_CTRL Offset: 0x238) (R/ 32) Channel 2 FIFO Fullness Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_GAP:13;                 /**< bit:  0..12  Remaining space (in bytes) in FIFO for read data */
     uint32_t :3;                        /**< bit: 13..15  Reserved */
@@ -1448,7 +1448,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_CH_ENABLE_REG : (PROV_DMA_CTRL Offset: 0x240) (R/W 8) Channel 2 Channel Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH2_CH_ENABLE_REG:1;       /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -1468,7 +1468,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_CH_START_REG : (PROV_DMA_CTRL Offset: 0x244) (/W 8) Channel 2 Channel Start Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH2_CH_START_REG:1;        /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -1488,7 +1488,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_CH_ACTIVE_REG : (PROV_DMA_CTRL Offset: 0x248) (R/ 8) Channel 2 Channel Active Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_RD_ACTIVE:1;            /**< bit:      0  Set if channel is enabled and all read data has been received */
     uint8_t  CH_WR_ACTIVE:1;            /**< bit:      1  Set if channel is enabled and all write data has been transfered */
@@ -1512,7 +1512,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_COUNT_REG : (PROV_DMA_CTRL Offset: 0x250) (R/ 32) Channel 2 Buffer Counter Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t BUFF_COUNT:12;             /**< bit:  0..11  Number of buffers transferred by channel since started */
     uint32_t :4;                        /**< bit: 12..15  Reserved */
@@ -1537,7 +1537,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_INT_RAWSTAT_REG : (PROV_DMA_CTRL Offset: 0x2a0) (R/W 8) Channel 2 Interrupt Raw Status (Write 1 to any field to issue interrupt) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -1584,7 +1584,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_INT_CLEAR_REG : (PROV_DMA_CTRL Offset: 0x2a4) (R/W 8) Channel 2 Interrupt Clear (Write 1 to clear) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Clear channel end interrupt. Decrements INT_COUNT register */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Clear AHB read slave error               */
@@ -1631,7 +1631,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_INT_ENABLE_REG : (PROV_DMA_CTRL Offset: 0x2a8) (R/W 8) Channel 2 Interrupt Enable -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Enables end of channel interrupt         */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Enables AHB read slave error interrupt   */
@@ -1678,7 +1678,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH2_INT_STATUS_REG : (PROV_DMA_CTRL Offset: 0x2ac) (R/W 8) Channel 2 Interrupt Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -1725,7 +1725,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_CMD_REG0 : (PROV_DMA_CTRL Offset: 0x300) (R/W 32) Channel 3 First Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_START_ADDR:32;          /**< bit:  0..31  Start Address of Read Buffer             */
   } bit;                                /**< Structure used for bit  access */
@@ -1744,7 +1744,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_CMD_REG1 : (PROV_DMA_CTRL Offset: 0x304) (R/W 32) Channel 3 Second Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_START_ADDR:32;          /**< bit:  0..31  Start Address of Write Buffer            */
   } bit;                                /**< Structure used for bit  access */
@@ -1763,7 +1763,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_CMD_REG2 : (PROV_DMA_CTRL Offset: 0x308) (R/W 16) Channel 3 Third Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t BUFFER_SIZE:13;            /**< bit:  0..12  Size (in Bytes) of Buffer to Transfer    */
     uint16_t :3;                        /**< bit: 13..15  Reserved */
@@ -1783,7 +1783,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_CMD_REG3 : (PROV_DMA_CTRL Offset: 0x30c) (R/W 32) Channel 3 Fourth Line Channel Command -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CMD_SET_INT:1;             /**< bit:      0  Active High Interrupt Enable once buffer has been transfered */
     uint32_t CMD_LAST:1;                /**< bit:      1  If set, channel stops when buffer done, otherwise load from CMD_NEXT_ADDR */
@@ -1810,7 +1810,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_STATIC_REG0 : (PROV_DMA_CTRL Offset: 0x310) (R/W 32) Channel 3 Static Configuration Read -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB read burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -1839,7 +1839,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_STATIC_REG1 : (PROV_DMA_CTRL Offset: 0x314) (R/W 32) Channel 3 Static Configuration Write -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WR_BURST_MAX_SIZE:7;       /**< bit:   0..6  Maximum number of bytes of an AHB write burst */
     uint32_t :9;                        /**< bit:  7..15  Reserved */
@@ -1868,7 +1868,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_STATIC_REG2 : (PROV_DMA_CTRL Offset: 0x318) (R/W 32) Channel 3 Block Mode -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :16;                       /**< bit:  0..15  Reserved */
     uint32_t JOINT:1;                   /**< bit:     16  If set channel will work in joint mode   */
@@ -1902,7 +1902,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_STATIC_REG4 : (PROV_DMA_CTRL Offset: 0x320) (R/W 32) Channel 3 Static Configuration Peripheral -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_PERIPH_NUM:5;           /**< bit:   0..4  Number of peripheral to read from (0 if memory or no peripheral flow control) */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -1937,7 +1937,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_RESRICT_REG : (PROV_DMA_CTRL Offset: 0x32c) (R/ 16) Channel 3 Restrictions Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t RD_ALLOW_FULL_FIFO:1;      /**< bit:      0  Read start address does not restrict burst size */
     uint16_t WR_ALLOW_FULL_FIFO:1;      /**< bit:      1  Write start address does not restrict burst size */
@@ -1978,7 +1978,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_FIFO_FULLNESS_REG : (PROV_DMA_CTRL Offset: 0x338) (R/ 32) Channel 3 FIFO Fullness Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t RD_GAP:13;                 /**< bit:  0..12  Remaining space (in bytes) in FIFO for read data */
     uint32_t :3;                        /**< bit: 13..15  Reserved */
@@ -2003,7 +2003,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_CH_ENABLE_REG : (PROV_DMA_CTRL Offset: 0x340) (R/W 8) Channel 3 Channel Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH3_CH_ENABLE_REG:1;       /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -2023,7 +2023,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_CH_START_REG : (PROV_DMA_CTRL Offset: 0x344) (/W 8) Channel 3 Channel Start Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH3_CH_START_REG:1;        /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -2043,7 +2043,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_CH_ACTIVE_REG : (PROV_DMA_CTRL Offset: 0x348) (R/ 8) Channel 3 Channel Active Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_RD_ACTIVE:1;            /**< bit:      0  Set if channel is enabled and all read data has been received */
     uint8_t  CH_WR_ACTIVE:1;            /**< bit:      1  Set if channel is enabled and all write data has been transfered */
@@ -2067,7 +2067,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_COUNT_REG : (PROV_DMA_CTRL Offset: 0x350) (R/ 32) Channel 3 Buffer Counter Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t BUFF_COUNT:12;             /**< bit:  0..11  Number of buffers transferred by channel since started */
     uint32_t :4;                        /**< bit: 12..15  Reserved */
@@ -2092,7 +2092,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_INT_RAWSTAT_REG : (PROV_DMA_CTRL Offset: 0x3a0) (R/W 8) Channel 3 Interrupt Raw Status (Write 1 to any field to issue interrupt) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -2139,7 +2139,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_INT_CLEAR_REG : (PROV_DMA_CTRL Offset: 0x3a4) (R/W 8) Channel 3 Interrupt Clear (Write 1 to clear) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Clear channel end interrupt. Decrements INT_COUNT register */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Clear AHB read slave error               */
@@ -2186,7 +2186,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_INT_ENABLE_REG : (PROV_DMA_CTRL Offset: 0x3a8) (R/W 8) Channel 3 Interrupt Enable -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Enables end of channel interrupt         */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  Enables AHB read slave error interrupt   */
@@ -2233,7 +2233,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CH3_INT_STATUS_REG : (PROV_DMA_CTRL Offset: 0x3ac) (R/W 8) Channel 3 Interrupt Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_END:1;                  /**< bit:      0  Indicates an unserviced channel end interrupt */
     uint8_t  RD_SLVERR:1;               /**< bit:      1  AHB read slave error                     */
@@ -2280,7 +2280,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CORE_INT_STATUS : (PROV_DMA_CTRL Offset: 0x800) (R/ 8) Indicates which channels caused interrupt -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CHANNEL_0:1;               /**< bit:      0  Indicates channel 0 caused interrupt     */
     uint8_t  CHANNEL_1:1;               /**< bit:      1  Indicates channel 1 caused interrupt     */
@@ -2313,13 +2313,13 @@ typedef union {
 #define PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL_3 PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL_3_Msk    /**< \deprecated Old style mask definition for 1 bit bitfield. Use PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL_3_Msk instead */
 #define PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Pos 0                                              /**< (PROV_DMA_CTRL_CORE_INT_STATUS Position) Indicates channel 3 caused interrupt */
 #define PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Msk (0xFu << PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Pos)  /**< (PROV_DMA_CTRL_CORE_INT_STATUS Mask) CHANNEL_ */
-#define PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL_(value) (PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Msk & ((value) << PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Pos))  
+#define PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL_(value) (PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Msk & ((value) << PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Pos))
 #define PROV_DMA_CTRL_CORE_INT_STATUS_MASK  0x0Fu                                          /**< \deprecated (PROV_DMA_CTRL_CORE_INT_STATUS) Register MASK  (Use PROV_DMA_CTRL_CORE_INT_STATUS_Msk instead)  */
 #define PROV_DMA_CTRL_CORE_INT_STATUS_Msk   0x0Fu                                          /**< (PROV_DMA_CTRL_CORE_INT_STATUS) Register Mask  */
 
 /* -------- PROV_DMA_CTRL_CORE_JOINT_MODE : (PROV_DMA_CTRL Offset: 0x830) (R/W 8) If set, core works in joint mode -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CORE_JOINT_MODE:1;         /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -2339,7 +2339,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CORE_PRIORITY : (PROV_DMA_CTRL Offset: 0x838) (R/W 16) Core Priority Channels -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t RD_PRIO_TOP_NUM:3;         /**< bit:   0..2  Core Read Top Priority Channel Number    */
     uint16_t RD_PRIO_TOP:1;             /**< bit:      3  Core Read Top Priority Enable            */
@@ -2386,7 +2386,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CORE_CLKDIV : (PROV_DMA_CTRL Offset: 0x840) (R/W 8) Ratio between main clock and core clock -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CORE_CLKDIV:4;             /**< bit:   0..3                                           */
     uint8_t  :4;                        /**< bit:   4..7  Reserved */
@@ -2406,7 +2406,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CORE_CH_START : (PROV_DMA_CTRL Offset: 0x848) (/W 8) Channel Start -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CH_0:1;                    /**< bit:      0  Starts Channel 0                         */
     uint8_t  CH_1:1;                    /**< bit:      1  Starts Channel 1                         */
@@ -2439,13 +2439,13 @@ typedef union {
 #define PROV_DMA_CTRL_CORE_CH_START_CH_3    PROV_DMA_CTRL_CORE_CH_START_CH_3_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use PROV_DMA_CTRL_CORE_CH_START_CH_3_Msk instead */
 #define PROV_DMA_CTRL_CORE_CH_START_CH__Pos 0                                              /**< (PROV_DMA_CTRL_CORE_CH_START Position) Starts Channel 3 */
 #define PROV_DMA_CTRL_CORE_CH_START_CH__Msk (0xFu << PROV_DMA_CTRL_CORE_CH_START_CH__Pos)  /**< (PROV_DMA_CTRL_CORE_CH_START Mask) CH_ */
-#define PROV_DMA_CTRL_CORE_CH_START_CH_(value) (PROV_DMA_CTRL_CORE_CH_START_CH__Msk & ((value) << PROV_DMA_CTRL_CORE_CH_START_CH__Pos))  
+#define PROV_DMA_CTRL_CORE_CH_START_CH_(value) (PROV_DMA_CTRL_CORE_CH_START_CH__Msk & ((value) << PROV_DMA_CTRL_CORE_CH_START_CH__Pos))
 #define PROV_DMA_CTRL_CORE_CH_START_MASK    0x0Fu                                          /**< \deprecated (PROV_DMA_CTRL_CORE_CH_START) Register MASK  (Use PROV_DMA_CTRL_CORE_CH_START_Msk instead)  */
 #define PROV_DMA_CTRL_CORE_CH_START_Msk     0x0Fu                                          /**< (PROV_DMA_CTRL_CORE_CH_START) Register Mask  */
 
 /* -------- PROV_DMA_CTRL_PERIPH_RX_CTRL : (PROV_DMA_CTRL Offset: 0x850) (R/W 32) Direct control of peripheral RX request -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
     uint32_t RX_REQ:31;                 /**< bit:  1..31  Allows direct control of the peripheral RX request bus */
@@ -2465,7 +2465,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_PERIPH_TX_CTRL : (PROV_DMA_CTRL Offset: 0x860) (R/W 32) Direct control of peripheral TX request -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
     uint32_t TX_REQ:31;                 /**< bit:  1..31  Allows direct control of the peripheral TX request bus */
@@ -2485,7 +2485,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CORE_IDLE : (PROV_DMA_CTRL Offset: 0x8d0) (R/ 8) Indicates all channels have stopped and transactions have completed -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CORE_IDLE:1;               /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -2505,7 +2505,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_USER_DEF_STATUS : (PROV_DMA_CTRL Offset: 0x8e0) (R/ 32) User Defined Configurations -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t INT_NUM:4;                 /**< bit:   0..3  Number of bits in interrupt bus          */
     uint32_t :1;                        /**< bit:      4  Reserved */
@@ -2554,7 +2554,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CORE_DEF_STATUS0 : (PROV_DMA_CTRL Offset: 0x8f0) (R/ 32) User Defined Core Configurations 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CH_NUM:4;                  /**< bit:   0..3  Number of channels (reads 1, should read 4) */
     uint32_t FIFO_SIZE:4;               /**< bit:   4..7  Log2 of FIFO size per channel            */
@@ -2599,7 +2599,7 @@ typedef union {
 
 /* -------- PROV_DMA_CTRL_CORE_DEF_STATUS1 : (PROV_DMA_CTRL Offset: 0x8f4) (R/ 16) User Defined Core Configurations 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t WDT:1;                     /**< bit:      0  Set if core has watchdog timer           */
     uint16_t AHB_TIMEOUT:1;             /**< bit:      1  Set if core supports timeouts on AHB read and write buses */

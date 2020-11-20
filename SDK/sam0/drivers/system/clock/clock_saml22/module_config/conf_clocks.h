@@ -168,4 +168,3 @@
 #  define CONF_CLOCK_GCLK_4_OUTPUT_ENABLE         false
 
 #endif /* CONF_CLOCKS_H_INCLUDED */
-

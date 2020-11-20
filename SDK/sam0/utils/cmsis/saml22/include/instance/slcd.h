@@ -130,9 +130,9 @@
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance parameters for SLCD peripheral ========== */
-#define SLCD_DMAC_ID_ABMDRDY        34      
-#define SLCD_DMAC_ID_ACMDRDY        33      
-#define SLCD_DMAC_ID_DMU            32      
+#define SLCD_DMAC_ID_ABMDRDY        34
+#define SLCD_DMAC_ID_ACMDRDY        33
+#define SLCD_DMAC_ID_DMU            32
 #define SLCD_MAX_COM                8        // Max number of COM lines (4 or 8)
 #define SLCD_MAX_SEG                44       // Max number of SEG lines (24 or 44)
 #define SLCD_NB_LP                  52       // Number of LCD pins ([28..64] or [48..64])

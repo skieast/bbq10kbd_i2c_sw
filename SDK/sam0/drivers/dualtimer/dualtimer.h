@@ -86,7 +86,7 @@
  *
  *   1. Clearing the one-shot count bit in the control register, in which case the
  *     count proceeds according to the selection of Free-running or Periodic mode.
- *   
+ *
  *   2. Writing a new value to the Load Value register.
  * - Free-running Mode
  *
@@ -131,7 +131,7 @@
  * clock, and is used by the register interface. TIMCLK is the input to the prescale
  * units and the decrementing counters.
  *
- * This provision of two clock inputs enables the counters to continue to run while 
+ * This provision of two clock inputs enables the counters to continue to run while
  * the APB system is in a sleep state when PCLK is disabled. External system control
  * logic must handle the changeover periods when PCLK is disabled and enabled to ensure
  * that the PCLK and TIMCLK inputs are fed with synchronous signals when any register

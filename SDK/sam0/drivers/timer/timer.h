@@ -78,7 +78,7 @@
  *
  * - You can generate an interrupt request signal, TIMERINT,
  * when the counter reaches 0.
- 
+
  * - The interrupt request is held until it is cleared by writing to the INTCLEAR Register.
  *
  * - You can use the zero to one transition of the external input signal, EXTIN, as a timer enable.
@@ -88,7 +88,7 @@
  *
  * - The external clock, EXTIN, must be slower than half of the peripheral clock because it is
  * sampled by a double flip-flop and then goes through edge-detection logic when the
- * external inputs act as a clock. 
+ * external inputs act as a clock.
  *
  * - A separate clock pin, PCLKG, for the APB register read or write logic that permits the
  * clock to peripheral register logic to stop when there is no APB activity.

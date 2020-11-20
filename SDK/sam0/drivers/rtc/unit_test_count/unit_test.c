@@ -78,7 +78,7 @@
  *  - SAM C21 Xplained Pro board
  *  - SAM D20 Xplained Pro board
  *  - SAM R30 Xplained Pro board
- *  
+ *
  * \section asfdoc_sam0_rtc_unit_test_setup Setup
  *
  * To run the test:
@@ -201,7 +201,7 @@ static void run_rtc_count_test(const struct test_case *test)
 	status = rtc_count_set_count(&rtc_inst, 0x0);
 	test_assert_true(test, status == STATUS_OK,
 			"RTC set count failed");
-			
+
 	/* Enable the RTC */
 	rtc_count_enable(&rtc_inst);
 
@@ -220,7 +220,7 @@ static void run_rtc_count_test(const struct test_case *test)
 	test_assert_true(test, result == true,
 	"RTC count overflow test failed");
 	rtc_count_clear_overflow(&rtc_inst);
-	
+
 	rtc_count_disable(&rtc_inst);
 
 }
@@ -234,7 +234,7 @@ static void run_rtc_count_test(const struct test_case *test)
 static void run_rtc_count_interrupt_test(const struct test_case *test)
 {
 	enum status_code status;
-	
+
 	status = rtc_count_register_callback(
 			&rtc_inst, rtc_count_match_callback, RTC_COUNT_CALLBACK_COMPARE_1);
 	test_assert_true(test, status == STATUS_OK,

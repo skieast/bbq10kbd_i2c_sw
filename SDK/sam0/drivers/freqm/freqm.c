@@ -92,7 +92,7 @@ enum status_code freqm_init(
 	gclk_chan_conf.source_generator = config->ref_clock_source;
 	system_gclk_chan_set_config(FREQM_GCLK_ID_REF, &gclk_chan_conf);
 	system_gclk_chan_enable(FREQM_GCLK_ID_REF);
-	
+
 	module_inst->ref_clock_freq = system_gclk_gen_get_hz(config->ref_clock_source);
 
 	/* Perform a software reset */
@@ -129,7 +129,7 @@ enum status_code freqm_init(
  * \retval FREQM_STATUS_MEASURE_DONE   Measurement result was retrieved successfully
  * \retval FREQM_STATUS_MEASURE_BUSY   Measurement result was not ready
  * \retval FREQM_STATUS_CNT_OVERFLOW   Measurement result was overflow
- *                              
+ *
  * \note If overflow occurred, configure faster reference clock or reduce reference clock cycles.
  */
 enum freqm_status freqm_get_result_value(

@@ -89,7 +89,7 @@ enum i2c_master_interrupt_flag {
 /**
  * \brief I<SUP>2</SUP>C frequencies
  *
- * Values for I<SUP>2</SUP>C speeds supported by the module. 
+ * Values for I<SUP>2</SUP>C speeds supported by the module.
  *
  */
 enum i2c_master_baud_rate {
@@ -241,4 +241,3 @@ enum status_code i2c_master_write_byte(
 #endif
 
 #endif /* I2C_MASTER_H_INCLUDED */
-

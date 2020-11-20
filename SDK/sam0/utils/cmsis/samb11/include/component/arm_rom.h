@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR ARM_ROM */
 /* ========================================================================== */
-/** \addtogroup SAMB11_ARM_ROM ARM ROM 
+/** \addtogroup SAMB11_ARM_ROM ARM ROM
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- ARM_ROM_ROM_SCS : (ARM_ROM Offset: 0x00) (R/ 32) Points to the SCS at 0xE000E000 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ROM_SCS:32;                /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -79,7 +79,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_DWT : (ARM_ROM Offset: 0x10) (R/ 32) Points to the DWT at 0xE0001000 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ROM_DWT:32;                /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -98,7 +98,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_BPU : (ARM_ROM Offset: 0x20) (R/ 32) Points to the BPU at 0xE0002000 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ROM_BPU:32;                /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -117,7 +117,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_EOT : (ARM_ROM Offset: 0x30) (R/ 32) End of Table Marker -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ROM_EOT:32;                /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -136,7 +136,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_CSMT : (ARM_ROM Offset: 0xfcc) (R/ 8) System Memory accessible through DAP -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ROM_CSMT:1;                /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -156,7 +156,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_PID4 : (ARM_ROM Offset: 0xfd0) (R/ 8) Peripheral ID Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_C_CODE:4;           /**< bit:   0..3  JEP106 C Code                            */
     uint8_t  BLOCK_COUNT:4;             /**< bit:   4..7  Block Count                              */
@@ -179,7 +179,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_PID0 : (ARM_ROM Offset: 0xfe0) (R/ 8) Peripheral ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:8;             /**< bit:   0..7  Part Number Bits 7:0                     */
   } bit;                                /**< Structure used for bit  access */
@@ -198,7 +198,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_PID1 : (ARM_ROM Offset: 0xfe4) (R/ 8) Peripheral ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:4;             /**< bit:   0..3  Part Number Bits 11:8                    */
     uint8_t  JEP106_ID_3_0:4;           /**< bit:   4..7  JEP106 ID Code Bits 6:4                  */
@@ -221,7 +221,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_PID2 : (ARM_ROM Offset: 0xfe8) (R/ 8) Peripheral ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_ID_6_4:3;           /**< bit:   0..2  JEP106 ID Code Bits 6:4                  */
     uint8_t  JEDEC_USED:1;              /**< bit:      3  JEDEC Used                               */
@@ -248,7 +248,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_PID3 : (ARM_ROM Offset: 0xfec) (R/ 8) Peripheral ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CUSTOMER_MOD_NUMBER:4;     /**< bit:   0..3  Customer Modification Number             */
     uint8_t  ECO_REV_NUMBER:4;          /**< bit:   4..7  ECO Revision Number                      */
@@ -271,7 +271,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_CID0 : (ARM_ROM Offset: 0xff0) (R/ 8) Component ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ROM_CID0:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -290,7 +290,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_CID1 : (ARM_ROM Offset: 0xff4) (R/ 8) Component ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ROM_CID1:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -309,7 +309,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_CID2 : (ARM_ROM Offset: 0xff8) (R/ 8) Component ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ROM_CID2:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -328,7 +328,7 @@ typedef union {
 
 /* -------- ARM_ROM_ROM_CID3 : (ARM_ROM Offset: 0xffc) (R/ 8) Component ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ROM_CID3:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */

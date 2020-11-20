@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR ARM_SYSCTRL */
 /* ========================================================================== */
-/** \addtogroup SAMB11_ARM_SYSCTRL ARM System Control 
+/** \addtogroup SAMB11_ARM_SYSCTRL ARM System Control
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- ARM_SYSCTRL_ACTLR : (ARM_SYSCTRL Offset: 0x08) (R/ 32) Auxiliary Control Register (not implemented) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ACTLR:32;                  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -79,7 +79,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SYST_CSR : (ARM_SYSCTRL Offset: 0x10) (R/W 32) SysTick Control and Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ENABLE:1;                  /**< bit:      0  Indicates the enabled status of the SysTick counter */
     uint32_t TICKINT:1;                 /**< bit:      1  Indicates whether counting to 0 causes the status of the SysTick exception to change to pending */
@@ -120,7 +120,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SYST_RVR : (ARM_SYSCTRL Offset: 0x14) (R/W 32) SysTick Reload Value Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t SYST_RVR:24;               /**< bit:  0..23                                           */
     uint32_t :8;                        /**< bit: 24..31  Reserved */
@@ -140,7 +140,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SYST_CVR : (ARM_SYSCTRL Offset: 0x18) (R/W 32) SysTick Current Value Register (Any Write Clears to 0) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t SYST_CVR:24;               /**< bit:  0..23                                           */
     uint32_t :8;                        /**< bit: 24..31  Reserved */
@@ -160,7 +160,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SYST_CALIB : (ARM_SYSCTRL Offset: 0x1c) (R/ 32) SysTick Calibration Value Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t TENMS:24;                  /**< bit:  0..23  Holds a reload value to be used for 10ms timing. If 0 then calibration value is not known. */
     uint32_t :6;                        /**< bit: 24..29  Reserved */
@@ -188,7 +188,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_ISER : (ARM_SYSCTRL Offset: 0x100) (R/W 32) Interrupt Set-Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t SETENA:32;                 /**< bit:  0..31  Write 1 to enable the associated interrupt */
   } bit;                                /**< Structure used for bit  access */
@@ -207,7 +207,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_ICER : (ARM_SYSCTRL Offset: 0x180) (R/W 32) Interrupt Clear Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CLRENA:32;                 /**< bit:  0..31  Write 1 to disable the associated interrupt */
   } bit;                                /**< Structure used for bit  access */
@@ -226,7 +226,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_ISPR : (ARM_SYSCTRL Offset: 0x200) (R/W 32) Interrupt Set-Pending Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t SETPEND:32;                /**< bit:  0..31  Change the state of the associated interrupt to pending */
   } bit;                                /**< Structure used for bit  access */
@@ -245,7 +245,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_ICPR : (ARM_SYSCTRL Offset: 0x280) (R/W 32) Interrupt Clear-Pending Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CLRPEND:32;                /**< bit:  0..31  Change the state of the associated interrupt to not pending */
   } bit;                                /**< Structure used for bit  access */
@@ -264,7 +264,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR0 : (ARM_SYSCTRL Offset: 0x400) (R/W 32) Interrupt Priority Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :6;                        /**< bit:   0..5  Reserved */
     uint32_t PRI_N0:2;                  /**< bit:   6..7  Priority of Interrupt 0                  */
@@ -299,7 +299,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR1 : (ARM_SYSCTRL Offset: 0x404) (R/W 32) Interrupt Priority Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :6;                        /**< bit:   0..5  Reserved */
     uint32_t PRI_N4:2;                  /**< bit:   6..7  Priority of Interrupt 4                  */
@@ -334,7 +334,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR2 : (ARM_SYSCTRL Offset: 0x408) (R/W 32) Interrupt Priority Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :6;                        /**< bit:   0..5  Reserved */
     uint32_t PRI_N8:2;                  /**< bit:   6..7  Priority of Interrupt 8                  */
@@ -369,7 +369,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR3 : (ARM_SYSCTRL Offset: 0x40c) (R/W 32) Interrupt Priority Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :6;                        /**< bit:   0..5  Reserved */
     uint32_t PRI_N12:2;                 /**< bit:   6..7  Priority of Interrupt 12                 */
@@ -404,7 +404,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR4 : (ARM_SYSCTRL Offset: 0x410) (R/W 32) Interrupt Priority Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :5;                        /**< bit:   0..4  Reserved */
     uint32_t PRI_N16:3;                 /**< bit:   5..7  Priority of Interrupt 16                 */
@@ -439,7 +439,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR5 : (ARM_SYSCTRL Offset: 0x414) (R/W 32) Interrupt Priority Register 5 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :5;                        /**< bit:   0..4  Reserved */
     uint32_t PRI_N20:3;                 /**< bit:   5..7  Priority of Interrupt 20                 */
@@ -474,7 +474,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR6 : (ARM_SYSCTRL Offset: 0x418) (R/W 32) Interrupt Priority Register 6 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :5;                        /**< bit:   0..4  Reserved */
     uint32_t PRI_N24:3;                 /**< bit:   5..7  Priority of Interrupt 24                 */
@@ -509,7 +509,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_NVIC_IPR7 : (ARM_SYSCTRL Offset: 0x41c) (R/W 32) Interrupt Priority Register 7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :5;                        /**< bit:   0..4  Reserved */
     uint32_t PRI_N28:3;                 /**< bit:   5..7  Priority of Interrupt 28                 */
@@ -544,7 +544,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_CPUID : (ARM_SYSCTRL Offset: 0xd00) (R/ 32) CPU Identification Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CPUID:32;                  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -563,7 +563,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_ICSR : (ARM_SYSCTRL Offset: 0xd04) (R/ 32) Interrupt Control State Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t VECTACTIVE:9;              /**< bit:   0..8  Exception number for the current executing exception */
     uint32_t :3;                        /**< bit:  9..11  Reserved */
@@ -618,7 +618,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_AIRCR : (ARM_SYSCTRL Offset: 0xd0c) (R/ 32) Application Interrupt and Reset Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
     uint32_t VECTCLRACTIVE:1;           /**< bit:      1  Clears all active state information for fixed and configurable exceptions */
@@ -651,7 +651,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCR : (ARM_SYSCTRL Offset: 0xd10) (R/W 8) System Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  :1;                        /**< bit:      0  Reserved */
     uint8_t  SLEEPONEXIT:1;             /**< bit:      1  Enter sleep state on exit from an ISR    */
@@ -681,7 +681,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_CCR : (ARM_SYSCTRL Offset: 0xd14) (R/ 16) Configuration and Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t :3;                        /**< bit:   0..2  Reserved */
     uint16_t UNALIGN_TRP:1;             /**< bit:      3  Unaligned work and halfword accesses generate a HardFault exception */
@@ -707,7 +707,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SHPR2 : (ARM_SYSCTRL Offset: 0xd1c) (R/W 32) System Handler Priority Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :30;                       /**< bit:  0..29  Reserved */
     uint32_t PRI_11:2;                  /**< bit: 30..31  Priority of system handler 11, SVCall    */
@@ -727,7 +727,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SHPR3 : (ARM_SYSCTRL Offset: 0xd20) (R/W 32) System Handler Priority Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :22;                       /**< bit:   0..21  Reserved */
     uint32_t PRI_14:2;                  /**< bit:  22..23  Priority of system handler 14, PendSV    */
@@ -752,7 +752,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SHCSR : (ARM_SYSCTRL Offset: 0xd24) (R/W 16) System Handler Control and State Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t :15;                       /**< bit:  0..14  Reserved */
     uint16_t SVCALLPENDED:1;            /**< bit:     15  SVCall is pending                        */
@@ -772,7 +772,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_DFSR : (ARM_SYSCTRL Offset: 0xd30) (R/W 8) Debug Fault Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  HALTED:1;                  /**< bit:      0  Halt Request Debug Event Active          */
     uint8_t  BKPT:1;                    /**< bit:      1  At least one breakpoint debug event      */
@@ -808,7 +808,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_DHCSR : (ARM_SYSCTRL Offset: 0xdf0) (R/W 32) Debug Halting Control and Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t C_DEBUGEN:1;               /**< bit:      0  Halting Debug Enabled (Must write 0xA05F to bits 31:16 to access) */
     uint32_t C_HALT:1;                  /**< bit:      1  Request a running processor to halt (Must write 0xA05F to bits 31:16 to access) */
@@ -865,7 +865,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_DCRSR : (ARM_SYSCTRL Offset: 0xdf4) (R/W 32) Debug Core Register Selector Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REGSEL:5;                  /**< bit:   0..4  Specifies the ARM core register or special purpose register to transfer */
     uint32_t :11;                       /**< bit:  5..15  Reserved */
@@ -930,7 +930,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_DCRDR : (ARM_SYSCTRL Offset: 0xdf8) (R/W 32) Debug Core Register Data Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t DBGTMP:32;                 /**< bit:  0..31  Data Temporary Cache                     */
   } bit;                                /**< Structure used for bit  access */
@@ -949,7 +949,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_DEMCR : (ARM_SYSCTRL Offset: 0xdfc) (R/W 32) Debug Exception and Monitor Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t VC_CORERESET:1;            /**< bit:      0  Reset Vector Catch Enabled               */
     uint32_t :9;                        /**< bit:   1..9  Reserved */
@@ -979,7 +979,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_PID4 : (ARM_SYSCTRL Offset: 0xfd0) (R/ 8) Peripheral ID Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_C_CODE:4;           /**< bit:   0..3  JEP106 C Code                            */
     uint8_t  BLOCK_COUNT:4;             /**< bit:   4..7  Block Count                              */
@@ -1002,7 +1002,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_PID0 : (ARM_SYSCTRL Offset: 0xfe0) (R/ 8) Peripheral ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:8;             /**< bit:   0..7  Part Number Bits 7:0                     */
   } bit;                                /**< Structure used for bit  access */
@@ -1021,7 +1021,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_PID1 : (ARM_SYSCTRL Offset: 0xfe4) (R/ 8) Peripheral ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:4;             /**< bit:   0..3  Part Number Bits 11:8                    */
     uint8_t  JEP106_ID_3_0:4;           /**< bit:   4..7  JEP106 ID Code Bits 3:0                  */
@@ -1044,7 +1044,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_PID2 : (ARM_SYSCTRL Offset: 0xfe8) (R/ 8) Peripheral ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_ID_6_4:3;           /**< bit:   0..2  JEP106 ID Code Bits 6:4                  */
     uint8_t  JEDEC_USED:1;              /**< bit:      3  JEDEC Used                               */
@@ -1071,7 +1071,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_PID3 : (ARM_SYSCTRL Offset: 0xfec) (R/ 8) Peripheral ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CUSTOMER_MOD_NUMBER:4;     /**< bit:   0..3  Customer Modification Number             */
     uint8_t  ECO_REV_NUMBER:4;          /**< bit:   4..7  ECO Revision Number                      */
@@ -1094,7 +1094,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_CID0 : (ARM_SYSCTRL Offset: 0xff0) (R/ 8) Component ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  SCS_CID0:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1113,7 +1113,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_CID1 : (ARM_SYSCTRL Offset: 0xff4) (R/ 8) Component ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  SCS_CID1:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1132,7 +1132,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_CID2 : (ARM_SYSCTRL Offset: 0xff8) (R/ 8) Component ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  SCS_CID2:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -1151,7 +1151,7 @@ typedef union {
 
 /* -------- ARM_SYSCTRL_SCS_CID3 : (ARM_SYSCTRL Offset: 0xffc) (R/ 8) Component ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  SCS_CID3:8;                /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */

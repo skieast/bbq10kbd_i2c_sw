@@ -622,4 +622,3 @@ enum status_code tsens_read(int32_t *result);
 #endif
 
 #endif /* TSENS_H_INCLUDED */
-

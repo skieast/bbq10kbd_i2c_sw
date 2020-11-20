@@ -274,4 +274,3 @@ bool opamp_is_ready(const enum opamp_id number)
 
 	return false;
 }
-

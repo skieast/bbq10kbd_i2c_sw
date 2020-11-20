@@ -1154,4 +1154,3 @@ static inline void sdadc_disable_interrupt(struct sdadc_module *const module_ins
  */
 
 #endif /* SDADC_H_INCLUDED */
-

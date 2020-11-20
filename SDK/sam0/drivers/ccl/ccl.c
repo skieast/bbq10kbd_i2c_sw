@@ -150,5 +150,3 @@ void ccl_lut_disable(const enum ccl_lut_id number)
 	/* Disable the LUTx */
 	CCL->LUTCTRL[number].reg &= ~CCL_LUTCTRL_ENABLE;
 }
-
-

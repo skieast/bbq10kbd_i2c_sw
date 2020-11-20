@@ -93,7 +93,7 @@ static void _i2c_master_write(struct i2c_master_module *const module)
 
 	/* Write byte from buffer to slave */
 	i2c_module->TRANSMIT_DATA.reg = module->buffer[buffer_index];
-	
+
 	if (module->buffer_remaining <= 0) {
 		i2c_module->TX_INTERRUPT_MASK.reg = I2C_TX_INTERRUPT_MASK_TX_FIFO_EMPTY_MASK;
 	}
@@ -147,7 +147,7 @@ void i2c_master_unregister_callback(
 	/* Sanity check */
 	Assert(module);
 	Assert(module->hw);
-	
+
 	/* Register callback */
 	module->callbacks[callback_type] = NULL;
 
@@ -182,7 +182,7 @@ static enum status_code _i2c_master_read_packet(
 	module->buffer_remaining   = packet->data_length;
 	module->transfer_direction = I2C_TRANSFER_READ;
 	module->status             = STATUS_BUSY;
-	
+
 	i2c_wait_for_idle(i2c_module);
 	/* Flush the FIFO */
 	i2c_module->I2C_FLUSH.reg = 1;
@@ -193,7 +193,7 @@ static enum status_code _i2c_master_read_packet(
 			(packet->address << 1) | module->transfer_direction;
 	/* Enable interrupts */
 	i2c_module->RX_INTERRUPT_MASK.reg = I2C_RX_INTERRUPT_MASK_RX_FIFO_NOT_EMPTY_MASK;
-	
+
 	return STATUS_OK;
 }
 
@@ -410,7 +410,7 @@ void _i2c_master_isr_handler(void)
 		if (!module->no_stop) {
 			/* Send stop condition */
 			i2c_module->I2C_ONBUS.reg = I2C_ONBUS_ONBUS_ENABLE_0;
-		} 
+		}
 
 		if (callback_mask & (1 << I2C_MASTER_CALLBACK_WRITE_COMPLETE)) {
 			module->callbacks[I2C_MASTER_CALLBACK_WRITE_COMPLETE](module);
@@ -439,7 +439,7 @@ void _i2c_master_isr_handler(void)
 			/* Send stop condition */
 			i2c_module->I2C_ONBUS.reg = I2C_ONBUS_ONBUS_ENABLE_0;
 		}
-		
+
 		if ((callback_mask & (1 << I2C_MASTER_CALLBACK_READ_COMPLETE))
 				&& (module->transfer_direction == I2C_TRANSFER_READ)) {
 			module->callbacks[I2C_MASTER_CALLBACK_READ_COMPLETE](module);
@@ -450,7 +450,7 @@ void _i2c_master_isr_handler(void)
 			NVIC_ClearPendingIRQ(I2C0_RX_IRQn);
 		} else if (module->hw == I2C1) {
 			NVIC_ClearPendingIRQ(I2C1_RX_IRQn);
-		} 
+		}
 	} else {
 		if (module->hw == I2C0) {
 			NVIC_ClearPendingIRQ(I2C0_TX_IRQn);

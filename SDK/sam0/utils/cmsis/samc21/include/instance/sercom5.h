@@ -138,9 +138,9 @@
 /* ========== Instance parameters for SERCOM5 peripheral ========== */
 #define SERCOM5_DMAC_ID_RX          12       // Index of DMA RX trigger
 #define SERCOM5_DMAC_ID_TX          13       // Index of DMA TX trigger
-#define SERCOM5_GCLK_ID_CORE        25      
-#define SERCOM5_GCLK_ID_SLOW        24      
-#define SERCOM5_INT_MSB             6       
-#define SERCOM5_PMSB                3       
+#define SERCOM5_GCLK_ID_CORE        25
+#define SERCOM5_GCLK_ID_SLOW        24
+#define SERCOM5_INT_MSB             6
+#define SERCOM5_PMSB                3
 
 #endif /* _SAMC21_SERCOM5_INSTANCE_ */

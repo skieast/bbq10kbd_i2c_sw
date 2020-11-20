@@ -97,7 +97,7 @@ static void _i2c_master_read(
 			i2c_module->CTRLB.reg |= SERCOM_I2CM_CTRLB_CMD(3);
 		}
 	}
-	
+
 	/* Read byte from slave and put in buffer */
 	_i2c_master_wait_for_sync(module);
 	module->buffer[buffer_index] = i2c_module->DATA.reg;
@@ -276,7 +276,7 @@ enum status_code i2c_master_read_bytes(
 	module->status             = STATUS_BUSY;
 	module->send_stop = false;
 	module->send_nack = false;
-	
+
 	/* Enable interrupts */
 	i2c_module->INTENSET.reg =
 			SERCOM_I2CM_INTENSET_MB | SERCOM_I2CM_INTENSET_SB;
@@ -449,7 +449,7 @@ enum status_code i2c_master_read_packet_job_no_stop(
 }
 
 /**
- * \brief Initiates a read packet operation without sending a NACK signal and a 
+ * \brief Initiates a read packet operation without sending a NACK signal and a
  * STOP condition when done
  *
  * Reads a data packet from the specified slave address on the I<SUP>2</SUP>C bus without
@@ -516,7 +516,7 @@ enum status_code i2c_master_write_bytes(
 	module->status             = STATUS_BUSY;
 	module->send_stop = false;
 	module->send_nack = false;
-	
+
 	/* Enable interrupts */
 	i2c_module->INTENSET.reg =
 			SERCOM_I2CM_INTENSET_MB | SERCOM_I2CM_INTENSET_SB;
@@ -694,7 +694,7 @@ void _i2c_master_interrupt_handler(
 			/* Clear write interrupt flag */
 			i2c_module->INTFLAG.reg = SERCOM_I2CM_INTFLAG_MB;
 		}
-		
+
 		if (callback_mask & (1 << I2C_MASTER_CALLBACK_WRITE_COMPLETE)) {
 			module->callbacks[I2C_MASTER_CALLBACK_WRITE_COMPLETE](module);
 		}
@@ -716,7 +716,7 @@ void _i2c_master_interrupt_handler(
 	if ((module->buffer_length > 0) && (module->buffer_remaining <= 0) &&
 			(module->status == STATUS_BUSY) &&
 			(module->transfer_direction == I2C_TRANSFER_READ)) {
-		
+
 		/* Clear read interrupt flag */
 		if (i2c_module->INTFLAG.reg & SERCOM_I2CM_INTFLAG_SB) {
 			i2c_module->INTFLAG.reg = SERCOM_I2CM_INTFLAG_SB;

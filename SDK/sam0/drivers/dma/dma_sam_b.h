@@ -103,8 +103,8 @@ extern "C" {
  *      <td>4</td>
  *    </tr>
  * </table>
- * The DMA channel operation can be suspended at any time by software, 
- * or after selectable descriptor execution. The DMAC driver for SAM 
+ * The DMA channel operation can be suspended at any time by software,
+ * or after selectable descriptor execution. The DMAC driver for SAM
  * supports four types of transfers such as peripheral to peripheral,
  * peripheral to memory, memory to peripheral, and memory to memory.
  *
@@ -369,8 +369,8 @@ struct dma_config {
 	bool enable_inc_addr;
 	/** Index of peripheral to read/write from (0 if memory or no peripheral flow control) */
 	enum dma_peripheral_index periph;
-	/** 
-	 * Number of cycles to wait for read/write request signal to update 
+	/**
+	 * Number of cycles to wait for read/write request signal to update
 	 * after issuing the read/write clear signal
 	 */
 	uint8_t periph_delay;

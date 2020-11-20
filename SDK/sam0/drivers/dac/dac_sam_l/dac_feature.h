@@ -608,4 +608,3 @@ bool dac_chan_is_end_of_conversion(
 
 
 #endif /* DAC_FEATURE_H_INCLUDED */
-

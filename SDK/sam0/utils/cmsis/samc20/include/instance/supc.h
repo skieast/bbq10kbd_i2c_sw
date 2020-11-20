@@ -66,8 +66,8 @@
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance parameters for SUPC peripheral ========== */
-#define SUPC_BODCORE_CALIB_MSB      5       
-#define SUPC_BODVDD_CALIB_MSB       5       
+#define SUPC_BODCORE_CALIB_MSB      5
+#define SUPC_BODVDD_CALIB_MSB       5
 #define SUPC_SUPC_OUT_NUM_MSB       1        // MSB of backup output pad Number
 
 #endif /* _SAMC20_SUPC_INSTANCE_ */

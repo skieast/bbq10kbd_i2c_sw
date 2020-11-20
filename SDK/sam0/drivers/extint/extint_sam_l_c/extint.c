@@ -386,7 +386,7 @@ enum status_code extint_nmi_set_config(
 		new_config |= EIC_NMICTRL_NMIASYNCH;
 	}
 #endif
-	
+
 	/* Disable EIC and general clock to configure NMI */
 	_extint_disable();
 #if(EXTINT_CLOCK_SELECTION == EXTINT_CLK_GCLK)

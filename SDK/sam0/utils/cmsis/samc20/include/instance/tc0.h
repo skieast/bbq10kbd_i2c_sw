@@ -108,16 +108,16 @@
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance parameters for TC0 peripheral ========== */
-#define TC0_CC_NUM                  2       
+#define TC0_CC_NUM                  2
 #define TC0_DMAC_ID_MC_0            28
 #define TC0_DMAC_ID_MC_1            29
 #define TC0_DMAC_ID_MC_LSB          28
 #define TC0_DMAC_ID_MC_MSB          29
 #define TC0_DMAC_ID_MC_SIZE         2
 #define TC0_DMAC_ID_OVF             27       // Indexes of DMA Overflow trigger
-#define TC0_EXT                     0       
-#define TC0_GCLK_ID                 30      
-#define TC0_MASTER                  1       
-#define TC0_OW_NUM                  2       
+#define TC0_EXT                     0
+#define TC0_GCLK_ID                 30
+#define TC0_MASTER                  1
+#define TC0_OW_NUM                  2
 
 #endif /* _SAMC20_TC0_INSTANCE_ */

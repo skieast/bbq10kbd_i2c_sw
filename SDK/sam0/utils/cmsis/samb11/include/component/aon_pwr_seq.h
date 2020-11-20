@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR AON_PWR_SEQ */
 /* ========================================================================== */
-/** \addtogroup SAMB11_AON_PWR_SEQ Always On Power Sequencer 
+/** \addtogroup SAMB11_AON_PWR_SEQ Always On Power Sequencer
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- AON_PWR_SEQ_GPIO_WAKEUP_CTRL : (AON_PWR_SEQ Offset: 0x00) (R/W 8) Controls the wakeup enable for GPIO_0, GPIO_1 and GPIO_2 (Pinmux will control the ARM wakeup) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  :1;                        /**< bit:      0  Reserved */
     uint8_t  BLE_ENABLE:1;              /**< bit:      1  If set, this will enable GPIO_0 to wake up the BLE domain (PD4, PD5 and PD6) */
@@ -81,7 +81,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_AON_ST_WAKEUP_CTRL : (AON_PWR_SEQ Offset: 0x0c) (R/W 8) Controls the wakeup enable for the Always On Sleep Timer (AON_ST) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ARM_ENABLE:1;              /**< bit:      0  If set, this will enable the AON_ST to wake up the ARM domain (PD1, PD2 and PD3) */
     uint8_t  BLE_ENABLE:1;              /**< bit:      1  If set, this will enable the AON_ST to wake up the BLE domain (PD4, PD5 and PD6) */
@@ -105,7 +105,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_LPMCU_WAKEUP_CTRL : (AON_PWR_SEQ Offset: 0x10) (R/W 16) Controls the wakeup enable for the Low Power Micro Controller Unit (LPMCU) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t :6;                        /**< bit:   0..5  Reserved */
     uint16_t BLE_ENABLE:1;              /**< bit:      6  If set, this will enable the LPMCU to wake up the BLE domain (PD4, PD5 and PD6) */
@@ -131,7 +131,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_BLE_ST_WAKEUP_CTRL : (AON_PWR_SEQ Offset: 0x14) (R/W 8) Controls the wakeup enable for the BLE Sleep Timer (BLE_ST) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ARM_ENABLE:1;              /**< bit:      0  If set, this will enable the BLE_ST to wake up the ARM domain */
     uint8_t  BLE_ENABLE:1;              /**< bit:      1  If set, this will enable the BLE_ST to wake up the BLE domain */
@@ -155,7 +155,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_LPMCU_SLEEP_1_CTRL : (AON_PWR_SEQ Offset: 0x20) (R/W 32) Controls the sleep and retention options for SLEEP request 1 from the ARM -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ARM_SLEEP_EN:1;            /**< bit:      0  Enables the SLEEP request 1 to put all ARM domains in sleep or retention (PD1, PD2A, PD2B, PD3, PD8).  PD7 has its own control */
     uint32_t :5;                        /**< bit:   1..5  Reserved */
@@ -211,7 +211,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_OFF_DELAY_0_CTRL : (AON_PWR_SEQ Offset: 0x40) (R/W 32) Power OFF Delays -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CLOCK_EN_EARLY:6;          /**< bit:   0..5  Number of clock cycles before setting clock_en_early to low (clock_en is +1 of this value) */
     uint32_t :10;                       /**< bit:  6..15  Reserved */
@@ -241,7 +241,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_OFF_DELAY_1_CTRL : (AON_PWR_SEQ Offset: 0x44) (R/W 32) Power OFF Delays -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t BTRIM:6;                   /**< bit:   0..5  Number of clock cycles before applying BTRIM mux select */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -276,7 +276,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_ON_DELAY_0_CTRL : (AON_PWR_SEQ Offset: 0x48) (R/W 16) Power ON Delays -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t CLOCK_EN_EARLY_ARM:6;      /**< bit:   0..5  Number of clock cycles before setting clock_en_early to high for ARM domain clock_en is +1 of this value isolate is -2 of this value resetn is -1 of this value  */
     uint16_t :2;                        /**< bit:   6..7  Reserved */
@@ -301,7 +301,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_ON_DELAY_1_CTRL : (AON_PWR_SEQ Offset: 0x4c) (R/W 32) Power ON Delays -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t BTRIM:6;                   /**< bit:   0..5  Number of clock cycles before removing BTRIM mux select */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -336,7 +336,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_VDD_DCDC_EN_DELAY_CTRL : (AON_PWR_SEQ Offset: 0x50) (R/W 16) VDD_DCDC_EN Delay Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t OFF:6;                     /**< bit:   0..5  Number of clock cycles before disabling the DCDC */
     uint16_t :2;                        /**< bit:   6..7  Reserved */
@@ -361,7 +361,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_MISC_BYPASS_0_CTRL : (AON_PWR_SEQ Offset: 0x218) (R/W 16) Bypass control for misc signals -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t :2;                        /**< bit:   0..1  Reserved */
     uint16_t PD0_LOW_VOLTAGE_EN_VAL:1;  /**< bit:      2  Bypass value for pd0_low_voltage_en      */
@@ -407,7 +407,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_RAW_WAKEUP_BITS : (AON_PWR_SEQ Offset: 0x300) (R/ 8) Raw Wakeup Bits -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  GPIO_0:1;                  /**< bit:      0  AO_GPIO_0 wakeup raw status              */
     uint8_t  GPIO_1:1;                  /**< bit:      1  AO_GPIO_1 wakeup raw status              */
@@ -448,13 +448,13 @@ typedef union {
 #define AON_PWR_SEQ_RAW_WAKEUP_BITS_BLE_ST  AON_PWR_SEQ_RAW_WAKEUP_BITS_BLE_ST_Msk         /**< \deprecated Old style mask definition for 1 bit bitfield. Use AON_PWR_SEQ_RAW_WAKEUP_BITS_BLE_ST_Msk instead */
 #define AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO__Pos 0                                              /**< (AON_PWR_SEQ_RAW_WAKEUP_BITS Position) AO_GPIO_x wakeup raw status */
 #define AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO__Msk (0x7u << AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO__Pos)  /**< (AON_PWR_SEQ_RAW_WAKEUP_BITS Mask) GPIO_ */
-#define AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO_(value) (AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO__Msk & ((value) << AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO__Pos))  
+#define AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO_(value) (AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO__Msk & ((value) << AON_PWR_SEQ_RAW_WAKEUP_BITS_GPIO__Pos))
 #define AON_PWR_SEQ_RAW_WAKEUP_BITS_MASK    0x3Fu                                          /**< \deprecated (AON_PWR_SEQ_RAW_WAKEUP_BITS) Register MASK  (Use AON_PWR_SEQ_RAW_WAKEUP_BITS_Msk instead)  */
 #define AON_PWR_SEQ_RAW_WAKEUP_BITS_Msk     0x3Fu                                          /**< (AON_PWR_SEQ_RAW_WAKEUP_BITS) Register Mask  */
 
 /* -------- AON_PWR_SEQ_PD_WAKEUP_BITS : (AON_PWR_SEQ Offset: 0x304) (R/ 16) Individual Power Domain Wakeup Bits -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t ARM:1;                     /**< bit:      0  Indicates ARM (PD1, PD2A, PD2B, PD3, PD8) currently has a wakeup active */
     uint16_t :5;                        /**< bit:   1..5  Reserved */
@@ -490,13 +490,13 @@ typedef union {
 #define AON_PWR_SEQ_PD_WAKEUP_BITS_PD7      AON_PWR_SEQ_PD_WAKEUP_BITS_PD7_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use AON_PWR_SEQ_PD_WAKEUP_BITS_PD7_Msk instead */
 #define AON_PWR_SEQ_PD_WAKEUP_BITS_PD_Pos   8                                              /**< (AON_PWR_SEQ_PD_WAKEUP_BITS Position) Indicates PD7 currently has a wakeup active */
 #define AON_PWR_SEQ_PD_WAKEUP_BITS_PD_Msk   (0x3u << AON_PWR_SEQ_PD_WAKEUP_BITS_PD_Pos)    /**< (AON_PWR_SEQ_PD_WAKEUP_BITS Mask) PD */
-#define AON_PWR_SEQ_PD_WAKEUP_BITS_PD(value) (AON_PWR_SEQ_PD_WAKEUP_BITS_PD_Msk & ((value) << AON_PWR_SEQ_PD_WAKEUP_BITS_PD_Pos))  
+#define AON_PWR_SEQ_PD_WAKEUP_BITS_PD(value) (AON_PWR_SEQ_PD_WAKEUP_BITS_PD_Msk & ((value) << AON_PWR_SEQ_PD_WAKEUP_BITS_PD_Pos))
 #define AON_PWR_SEQ_PD_WAKEUP_BITS_MASK     0x341u                                         /**< \deprecated (AON_PWR_SEQ_PD_WAKEUP_BITS) Register MASK  (Use AON_PWR_SEQ_PD_WAKEUP_BITS_Msk instead)  */
 #define AON_PWR_SEQ_PD_WAKEUP_BITS_Msk      0x341u                                         /**< (AON_PWR_SEQ_PD_WAKEUP_BITS) Register Mask  */
 
 /* -------- AON_PWR_SEQ_SERVICED_REQUEST : (AON_PWR_SEQ Offset: 0x308) (R/ 16) Serviced Request Status Bits -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t GPIO_WAKEUP:1;             /**< bit:      0  Indicates GPIO wakeup has been serviced  */
     uint16_t :2;                        /**< bit:   1..2  Reserved */
@@ -534,7 +534,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_ACTIVE_REQUEST : (AON_PWR_SEQ Offset: 0x30c) (R/ 16) Active Request Status Bits -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t GPIO_WAKEUP:1;             /**< bit:      0  Indicates GPIO wakeup is the active request */
     uint16_t :2;                        /**< bit:   1..2  Reserved */
@@ -572,7 +572,7 @@ typedef union {
 
 /* -------- AON_PWR_SEQ_LOGIC_FSM_STATES : (AON_PWR_SEQ Offset: 0x3f0) (R/ 32) Current Logic FSM States -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MAIN_FSM_STATE:3;          /**< bit:   0..2  Main FSM State                           */
     uint32_t :5;                        /**< bit:   3..7  Reserved */

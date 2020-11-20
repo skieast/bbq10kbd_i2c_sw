@@ -67,11 +67,11 @@ enum freqm_callback_type {
 	/** Measurement done callback.*/
 	FREQM_CALLBACK_MEASURE_DONE = 0,
 };
- 
+
 /** \name Callback Configuration and Initialization
  * @{
  */
- 
+
 enum status_code freqm_register_callback(
 		struct freqm_module *const module,
 		freqm_callback_t callback_func,

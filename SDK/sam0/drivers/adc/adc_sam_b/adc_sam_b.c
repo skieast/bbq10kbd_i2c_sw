@@ -146,7 +146,7 @@ void adc_init(struct adc_config *config)
 		AON_GP_REGS0->RF_PMU_REGS_1.bit.SADC_CHN_CTRL = \
 				AON_GP_REGS_RF_PMU_REGS_1_SADC_CHN_CTRL_1_Val;
 		AON_GP_REGS0->RF_PMU_REGS_1.bit.SADC_CHN_SEL = config->input_channel;
-		
+
 		if (config->input_channel <= ADC_INPUT_CH_GPIO_MS4) {
 			/* Enable GPIO_MS pin */
 			_adc_gpio_ms_enable(config->input_channel);

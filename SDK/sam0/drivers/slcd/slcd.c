@@ -319,7 +319,7 @@ void slcd_set_blink_pixel(
 {
 	/* Validate parameters. */
 	Assert(pix_seg<=1);
-	
+
 	if (pix_seg == 0) {
 		SLCD->BCFG.reg |= SLCD_BCFG_BSS0(1 << pix_com);
 	}
@@ -341,7 +341,7 @@ void slcd_clear_blink_pixel(
 {
 	/* Validate parameters. */
 	Assert(pix_seg<=1);
-	
+
 	if (pix_seg == 0) {
 		SLCD->BCFG.reg &= ~ SLCD_BCFG_BSS0(1 << pix_com);
 	}
@@ -695,4 +695,3 @@ enum status_code slcd_circular_shift_set_config(
 
 	return STATUS_OK;
 }
-

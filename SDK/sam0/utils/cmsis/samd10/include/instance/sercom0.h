@@ -141,6 +141,6 @@
 #define SERCOM0_DMAC_ID_TX          2        // Index of DMA TX trigger
 #define SERCOM0_GCLK_ID_CORE        14       // Index of Generic Clock for Core
 #define SERCOM0_GCLK_ID_SLOW        13       // Index of Generic Clock for SMbus Timeout
-#define SERCOM0_INT_MSB             6       
+#define SERCOM0_INT_MSB             6
 
 #endif /* _SAMD10_SERCOM0_INSTANCE_ */

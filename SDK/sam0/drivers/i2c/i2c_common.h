@@ -280,7 +280,7 @@ enum i2c_transfer_direction {
 };
 
 /**
- * \brief I2C module clock input 
+ * \brief I2C module clock input
  *
  * I2C module clock.
  *

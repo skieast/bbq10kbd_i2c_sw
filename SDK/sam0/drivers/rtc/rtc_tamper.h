@@ -63,8 +63,8 @@
  * output signals are compared and a tamper condition is detected when they do not match.
  *
  *
- * Separate debouncers are embedded for each external input. The detection time 
- * depends on whether the debouncer operates synchronously or asynchronously, 
+ * Separate debouncers are embedded for each external input. The detection time
+ * depends on whether the debouncer operates synchronously or asynchronously,
  * and whether majority detection is enabled or not. For details, refer to the section
  * "Tamper Detection" of datasheet.
  * \if RTC_COUNT_CALLBACK_MODE
@@ -234,7 +234,7 @@ struct rtc_tamper_config {
 /**
  *  \brief Gets the RTC tamper default configurations.
  *
- *  Initializes the configuration structure to default values. 
+ *  Initializes the configuration structure to default values.
  *
  *  The default configuration is as follows:
  *  - Disable backup register reset on tamper

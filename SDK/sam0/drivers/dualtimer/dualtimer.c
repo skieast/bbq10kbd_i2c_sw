@@ -245,7 +245,7 @@ void dualtimer_init(const struct dualtimer_config *config)
 		LPMCU_MISC_REGS_LPMCU_CLOCK_ENABLES_0_DUALTIMER0_CLK_EN;
 		LPMCU_MISC_REGS0->LPMCU_CTRL.bit.DUALTIMER0_CLK_SEL = config->clock_source;
 	}
-	
+
 	/* Timer1 config */
 	if (config->timer1.timer_enable) {
 		if (config->timer1.counter_mode == DUALTIMER_ONE_SHOT_MODE) {

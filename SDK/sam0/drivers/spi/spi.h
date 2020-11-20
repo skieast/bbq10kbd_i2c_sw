@@ -50,9 +50,9 @@
 /**
  * \defgroup asfdoc_samb_drivers_spi_group SAM Serial Peripheral Interface (SPI) Driver
  *
- * This driver for Atmel&reg; | SMART ARM-based microcontrollers provides 
- * an interface for the configuration and management of the module in 
- * its SPI mode to transfer SPI data frames. The following driver API modes 
+ * This driver for Atmel&reg; | SMART ARM-based microcontrollers provides
+ * an interface for the configuration and management of the module in
+ * its SPI mode to transfer SPI data frames. The following driver API modes
  * are covered by this manual:
  *
  * - Polled APIs
@@ -602,7 +602,7 @@ enum status_code spi_select_slave(
  * - \subpage asfdoc_samb_spi_slave_callback_use
  * \endif
  */
- 
+
  /**
  *
  * \page asfdoc_samb_drivers_spi_document_revision_history Document Revision History
@@ -622,4 +622,3 @@ enum status_code spi_select_slave(
  */
 
 #endif //SPI_H_INCLUDED
-

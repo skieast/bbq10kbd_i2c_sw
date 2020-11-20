@@ -161,7 +161,7 @@ enum aon_sleep_timer_wakeup {
  *  modified by the user application.
  */
 struct aon_sleep_timer_config {
-	/** Enable wakeup arm or wakeup arm and blue-tooth 
+	/** Enable wakeup arm or wakeup arm and blue-tooth
 	  * or disable arm wakeup */
 	enum aon_sleep_timer_wakeup wakeup;
 	/** Counter is reload or single mode */

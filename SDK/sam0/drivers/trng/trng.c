@@ -98,4 +98,3 @@ enum status_code trng_init(
 
 	return STATUS_OK;
 }
-

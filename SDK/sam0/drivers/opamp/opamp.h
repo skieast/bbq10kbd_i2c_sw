@@ -675,4 +675,3 @@ bool opamp_is_ready(const enum opamp_id number);
  */
 
 #endif /* OPAMP_H_INCLUDED */
-

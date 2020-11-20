@@ -458,7 +458,7 @@ uint32_t tc_get_count_value(
 
 	/* Read synchronization */
 	tc_sync_read_count(module_inst);
-	
+
 	/* Get a pointer to the module's hardware instance */
 	Tc *const tc_module = module_inst->hw;
 

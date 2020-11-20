@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR DUALTIMER */
 /* ========================================================================== */
-/** \addtogroup SAMB11_DUALTIMER ARM General Purpose Dual Timer 
+/** \addtogroup SAMB11_DUALTIMER ARM General Purpose Dual Timer
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- DUALTIMER_TIMER1LOAD : (DUALTIMER Offset: 0x00) (R/W 32) Timer 1 Load Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t TIMER1LOAD:32;             /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -79,7 +79,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER1VALUE : (DUALTIMER Offset: 0x04) (R/ 32) Timer 1 Current Value Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t TIMER1VALUE:32;            /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -98,7 +98,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER1CONTROL : (DUALTIMER Offset: 0x08) (R/W 8) Timer 1 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ONE_SHOT_COUNT:1;          /**< bit:      0  Mode Select                              */
     uint8_t  TIMER_SIZE:1;              /**< bit:      1  Timer Size                               */
@@ -161,7 +161,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER1INTCLR : (DUALTIMER Offset: 0x0c) (/W 8) Timer 1 Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMER1INTCLR:1;            /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -181,7 +181,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER1RIS : (DUALTIMER Offset: 0x10) (R/ 8) Timer 1 Raw Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMER1RIS:1;               /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -201,7 +201,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER1MIS : (DUALTIMER Offset: 0x14) (R/ 8) Timer 1 Masked Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMER1MIS:1;               /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -221,7 +221,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER1BGLOAD : (DUALTIMER Offset: 0x18) (R/W 32) Timer 1 Background Load Register (Reload Value for Period Mode) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t TIMER1BGLOAD:32;           /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -240,7 +240,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER2LOAD : (DUALTIMER Offset: 0x20) (R/W 32) Timer 2 Load Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t TIMER2LOAD:32;             /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -259,7 +259,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER2VALUE : (DUALTIMER Offset: 0x24) (R/ 32) Timer 2 Current Value Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t TIMER2VALUE:32;            /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -278,7 +278,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER2CONTROL : (DUALTIMER Offset: 0x28) (R/W 8) Timer 2 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ONE_SHOT_COUNT:1;          /**< bit:      0  Mode Select                              */
     uint8_t  TIMER_SIZE:1;              /**< bit:      1  Timer Size                               */
@@ -341,7 +341,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER2INTCLR : (DUALTIMER Offset: 0x2c) (/W 8) Timer 2 Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMER2INTCLR:1;            /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -361,7 +361,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER2RIS : (DUALTIMER Offset: 0x30) (R/ 8) Timer 2 Raw Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMER2RIS:1;               /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -381,7 +381,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER2MIS : (DUALTIMER Offset: 0x34) (R/ 8) Timer 2 Masked Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMER2MIS:1;               /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -401,7 +401,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMER2BGLOAD : (DUALTIMER Offset: 0x38) (R/W 32) Timer 2 Background Load Register (Reload Value for Period Mode) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t TIMER2BGLOAD:32;           /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -420,7 +420,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERITCR : (DUALTIMER Offset: 0xf00) (R/W 8) Integration Test Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERITCR:1;               /**< bit:      0                                           */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -440,7 +440,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERITOP : (DUALTIMER Offset: 0xf04) (/W 8) Integration Test Output Set Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  INT_TEST_TIMINT1_VALUE:1;  /**< bit:      0  Value Output on TIMINT1 in Integration Test Mode */
     uint8_t  INT_TEST_TIMING2_VALUE:1;  /**< bit:      1  Value Output on TIMINT2 in Integration Test Mode */
@@ -464,7 +464,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID4 : (DUALTIMER Offset: 0xfd0) (R/ 8) Peripheral ID Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_C_CODE:4;           /**< bit:   0..3  JEP106 C Code                            */
     uint8_t  BLOCK_COUNT:4;             /**< bit:   4..7  Block Count                              */
@@ -487,7 +487,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID5 : (DUALTIMER Offset: 0xfd4) (R/ 8) Peripheral ID Register 5 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERPERIPHID5:8;          /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -506,7 +506,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID6 : (DUALTIMER Offset: 0xfd8) (R/ 8) Peripheral ID Register 6 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERPERIPHID6:8;          /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -525,7 +525,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID7 : (DUALTIMER Offset: 0xfdc) (R/ 8) Peripheral ID Register 7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERPERIPHID7:8;          /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -544,7 +544,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID0 : (DUALTIMER Offset: 0xfe0) (R/ 8) Peripheral ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:8;             /**< bit:   0..7  Part Number Bits 7:0                     */
   } bit;                                /**< Structure used for bit  access */
@@ -563,7 +563,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID1 : (DUALTIMER Offset: 0xfe4) (R/ 8) Peripheral ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:4;             /**< bit:   0..3  Part Number Bits 11:8                    */
     uint8_t  JEP106_ID_3_0:4;           /**< bit:   4..7  JEP106 ID Bits 3:0                       */
@@ -586,7 +586,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID2 : (DUALTIMER Offset: 0xfe8) (R/ 8) Peripheral ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_ID_6_4:3;           /**< bit:   0..2  JEP106 ID Bits 6:4                       */
     uint8_t  JEDEC_USED:1;              /**< bit:      3  JEDEC Used                               */
@@ -613,7 +613,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPERIPHID3 : (DUALTIMER Offset: 0xfec) (R/ 8) Peripheral ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CUSTOMER_MOD_NUMBER:4;     /**< bit:   0..3  Customer Modification Number             */
     uint8_t  ECO_REV_NUMBER:4;          /**< bit:   4..7  ECO Revision Number                      */
@@ -636,7 +636,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPCELLID0 : (DUALTIMER Offset: 0xff0) (R/ 8) Component ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERPCELLID0:8;           /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -655,7 +655,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPCELLID1 : (DUALTIMER Offset: 0xff4) (R/ 8) Component ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERPCELLID1:8;           /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -674,7 +674,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPCELLID2 : (DUALTIMER Offset: 0xff8) (R/ 8) Component ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERPCELLID2:8;           /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -693,7 +693,7 @@ typedef union {
 
 /* -------- DUALTIMER_TIMERPCELLID3 : (DUALTIMER Offset: 0xffc) (R/ 8) Component ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TIMERPCELLID3:8;           /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */

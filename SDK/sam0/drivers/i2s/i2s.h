@@ -209,12 +209,12 @@
  * the FS width, the FS to data bits delay, etc., the module is able to handle
  * I<SUP>2</SUP>S compliant data stream.
  *
- * Also the Serializer can receive PDM format data stream, which allows the 
+ * Also the Serializer can receive PDM format data stream, which allows the
  * I<SUP>2</SUP>S module receive 1 PDM data on each SCK edge.
  *
  * \subsubsection asfdoc_sam0_i2s_module_overview_data_i2s I2S Stream Reception/Transmission
  *
- * For 2-channel I<SUP>2</SUP>S compliant data stream format the I<SUP>2</SUP>S 
+ * For 2-channel I<SUP>2</SUP>S compliant data stream format the I<SUP>2</SUP>S
  * module uses the FS line as word select (WS) signal and will send left channel
  * data word on low WS level and right channel data word on high WS level as
  * specified in the I<SUP>2</SUP>S standard. The supported word sizes are 8-,
@@ -487,8 +487,8 @@ enum i2s_data_format {
  * I<SUP>2</SUP>S data bit order.
  */
 enum i2s_bit_order {
-	/** Transfer Data Most Significant Bit first 
-	 * (Default for I<SUP>2</SUP>S protocol) 
+	/** Transfer Data Most Significant Bit first
+	 * (Default for I<SUP>2</SUP>S protocol)
 	 */
 	I2S_BIT_ORDER_MSB_FIRST,
 	/** Transfer Data Least Significant Bit first */

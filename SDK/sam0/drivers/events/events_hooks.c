@@ -230,6 +230,3 @@ void EVSYS_Handler(void)
 	flag = _events_inst.interrupt_flag_ack_buffer;
 	_events_inst.interrupt_flag_buffer &= ~flag;
 }
-
-
-

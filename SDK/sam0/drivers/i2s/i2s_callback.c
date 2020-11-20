@@ -219,7 +219,7 @@ enum status_code i2s_serializer_write_buffer_job(
 	Assert(module_inst);
 	Assert(module_inst->hw);
 	Assert(serializer < I2S_SERIALIZER_N);
-	
+
 	data_module = &module_inst->serializer[serializer];
 
 	/* Serializer must in transmit mode */

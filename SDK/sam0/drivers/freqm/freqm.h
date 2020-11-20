@@ -433,4 +433,3 @@ enum freqm_status freqm_get_result_value(
  */
 
 #endif /* FREQM_H_INCLUDED */
-

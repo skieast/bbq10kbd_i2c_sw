@@ -80,16 +80,16 @@
  * is required. This driver provides an easy-to-use interface to the physical
  * pin input samplers and output drivers, so that pins can be read from or
  * written to for general purpose external hardware control.
- * The GPIO I/O lines are differentiated based on whether digital or analog 
+ * The GPIO I/O lines are differentiated based on whether digital or analog
  * functionalities are enabled, whether the pins are capable of waking-up the core
  * from sleep into 3 groups called LP_GPIO_x, AO_GPIO_z, GPIO_MSy
  *
  * The GPIO module also allows all GPIO pins (LP_GPIO_x, GPIO_MSy, AO_GPIO_z) to be
- * configured as interrupt lines. Each interrupt line can be individually 
- * masked and can generate an interrupt to CPU on rising, falling, or on high or 
+ * configured as interrupt lines. Each interrupt line can be individually
+ * masked and can generate an interrupt to CPU on rising, falling, or on high or
  * low levels.
  *
- * Only AO_GPIO_z pin can wakeup the ARM Subsystem as well as BLE Subsystem from ULP mode. 
+ * Only AO_GPIO_z pin can wakeup the ARM Subsystem as well as BLE Subsystem from ULP mode.
  * Along with wakeup configuration enabling as an external interrupt will wakeup ARM and
  * generate interrupt request
  *
@@ -251,7 +251,7 @@ struct gpio_config {
 	/** GPIO pull-up/pull-down for input pins */
 	enum gpio_pin_pull input_pull;
 
-	/** Enable AON_GPIOs to wakeup MCU from ULP mode 
+	/** Enable AON_GPIOs to wakeup MCU from ULP mode
 	 *
 	 *  \note Only AO_GPIO_0, could enable this feature as per current ROM firmware code
 	 *		Restrict to use only AO_GPIO_0 for waking up BLE and MCU

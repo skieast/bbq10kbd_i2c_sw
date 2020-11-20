@@ -632,4 +632,3 @@ void dac_chan_disable_output_buffer(
 
 
 #endif /* DAC_FEATURE_H_INCLUDED */
-

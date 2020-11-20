@@ -77,7 +77,7 @@
  * it can be used for precision measurement of speed, acceleration, and position
  * of a motor's rotor and with rotary knobs to determine user input. The SAMB11
  * contains 3 Quadrature Decoder. Each one may be programmed independently.
- * The Quadrature Decoder require initialization prior to being enabled. 
+ * The Quadrature Decoder require initialization prior to being enabled.
  * Quadrature Decoder is a flexible fully configurable module which has the following features:
  *
  *   - 3 independent configurable Quadrature Decoder blocks.

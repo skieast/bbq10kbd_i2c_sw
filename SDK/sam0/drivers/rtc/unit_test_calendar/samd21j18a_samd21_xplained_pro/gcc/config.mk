@@ -76,7 +76,7 @@ CSRCS = \
        sam0/utils/syscalls/gcc/syscalls.c
 
 # List of assembler source files.
-ASSRCS = 
+ASSRCS =
 
 # List of include paths.
 INC_PATH = \
@@ -116,11 +116,11 @@ INC_PATH = \
 
 # Additional search paths for libraries.
 LIB_PATH =  \
-       thirdparty/CMSIS/Lib/GCC                          
+       thirdparty/CMSIS/Lib/GCC
 
 # List of libraries to use during linking.
 LIBS =  \
-       arm_cortexM0l_math                                
+       arm_cortexM0l_math
 
 # Path relative to top level directory pointing to a linker script.
 LINKER_SCRIPT_FLASH = sam0/utils/linker_scripts/samd21/gcc/samd21j18a_flash.ld
@@ -135,20 +135,20 @@ PROJECT_TYPE        = flash
 
 # Additional options for debugging. By default the common Makefile.in will
 # add -g3.
-DBGFLAGS = 
+DBGFLAGS =
 
 # Application optimization used during compilation and linking:
 # -O0, -O1, -O2, -O3 or -Os
 OPTIMIZATION = -O1
 
 # Extra flags to use when archiving.
-ARFLAGS = 
+ARFLAGS =
 
 # Extra flags to use when assembling.
-ASFLAGS = 
+ASFLAGS =
 
 # Extra flags to use when compiling.
-CFLAGS = 
+CFLAGS =
 
 # Extra flags to use when preprocessing.
 #
@@ -173,5 +173,5 @@ CPPFLAGS = \
 LDFLAGS = \
 
 # Pre- and post-build commands
-PREBUILD_CMD = 
-POSTBUILD_CMD = 
+PREBUILD_CMD =
+POSTBUILD_CMD =

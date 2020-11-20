@@ -491,7 +491,7 @@ enum status_code i2c_master_read_packet_wait(
 
 	module->send_stop = true;
 	module->send_nack = true;
-	
+
 	return _i2c_master_read_packet(module, packet);
 }
 
@@ -538,18 +538,18 @@ enum status_code i2c_master_read_packet_wait_no_stop(
 
 	module->send_stop = false;
 	module->send_nack = true;
-	
+
 	return _i2c_master_read_packet(module, packet);
 }
 
 /**
  * \internal
  * Starts blocking read operation.
- * \brief Reads data packet from slave without sending a nack signal and a stop 
+ * \brief Reads data packet from slave without sending a nack signal and a stop
  * condition when done
  *
  * Reads a data packet from the specified slave address on the I<SUP>2</SUP>C
- * bus without sending a nack signal and a stop condition when done, 
+ * bus without sending a nack signal and a stop condition when done,
  * thus retaining ownership of the bus when done. To end the transaction, a
  * \ref i2c_master_read_packet_wait "read" or
  * \ref i2c_master_write_packet_wait "write" with stop condition must be
@@ -717,7 +717,7 @@ enum status_code i2c_master_write_packet_wait(
 
 	module->send_stop = true;
 	module->send_nack = true;
-	
+
 	return _i2c_master_write_packet(module, packet);
 }
 
@@ -766,7 +766,7 @@ enum status_code i2c_master_write_packet_wait_no_stop(
 
 	module->send_stop = false;
 	module->send_nack = true;
-	
+
 	return _i2c_master_write_packet(module, packet);
 }
 
@@ -846,7 +846,7 @@ enum status_code i2c_master_read_byte(
 	*byte = i2c_module->DATA.reg;
 	/* Wait for response. */
 	tmp_status = _i2c_master_wait_for_bus(module);
-	
+
 	return tmp_status;
 }
 
@@ -871,7 +871,7 @@ enum status_code i2c_master_write_byte(
 {
   	enum status_code tmp_status;
   	SercomI2cm *const i2c_module = &(module->hw->I2CM);
-	
+
 	/* Write byte to slave. */
 	_i2c_master_wait_for_sync(module);
 	i2c_module->DATA.reg = byte;

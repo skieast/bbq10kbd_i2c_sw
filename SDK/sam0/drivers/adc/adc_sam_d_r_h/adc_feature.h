@@ -509,7 +509,7 @@ struct adc_config {
 	enum adc_divide_result divide_result;
 	/** Left adjusted result */
 	bool left_adjust;
-	/** Enables differential mode if true. 
+	/** Enables differential mode if true.
 	 * if false, ADC will run in singled-ended mode. */
 	bool differential_mode;
 	/** Enables free running mode if true */
@@ -725,4 +725,3 @@ static inline void adc_disable_pin_scan_mode(
 /** @} */
 
 #endif /* ADC_FEATURE_H_INCLUDED */
-

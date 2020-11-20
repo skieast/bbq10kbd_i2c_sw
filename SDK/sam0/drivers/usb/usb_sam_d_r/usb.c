@@ -2102,5 +2102,3 @@ enum status_code usb_init(struct usb_module *module_inst, Usb *const hw,
 
 	return STATUS_OK;
 }
-
-

@@ -52,4 +52,3 @@
 #  define CONF_SPI_SLAVE_ENABLE      false
 
 #endif /* CONF_SPI_H_INCLUDED */
-

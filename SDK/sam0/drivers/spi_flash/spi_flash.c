@@ -450,7 +450,7 @@ void spi_flash_leave_low_power_mode(void)
  * \brief Initializes the SPI Flash module
  */
 void spi_flash_clock_init(void)
-{	
+{
 	/* Reset SPI_Flash */
 	system_peripheral_reset(PERIPHERAL_SPI_FLASH);
 	system_peripheral_reset(PERIPHERAL_SPI_FLASH_IF);
@@ -471,7 +471,7 @@ void spi_flash_clock_init(void)
 void spi_flash_turn_off(void)
 {
 	LPMCU_MISC_REGS0->PULL_ENABLE.reg &= ~LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Msk;
-	
+
 	LPMCU_MISC_REGS0->SPIFLASH_VDDIO_CTRL.reg = 0x0;
 }
 
@@ -484,6 +484,6 @@ void spi_flash_turn_off(void)
 void spi_flash_turn_on(void)
 {
 	LPMCU_MISC_REGS0->PULL_ENABLE.reg |= LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Msk;
-	
+
 	LPMCU_MISC_REGS0->SPIFLASH_VDDIO_CTRL.reg = LPMCU_MISC_REGS_SPIFLASH_VDDIO_CTRL_ENABLE;
 }

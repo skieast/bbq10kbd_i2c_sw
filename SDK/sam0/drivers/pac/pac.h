@@ -1014,4 +1014,3 @@ static inline void system_pac_disable_event(void)
  */
 
 #endif /* PAC_H_INCLUDED */
-

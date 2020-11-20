@@ -143,7 +143,7 @@
  * channel (note that these names refer to the logical operation that the unit
  * performs, and both voltages should be above GND), which are then compared with
  * one another. Both the positive and the negative channel inputs are connected to
- * a pair of multiplexers (MUXes), which allows one of several possible inputs to be 
+ * a pair of multiplexers (MUXes), which allows one of several possible inputs to be
  * selected for each comparator channel.
  *
  * The exact channels available for each comparator differ for the positive and
@@ -686,7 +686,7 @@ struct ac_chan_config {
 	enum ac_hysteresis_level hysteresis_level;
 #endif
 	/** Output mode of the comparator, whether it should be available for
-	 *  internal use, or asynchronously/synchronously linked to a 
+	 *  internal use, or asynchronously/synchronously linked to a
 	 *  general-purpose input/output (GPIO) pin */
 	enum ac_chan_output output_mode;
 	/** Input multiplexer selection for the comparator's positive input pin */

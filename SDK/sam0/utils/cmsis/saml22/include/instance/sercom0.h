@@ -140,10 +140,10 @@
 /* ========== Instance parameters for SERCOM0 peripheral ========== */
 #define SERCOM0_DMAC_ID_RX          2        // Index of DMA RX trigger
 #define SERCOM0_DMAC_ID_TX          3        // Index of DMA TX trigger
-#define SERCOM0_GCLK_ID_CORE        16      
-#define SERCOM0_GCLK_ID_SLOW        15      
-#define SERCOM0_INT_MSB             6       
-#define SERCOM0_PMSB                3       
+#define SERCOM0_GCLK_ID_CORE        16
+#define SERCOM0_GCLK_ID_SLOW        15
+#define SERCOM0_INT_MSB             6
+#define SERCOM0_PMSB                3
 #define SERCOM0_SPI                 1        // SPI mode implemented?
 #define SERCOM0_TWIM                0        // TWI Master mode implemented?
 #define SERCOM0_TWIS                0        // TWI Slave mode implemented?

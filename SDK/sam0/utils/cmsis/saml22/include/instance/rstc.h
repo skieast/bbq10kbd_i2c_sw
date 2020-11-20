@@ -54,7 +54,7 @@
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance parameters for RSTC peripheral ========== */
-#define RSTC_BACKUP_IMPLEMENTED     1       
+#define RSTC_BACKUP_IMPLEMENTED     1
 #define RSTC_NUMBER_OF_EXTWAKE      0        // number of external wakeup line
 
 #endif /* _SAML22_RSTC_INSTANCE_ */

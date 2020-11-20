@@ -1110,12 +1110,12 @@ enum tcc_count_direction {
  * Used when selecting the Timer/Counter overflow DMA request mode.
  */
 enum tcc_count_overflow_dma_trigger_mode {
-	/** TCC generates a DMA request on each cycle when an update condition 
+	/** TCC generates a DMA request on each cycle when an update condition
 	 * is detected
 	 */
 	TCC_COUNT_OVERFLOW_DMA_TRIGGER_MODE_CONTINUE,
-	/** When an update condition is detected, the TCC generates a DMA trigger 
-	 * on the cycle following the DMA One-Shot Command written to the Control 
+	/** When an update condition is detected, the TCC generates a DMA trigger
+	 * on the cycle following the DMA One-Shot Command written to the Control
 	 * B register
 	 */
 	TCC_COUNT_OVERFLOW_DMA_TRIGGER_MODE_ONE_SHOT,
@@ -1159,7 +1159,7 @@ enum tcc_event_action {
 	/** Decrement the counter on event, irrespective of count direction */
 	TCC_EVENT_ACTION_DECREMENT,
 	/** Count during active state of asynchronous event. In this case,
-	* depending	on the count direction, the  count will be incremented 
+	* depending	on the count direction, the  count will be incremented
 	* or decremented on each prescaled GCLK_TCCx, as long as the input
 	* event remains active. */
 	TCC_EVENT_ACTION_COUNT_DURING_ACTIVE,
@@ -1511,7 +1511,7 @@ struct tcc_counter_config {
 	 */
 	bool oneshot;
 
-#ifdef FEATURE_TCC_GENERATE_DMA_TRIGGER	
+#ifdef FEATURE_TCC_GENERATE_DMA_TRIGGER
 	/** Counter overflow trigger a DMA request mode */
 	enum tcc_count_overflow_dma_trigger_mode dma_trigger_mode;
 #endif
@@ -2038,7 +2038,7 @@ static inline void tcc_dma_trigger_command(
 	while (tcc_module->SYNCBUSY.reg & TCC_SYNCBUSY_CTRLB) {
 			/* Wait for sync */
 	}
-	
+
 #if !(SAML21 || SAML22 || SAMR30)
 	/* Write command to execute */
 	tcc_module->CTRLBSET.reg = TCC_CTRLBSET_CMD_DMATRG;

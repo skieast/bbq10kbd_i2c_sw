@@ -1411,4 +1411,3 @@ void rtc_tamper_get_stamp (struct rtc_module *const module,
  */
 
 #endif /* RTC_CALENDAR_H_INCLUDED */
-

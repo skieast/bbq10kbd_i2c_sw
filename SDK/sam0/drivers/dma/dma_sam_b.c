@@ -251,7 +251,7 @@ static void _dma_set_config(struct dma_resource *resource,
 	set_channel_reg_val(resource->channel_id, (uint32_t)&PROV_DMA_CTRL0->CH0_STATIC_REG0.reg, regval);
 	/* Static register1 configuration */
 	regval = PROV_DMA_CTRL_CH0_STATIC_REG1_WR_BURST_MAX_SIZE(config->des.max_burst) |
-			PROV_DMA_CTRL_CH0_STATIC_REG1_WR_TOKENS(config->des.tokens) | 
+			PROV_DMA_CTRL_CH0_STATIC_REG1_WR_TOKENS(config->des.tokens) |
 			(config->des.enable_inc_addr << PROV_DMA_CTRL_CH0_STATIC_REG0_RD_INCR_Pos);
 	set_channel_reg_val(resource->channel_id, (uint32_t)&PROV_DMA_CTRL0->CH0_STATIC_REG1.reg, regval);
 	/* Static register2 configuration */
@@ -391,7 +391,7 @@ enum status_code dma_start_transfer_job(struct dma_resource *resource)
 	if (resource->descriptor->buffer_size == 0) {
 		return STATUS_ERR_INVALID_ARG;
 	}
-	
+
 	/* Clear the interrupt flag */
 	regval = get_channel_reg_val(resource->channel_id, (uint32_t)&PROV_DMA_CTRL0->CH0_INT_STATUS_REG.reg);
 	set_channel_reg_val(resource->channel_id, (uint32_t)&PROV_DMA_CTRL0->CH0_INT_CLEAR_REG.reg, regval);
@@ -423,7 +423,7 @@ static uint8_t get_channel_index(uint8_t channel)
 		channel = channel >> 1;
 		index++;
 	} while (channel);
-	
+
 	return (index - 1);
 }
 
@@ -440,9 +440,9 @@ static void dma_isr_handler( void )
 	uint8_t isr_flag = 0;
 
 	/* Get active channel */
-	active_channel =  PROV_DMA_CTRL0->CORE_INT_STATUS.reg & 
+	active_channel =  PROV_DMA_CTRL0->CORE_INT_STATUS.reg &
 			PROV_DMA_CTRL_CORE_INT_STATUS_CHANNEL__Msk;
-				
+
 	do {
 		channel_index = get_channel_index(active_channel);
 		/* Get active DMA resource based on channel */
@@ -493,7 +493,7 @@ static void dma_isr_handler( void )
 			/* Set I/O ERROR status */
 			resource->job_status = STATUS_ERR_IO;
 		}
-		
+
 		if (isr) {
 			/* Clear the watch dog error flag */
 			set_channel_reg_val(resource->channel_id, (uint32_t)&PROV_DMA_CTRL0->CH0_INT_CLEAR_REG.reg, 1<<isr_flag);
@@ -533,7 +533,7 @@ enum status_code dma_allocate(struct dma_resource *resource,
 		/* Select Mux 15 as PROV_DMA_CTRL0 interrupt source */
 		LPMCU_MISC_REGS0->IRQ_MUX_IO_SEL_3.bit.MUX_15 = LPMCU_MISC_REGS_IRQ_MUX_IO_SEL_3_MUX_15_16_Val;
 		system_register_isr(31, (uint32_t)dma_isr_handler);
-		
+
 		_dma_inst._dma_init = true;
 	}
 
@@ -542,12 +542,12 @@ enum status_code dma_allocate(struct dma_resource *resource,
 	if (new_channel == DMA_INVALID_CHANNEL) {
 		return STATUS_ERR_NOT_FOUND;
 	}
-	
+
 	/* Set the channel */
 	resource->channel_id = new_channel;
 	/* Configure the DMA control,channel registers and descriptors here */
 	_dma_set_config(resource, config);
-	
+
 	resource->descriptor = NULL;
 
 	/* Log the DMA resource into the internal DMA resource pool */

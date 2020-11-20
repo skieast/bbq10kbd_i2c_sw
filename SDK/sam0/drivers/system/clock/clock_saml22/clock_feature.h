@@ -662,7 +662,7 @@ struct system_clock_source_dfll_config {
  *   - Don't run in STANDBY sleep mode
  *   - Run when it's enabled (not on demand)
  *   - Clock failure detect disabled
- *   - CFD safe clock frequency is divided by 128 
+ *   - CFD safe clock frequency is divided by 128
  *   - Clock failure detect event output disabled
  *
  * \param[out] config  Configuration structure to fill with default values

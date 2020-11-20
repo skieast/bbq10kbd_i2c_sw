@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR LPMCU_MISC_REGS */
 /* ========================================================================== */
-/** \addtogroup SAMB11_LPMCU_MISC_REGS LPMCU Misc Registers 
+/** \addtogroup SAMB11_LPMCU_MISC_REGS LPMCU Misc Registers
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- LPMCU_MISC_REGS_LPMCU_CHIP_ID : (LPMCU_MISC_REGS Offset: 0x00) (R/ 32) The hard-coded ID for the chip. -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REV_ID:24;                 /**< bit:  0..23  Chip ID                                  */
     uint32_t :8;                        /**< bit: 24..31  Reserved */
@@ -80,7 +80,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_GLOBAL_RESET_0 : (LPMCU_MISC_REGS Offset: 0x04) (R/W 32) Active Low Global Reset -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t GLOBAL_RSTN:1;             /**< bit:      0  LPMCU Global Reset (self setting)        */
     uint32_t CPU_RSTN:1;                /**< bit:      1  LPMCU CPU Reset                          */
@@ -223,7 +223,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_GLOBAL_RESET_1 : (LPMCU_MISC_REGS Offset: 0x08) (R/W 16) Active Low Global Reset -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t DUALTIMER0_RSTN:1;         /**< bit:      0  DUALTIMER0 Reset                         */
     uint16_t I2C1_CORE_RSTN:1;          /**< bit:      1  I2C1 Core Reset                          */
@@ -287,7 +287,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_CLOCK_ENABLES_0 : (LPMCU_MISC_REGS Offset: 0x0c) (R/W 32) LPMCU Clock Enables -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
     uint32_t SPI_FLASH0_CLK_EN:1;       /**< bit:      1  SPI_FLASH0 Clock Enable                  */
@@ -414,7 +414,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_CLOCK_ENABLES_1 : (LPMCU_MISC_REGS Offset: 0x10) (R/W 32) LPMCU Clock Enables -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE0_CLK_EN:1;           /**< bit:      0  EFUSE0 Clock Enable                      */
     uint32_t EFUSE1_CLK_EN:1;           /**< bit:      1  EFUSE1 Clock Enable                      */
@@ -526,7 +526,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_BTMCU_CTRL : (LPMCU_MISC_REGS Offset: 0x14) (R/W 8) Miscellaneous BLE control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RXTX_SEQ_CLK_EN:1;         /**< bit:      0  BLE RXTX Sequencer Clock Enable          */
     uint8_t  AHB_CLK_EN:1;              /**< bit:      1  BLE HAB Clock Enable                     */
@@ -554,7 +554,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_CTRL : (LPMCU_MISC_REGS Offset: 0x18) (R/W 32) Miscellaneous LPMCU control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LPMCU_CLK_SEL:2;           /**< bit:   0..1  LPMCU Clock Frequency Selection          */
     uint32_t USE_BT26M_CLK:1;           /**< bit:      2  Use XO as ARM clock (must also set use_arm_lp_clk) */
@@ -646,7 +646,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_MBIST : (LPMCU_MISC_REGS Offset: 0x1c) (R/W 8) MBIST designation -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  MBIST_MODE:1;              /**< bit:      0  Puts the chip in MBIST mode              */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -666,7 +666,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_BLE_CTRL : (LPMCU_MISC_REGS Offset: 0x20) (R/W 8) BLE Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  BLE_WAKEUP_REQ:1;          /**< bit:      0  BLE Wakeup Request (to BLE Sleep Timer)  */
     uint8_t  BLE_WAKEUP_REQ_CORE:1;     /**< bit:      1  BLE Wakeup Request (to BLE Core)         */
@@ -690,7 +690,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MBIST_CTRL : (LPMCU_MISC_REGS Offset: 0x24) (R/W 32) MBIST Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MBIST_CONTROL:19;          /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -710,7 +710,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MBIST_STATUS : (LPMCU_MISC_REGS Offset: 0x28) (R/ 32) MBIST Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MBIST_BUS:21;              /**< bit:  0..20  Observation of MBIST results             */
     uint32_t MBIST_BLOCK_SEL:5;         /**< bit: 21..25  Observation of block field of MBIST control */
@@ -741,7 +741,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MBIST_SRAM_ALG_SEL : (LPMCU_MISC_REGS Offset: 0x2c) (R/W 16) Enables MBIST algorithms -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t MARCH2_ENABLE:1;           /**< bit:      0  Enables the march2 algorithm             */
     uint16_t UNIQUE_ENABLE:1;           /**< bit:      1  Enables the unique address algorithm     */
@@ -820,7 +820,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MBIST_BG : (LPMCU_MISC_REGS Offset: 0x30) (R/W 32) MBIST Background for MARCH2 algorithm (bits 31:0) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MBIST_BG:32;               /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -839,7 +839,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_TEST_BUS_CTRL : (LPMCU_MISC_REGS Offset: 0x38) (R/W 8) Controls all of the test bus functionality -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TEST_ENABLE_ARM:1;         /**< bit:      0  Selects periph test bus                  */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -859,7 +859,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_WP3_MISR_DATAOUT : (LPMCU_MISC_REGS Offset: 0x3c) (R/ 32) ROM MBIST Signature -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WP3_MISR_DATAOUT:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -878,7 +878,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL : (LPMCU_MISC_REGS Offset: 0x40) (R/W 32) Invert Output Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_0:1;               /**< bit:      0  Invert the output for lp_gpio_0          */
     uint32_t LP_GPIO_1:1;               /**< bit:      1  Invert the output for lp_gpio_1          */
@@ -1012,16 +1012,16 @@ typedef union {
 #define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP_4 LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP_4_Msk  /**< \deprecated Old style mask definition for 1 bit bitfield. Use LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP_4_Msk instead */
 #define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO__Pos 0                                              /**< (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL Position) Invert the output for lp_gpio_x */
 #define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO__Msk (0xFFFFFFu << LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO__Pos)  /**< (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL Mask) LP_GPIO_ */
-#define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO_(value) (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO__Msk & ((value) << LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO__Pos))  
+#define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO_(value) (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO__Msk & ((value) << LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_GPIO__Pos))
 #define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP__Pos 27                                             /**< (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL Position) Invert the output for lp_sip_4 */
 #define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP__Msk (0x1Fu << LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP__Pos)  /**< (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL Mask) LP_SIP_ */
-#define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP_(value) (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP__Msk & ((value) << LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP__Pos))  
+#define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP_(value) (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP__Msk & ((value) << LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_LP_SIP__Pos))
 #define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_MASK 0xF8FFFFFFu                                    /**< \deprecated (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL) Register MASK  (Use LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_Msk instead)  */
 #define LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL_Msk 0xF8FFFFFFu                                    /**< (LPMCU_MISC_REGS_INVERT_OUTPUT_CTRL) Register Mask  */
 
 /* -------- LPMCU_MISC_REGS_PINMUX_SEL_0 : (LPMCU_MISC_REGS Offset: 0x44) (R/W 32) Pinmux select for LP_GPIO_0, LP_GPIO_1, LP_GPIO_2, LP_GPIO_3, LP_GPIO_4, LP_GPIO_5, LP_GPIO_6, LP_GPIO_7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_0_SEL:3;           /**< bit:   0..2  Pinmux select for LP_GPIO_0              */
     uint32_t :1;                        /**< bit:      3  Reserved */
@@ -1172,7 +1172,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PINMUX_SEL_1 : (LPMCU_MISC_REGS Offset: 0x48) (R/W 32) Pinmux select for LP_GPIO_8, LP_GPIO_9, LP_GPIO_10, LP_GPIO_11, LP_GPIO_12, LP_GPIO_13, LP_GPIO_14, LP_GPIO_15 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_8_SEL:3;           /**< bit:   0..2  Pinmux select for LP_GPIO_8              */
     uint32_t :1;                        /**< bit:      3  Reserved */
@@ -1311,7 +1311,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PINMUX_SEL_2 : (LPMCU_MISC_REGS Offset: 0x4c) (R/W 32) Pinmux select for LP_GPIO_16, LP_GPIO_17, LP_GPIO_18, LP_GPIO_19, LP_GPIO_20, LP_GPIO_21, LP_GPIO_22, LP_GPIO_23 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_16_SEL:3;          /**< bit:   0..2  Pinmux select for LP_GPIO_16             */
     uint32_t :1;                        /**< bit:      3  Reserved */
@@ -1436,7 +1436,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PULL_ENABLE : (LPMCU_MISC_REGS Offset: 0x50) (R/W 32) Active Low Pull Enables for LPMCU Pads -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_0:1;               /**< bit:      0  Pull Enable for LP_GPIO_0                */
     uint32_t LP_GPIO_1:1;               /**< bit:      1  Pull Enable for LP_GPIO_1                */
@@ -1570,16 +1570,16 @@ typedef union {
 #define LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP_4 LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP_4_Msk       /**< \deprecated Old style mask definition for 1 bit bitfield. Use LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP_4_Msk instead */
 #define LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO__Pos 0                                              /**< (LPMCU_MISC_REGS_PULL_ENABLE Position) Pull Enable for LP_GPIO_x */
 #define LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO__Msk (0xFFFFFFu << LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO__Pos)  /**< (LPMCU_MISC_REGS_PULL_ENABLE Mask) LP_GPIO_ */
-#define LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO_(value) (LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO__Msk & ((value) << LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO__Pos))  
+#define LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO_(value) (LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO__Msk & ((value) << LPMCU_MISC_REGS_PULL_ENABLE_LP_GPIO__Pos))
 #define LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Pos 27                                             /**< (LPMCU_MISC_REGS_PULL_ENABLE Position) Pull Enable for LP_SIP_4 */
 #define LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Msk (0x1Fu << LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Pos)  /**< (LPMCU_MISC_REGS_PULL_ENABLE Mask) LP_SIP_ */
-#define LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP_(value) (LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Msk & ((value) << LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Pos))  
+#define LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP_(value) (LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Msk & ((value) << LPMCU_MISC_REGS_PULL_ENABLE_LP_SIP__Pos))
 #define LPMCU_MISC_REGS_PULL_ENABLE_MASK    0xF8FFFFFFu                                    /**< \deprecated (LPMCU_MISC_REGS_PULL_ENABLE) Register MASK  (Use LPMCU_MISC_REGS_PULL_ENABLE_Msk instead)  */
 #define LPMCU_MISC_REGS_PULL_ENABLE_Msk     0xF8FFFFFFu                                    /**< (LPMCU_MISC_REGS_PULL_ENABLE) Register Mask  */
 
 /* -------- LPMCU_MISC_REGS_RTYPE_PAD_0 : (LPMCU_MISC_REGS Offset: 0x54) (R/W 32) Controls the RTYPE (Pull Level) pad value for LPMCU Pads (0 = Pull Up) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_0:1;               /**< bit:      0  Controls RTYPE (Pull Level) value for LP_GPIO_0 */
     uint32_t LP_GPIO_1:1;               /**< bit:      1  Controls RTYPE (Pull Level) value LP_GPIO_1 */
@@ -1692,13 +1692,13 @@ typedef union {
 #define LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO_23 LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO_23_Msk     /**< \deprecated Old style mask definition for 1 bit bitfield. Use LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO_23_Msk instead */
 #define LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO__Pos 0                                              /**< (LPMCU_MISC_REGS_RTYPE_PAD_0 Position) Controls RTYPE (Pull Level) value LP_GPIO_23 */
 #define LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO__Msk (0xFFFFFFu << LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO__Pos)  /**< (LPMCU_MISC_REGS_RTYPE_PAD_0 Mask) LP_GPIO_ */
-#define LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO_(value) (LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO__Msk & ((value) << LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO__Pos))  
+#define LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO_(value) (LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO__Msk & ((value) << LPMCU_MISC_REGS_RTYPE_PAD_0_LP_GPIO__Pos))
 #define LPMCU_MISC_REGS_RTYPE_PAD_0_MASK    0xFFFFFFu                                      /**< \deprecated (LPMCU_MISC_REGS_RTYPE_PAD_0) Register MASK  (Use LPMCU_MISC_REGS_RTYPE_PAD_0_Msk instead)  */
 #define LPMCU_MISC_REGS_RTYPE_PAD_0_Msk     0xFFFFFFu                                      /**< (LPMCU_MISC_REGS_RTYPE_PAD_0) Register Mask  */
 
 /* -------- LPMCU_MISC_REGS_PINMUX_SEL_3 : (LPMCU_MISC_REGS Offset: 0x68) (R/W 32) Pinmux select for LP_SIP_0, LP_SIP_1, LP_SIP_2, LP_SIP_3, LP_SIP_4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_SIP_0_SEL:3;            /**< bit:   0..2  Pinmux select for LP_SIP_0               */
     uint32_t :1;                        /**< bit:      3  Reserved */
@@ -1748,7 +1748,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_ISHAPE_PAD_3 : (LPMCU_MISC_REGS Offset: 0x6c) (R/W 32) Controls the ISHAPE pad value for LPMCU SIP Pads -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_SIP_0:3;                /**< bit:   0..2  Controls ISHAPE value LP_SIP_0           */
     uint32_t :1;                        /**< bit:      3  Reserved */
@@ -1788,7 +1788,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_CTRL_2 : (LPMCU_MISC_REGS Offset: 0x90) (R/W 8) Misc control for the LPMCU -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  SPI_FLASH0_CLOCK_FRAC_VALUE:8;  /**< bit:   0..7  SPI_FLASH0 Fractional Divider Value      */
   } bit;                                /**< Structure used for bit  access */
@@ -1807,7 +1807,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SPIFLASH_VDDIO_CTRL : (LPMCU_MISC_REGS Offset: 0xa0) (R/W 8) Control for VDDIO of SPI FLASH -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enables power for the stacked (internal) SPI FLASH */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -1827,7 +1827,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SPIFLASH_BYPASS : (LPMCU_MISC_REGS Offset: 0xa4) (R/W 8) SPI FLASH Bypass -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enables Bypass of SPI Flash Controller   */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -1847,7 +1847,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_MUX_IO_SEL_0 : (LPMCU_MISC_REGS Offset: 0xc0) (R/W 32) ARM Cortex IRQ Mux Selection -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MUX_0:5;                   /**< bit:   0..4  IRQ_0 Source Selection                   */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -2082,7 +2082,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_MUX_IO_SEL_1 : (LPMCU_MISC_REGS Offset: 0xc4) (R/W 32) ARM Cortex IRQ Mux Selection -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MUX_4:5;                   /**< bit:   0..4  IRQ_4 Source Selection                   */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -2317,7 +2317,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_MUX_IO_SEL_2 : (LPMCU_MISC_REGS Offset: 0xc8) (R/W 32) ARM Cortex IRQ Mux Selection -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MUX_8:5;                   /**< bit:   0..4  IRQ_8 Source Selection                   */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -2552,7 +2552,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_MUX_IO_SEL_3 : (LPMCU_MISC_REGS Offset: 0xcc) (R/W 32) ARM Cortex IRQ Mux Selection -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MUX_12:5;                  /**< bit:   0..4  IRQ_12 Source Selection                  */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -2787,7 +2787,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_MUX_IO_SEL_4 : (LPMCU_MISC_REGS Offset: 0xd0) (R/W 32) ARM Cortex IRQ Mux Selection -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MUX_16:5;                  /**< bit:   0..4  IRQ_16 Source Selection                  */
     uint32_t :3;                        /**< bit:   5..7  Reserved */
@@ -3022,7 +3022,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_MUX_IO_SEL_5 : (LPMCU_MISC_REGS Offset: 0xd4) (R/W 8) ARM Cortex IRQ Mux Selection -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  MUX_20:5;                  /**< bit:   0..4  IRQ_20 Source Selection                  */
     uint8_t  :3;                        /**< bit:   5..7  Reserved */
@@ -3092,7 +3092,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PWM0_CTRL : (LPMCU_MISC_REGS Offset: 0x160) (R/W 32) PWM0 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t PWM_EN:1;                  /**< bit:      0  Active High PWM Enable                   */
     uint32_t OUTPUT_POLARITY:1;         /**< bit:      1  1 to inverse the polarity                */
@@ -3150,7 +3150,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PWM1_CTRL : (LPMCU_MISC_REGS Offset: 0x164) (R/W 32) PWM1 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t PWM_EN:1;                  /**< bit:      0  Active High PWM Enable                   */
     uint32_t OUTPUT_POLARITY:1;         /**< bit:      1  1 to inverse the polarity                */
@@ -3208,7 +3208,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PWM2_CTRL : (LPMCU_MISC_REGS Offset: 0x168) (R/W 32) PWM2 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t PWM_EN:1;                  /**< bit:      0  Active High PWM Enable                   */
     uint32_t OUTPUT_POLARITY:1;         /**< bit:      1  1 to inverse the polarity                */
@@ -3266,7 +3266,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PWM3_CTRL : (LPMCU_MISC_REGS Offset: 0x16c) (R/W 32) PWM3 Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t PWM_EN:1;                  /**< bit:      0  Active High PWM Enable                   */
     uint32_t OUTPUT_POLARITY:1;         /**< bit:      1  1 to inverse the polarity                */
@@ -3324,7 +3324,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MBIST_DUAL_STATUS : (LPMCU_MISC_REGS Offset: 0x170) (R/ 32) Reflects the status of MBIST from lpmcu and btmcu -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t MBIST_BUS:21;              /**< bit:  0..20  Observation of lpmcu and btmcu MBIST results */
     uint32_t :11;                       /**< bit: 21..31  Reserved */
@@ -3344,7 +3344,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_DUALTIMER0_CTRL : (LPMCU_MISC_REGS Offset: 0x188) (R/W 8) DUALTIMER0 Control -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CNTR_1_ENABLE:1;           /**< bit:      0  Enable Dual Timer 1 Decoder              */
     uint8_t  CNTR_2_ENABLE:1;           /**< bit:      1  Enable Dual Timer 2 Decoder              */
@@ -3368,7 +3368,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_ARM_SLEEP_WAKEUP_CTRL : (LPMCU_MISC_REGS Offset: 0x190) (R/W 32) Sleep and Wakeup Control for the AON Power Sequencer -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t SLEEP_1:1;                 /**< bit:      0  Sleep Request 1 from the ARM to the AON Power Sequencer */
     uint32_t :15;                       /**< bit:  1..15  Reserved */
@@ -3398,7 +3398,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MEGA_MUX_IO_SEL_0 : (LPMCU_MISC_REGS Offset: 0x1a0) (R/W 32) Mega Mux Selection -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_0:6;               /**< bit:   0..5  LP_GPIO_0 mega mux selection             */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -3713,7 +3713,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MEGA_MUX_IO_SEL_1 : (LPMCU_MISC_REGS Offset: 0x1a4) (R/W 32) Mega Mux Selection (Refer to Mega_Mux_IO Spreadsheet) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_4:6;               /**< bit:   0..5  LP_GPIO_4 mega mux selection             */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -4028,7 +4028,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MEGA_MUX_IO_SEL_2 : (LPMCU_MISC_REGS Offset: 0x1a8) (R/W 32) Mega Mux Selection (Refer to Mega_Mux_IO Spreadsheet) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_8:6;               /**< bit:   0..5  LP_GPIO_8 mega mux selection             */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -4343,7 +4343,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MEGA_MUX_IO_SEL_3 : (LPMCU_MISC_REGS Offset: 0x1ac) (R/W 32) Mega Mux Selection (Refer to Mega_Mux_IO Spreadsheet) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_12:6;              /**< bit:   0..5  LP_GPIO_12 mega mux selection            */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -4658,7 +4658,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MEGA_MUX_IO_SEL_4 : (LPMCU_MISC_REGS Offset: 0x1b0) (R/W 32) Mega Mux Selection (Refer to Mega_Mux_IO Spreadsheet) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_16:6;              /**< bit:   0..5  LP_GPIO_16 mega mux selection            */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -4973,7 +4973,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MEGA_MUX_IO_SEL_5 : (LPMCU_MISC_REGS Offset: 0x1b4) (R/W 32) Mega Mux Selection (Refer to Mega_Mux_IO Spreadsheet) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t LP_GPIO_20:6;              /**< bit:   0..5  LP_GPIO_20 mega mux selection            */
     uint32_t :2;                        /**< bit:   6..7  Reserved */
@@ -5288,7 +5288,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SENS_ADC_CLK_CTRL : (LPMCU_MISC_REGS Offset: 0x1c0) (R/W 32) Clock control for the Sensor ADC -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FRAC_PART:8;               /**< bit:   0..7  Fractional part for the clock divider    */
     uint32_t INT_PART:12;               /**< bit:  8..19  Integer part for the clock divider       */
@@ -5316,7 +5316,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SENS_ADC_RAW_STATUS : (LPMCU_MISC_REGS Offset: 0x1c4) (R/ 32) Raw Status from the Sensor ADC -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ADC_OUT:11;                /**< bit:  0..10  Raw Status of the sens_adc_out port of the PMU */
     uint32_t :1;                        /**< bit:     11  Reserved */
@@ -5346,7 +5346,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SENS_ADC_CH0_DATA : (LPMCU_MISC_REGS Offset: 0x1c8) (R/ 16) Current data of the Sensor ADC for Channel 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t SENS_ADC_CH0_DATA:11;      /**< bit:  0..10                                           */
     uint16_t :5;                        /**< bit: 11..15  Reserved */
@@ -5366,7 +5366,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SENS_ADC_CH1_DATA : (LPMCU_MISC_REGS Offset: 0x1cc) (R/ 16) Current data of the Sensor ADC for Channel 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t SENS_ADC_CH1_DATA:11;      /**< bit:  0..10                                           */
     uint16_t :5;                        /**< bit: 11..15  Reserved */
@@ -5386,7 +5386,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SENS_ADC_CH2_DATA : (LPMCU_MISC_REGS Offset: 0x1d0) (R/ 16) Current data of the Sensor ADC for Channel 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t SENS_ADC_CH2_DATA:11;      /**< bit:  0..10                                           */
     uint16_t :5;                        /**< bit: 11..15  Reserved */
@@ -5406,7 +5406,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_SENS_ADC_CH3_DATA : (LPMCU_MISC_REGS Offset: 0x1d4) (R/ 16) Current data of the Sensor ADC for Channel 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t SENS_ADC_CH3_DATA:11;      /**< bit:  0..10                                           */
     uint16_t :5;                        /**< bit: 11..15  Reserved */
@@ -5426,7 +5426,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_CTRL : (LPMCU_MISC_REGS Offset: 0x1e8) (R/W 16) Configure the IRQ inputs to the system as either Rising Edge or Level Shift -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t BLE_LVL_OSC_EN_IRQ_EN:1;   /**< bit:      0  Enable the OSC_en signal for Level Shift and Clear Mode */
     uint16_t BLE_LVL_OSC_EN_IRQ_CLR:1;  /**< bit:      1  if ble_lvl_osc_en_irq_en is enabled, setting irq clr to 1 will clear the irq request */
@@ -5482,7 +5482,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_IRQ_STS : (LPMCU_MISC_REGS Offset: 0x1ec) (R/ 8) Read the raw (no level or rise detect) IRQ inputs to the system from the designated cores -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  BLE_OSC_EN_IRQ:1;          /**< bit:      0  Read the OSC_en signal from the lp core  */
     uint8_t  BLE_WAKEUP_LP_IRQ:1;       /**< bit:      1  Read the wakeup_lp_irq signal from the lp core */
@@ -5518,7 +5518,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MSEMI_MEM_CTRL : (LPMCU_MISC_REGS Offset: 0x200) (R/W 32) Control the rwm, rm and wm on the Mobile Semi Memories -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t PD2A_MEM_RWM_EN:1;         /**< bit:      0  RWM control for pd2a memory              */
     uint32_t PD2A_MEM_WM_EN:1;          /**< bit:      1  WM control for pd2a memory               */
@@ -5624,7 +5624,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_EFUSE_1_STATUS_3 : (LPMCU_MISC_REGS Offset: 0x204) (R/W 32) EFUSE_1_3 Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t EFUSE_1_STATUS_3:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5643,7 +5643,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_LPMCU_FORCE_CTRL : (LPMCU_MISC_REGS Offset: 0x210) (R/W 16) Miscellaneous Force control values for LPMCU -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t SCLK_EN:1;                 /**< bit:      0  Enable Force Control of SCLK             */
     uint16_t SCLK_VAL:1;                /**< bit:      1  Enable Force Control of SCLK Value       */
@@ -5711,7 +5711,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_ARM_IRQ_STATUS_0 : (LPMCU_MISC_REGS Offset: 0x214) (R/ 32) ARM Cortex M0 IRQ Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ARM_IRQ_STATUS_0:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5730,7 +5730,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_ARM_IRQ_STATUS_1 : (LPMCU_MISC_REGS Offset: 0x218) (R/ 32) ARM Cortex M0 IRQ Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t ARM_IRQ_STATUS_1:32;       /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5749,7 +5749,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_BLE_DEEP_SLEEP_ENABLES : (LPMCU_MISC_REGS Offset: 0x240) (R/W 8) BLE Deep Sleep Enables -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  FW_TIMER_CORR_EN:1;        /**< bit:      0  Enables FW Timer Correction Operation    */
     uint8_t  HW_TIMER_CORR_EN:1;        /**< bit:      1  Enables HW Timer Correction Operation    */
@@ -5773,7 +5773,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_DEEP_SLEEP_HW_TIMER_CORR : (LPMCU_MISC_REGS Offset: 0x244) (R/W 32) Configures the HW auto correction algorithm of the fine/base timers after wakeup from deep sleep -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t WAIT:10;                   /**< bit:   0..9  Wait time in us after wakeup before correction begins */
     uint32_t :2;                        /**< bit: 10..11  Reserved */
@@ -5798,7 +5798,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_REMAP_IDRAM1_BASE_ADDR : (LPMCU_MISC_REGS Offset: 0x254) (R/W 32) ARM Cortex M0 idram 1 remap base addr -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REMAP_IDRAM1_BASE_ADDR:32;  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5817,7 +5817,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_REMAP_IDRAM1_END_ADDR : (LPMCU_MISC_REGS Offset: 0x258) (R/W 32) ARM Cortex M0 idram 1 remap end addr -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REMAP_IDRAM1_END_ADDR:32;  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5836,7 +5836,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_REMAP_IDRAM2_BASE_ADDR : (LPMCU_MISC_REGS Offset: 0x25c) (R/W 32) ARM Cortex M0 idram 2 remap base addr -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REMAP_IDRAM2_BASE_ADDR:32;  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5855,7 +5855,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_REMAP_IDRAM2_END_ADDR : (LPMCU_MISC_REGS Offset: 0x260) (R/W 32) ARM Cortex M0 idram 2 remap end addr -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REMAP_IDRAM2_END_ADDR:32;  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5874,7 +5874,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_REMAP_BOOT_BASE_ADDR : (LPMCU_MISC_REGS Offset: 0x264) (R/W 32) ARM Cortex M0 bootrom remap base addr -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REMAP_BOOT_BASE_ADDR:32;   /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5893,7 +5893,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_REMAP_BOOT_END_ADDR : (LPMCU_MISC_REGS Offset: 0x268) (R/W 32) ARM Cortex M0 bootrom remap end addr -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t REMAP_BOOT_END_ADDR:32;    /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -5912,7 +5912,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC_IRQS : (LPMCU_MISC_REGS Offset: 0x280) (R/ 8) Reflects the IRQ status of the Quad Decoders -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  QUAD_DEC0_IRQ:1;           /**< bit:      0  QUAD_DEC0 Interrupt                      */
     uint8_t  QUAD_DEC1_IRQ:1;           /**< bit:      1  QUAD_DEC1 Interrupt                      */
@@ -5940,7 +5940,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC0_STATUS : (LPMCU_MISC_REGS Offset: 0x284) (R/ 16) Current status of QUAD_DEC0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t COUNT:16;                  /**< bit:  0..15  Current count of QUAD_DEC0               */
   } bit;                                /**< Structure used for bit  access */
@@ -5959,7 +5959,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC1_STATUS : (LPMCU_MISC_REGS Offset: 0x288) (R/ 16) Current status of QUAD_DEC1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t COUNT:16;                  /**< bit:  0..15  Current count of QUAD_DEC1               */
   } bit;                                /**< Structure used for bit  access */
@@ -5978,7 +5978,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC2_STATUS : (LPMCU_MISC_REGS Offset: 0x28c) (R/ 16) Current status of QUAD_DEC2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t COUNT:16;                  /**< bit:  0..15  Current count of QUAD_DEC2               */
   } bit;                                /**< Structure used for bit  access */
@@ -5997,7 +5997,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC0_THRESHOLD : (LPMCU_MISC_REGS Offset: 0x290) (R/W 32) Thresholds for QUAD_DEC0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t UPPER:16;                  /**< bit:  0..15  Upper Threshold of counter for QUAD_DEC0 */
     uint32_t LOWER:16;                  /**< bit: 16..31  Lower Threshold of counter for QUAD_DEC0 */
@@ -6020,7 +6020,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC0_CTRL : (LPMCU_MISC_REGS Offset: 0x294) (R/W 8) Control for QUAD_DEC0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enable Quad Decoder                      */
     uint8_t  CLR_IRQ:1;                 /**< bit:      1  Clear IRQ From Quad Decoder              */
@@ -6056,7 +6056,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC1_THRESHOLD : (LPMCU_MISC_REGS Offset: 0x2a0) (R/W 32) Thresholds for QUAD_DEC1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t UPPER:16;                  /**< bit:  0..15  Upper Threshold of counter for QUAD_DEC1 */
     uint32_t LOWER:16;                  /**< bit: 16..31  Lower Threshold of counter for QUAD_DEC1 */
@@ -6079,7 +6079,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC1_CTRL : (LPMCU_MISC_REGS Offset: 0x2a4) (R/W 8) Control for QUAD_DEC1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enable Quad Decoder                      */
     uint8_t  CLR_IRQ:1;                 /**< bit:      1  Clear IRQ From Quad Decoder              */
@@ -6115,7 +6115,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC2_THRESHOLD : (LPMCU_MISC_REGS Offset: 0x2b0) (R/W 32) Thresholds for QUAD_DEC2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t UPPER:16;                  /**< bit:  0..15  Upper Threshold of counter for QUAD_DEC2 */
     uint32_t LOWER:16;                  /**< bit: 16..31  Lower Threshold of counter for QUAD_DEC2 */
@@ -6138,7 +6138,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_QUAD_DEC2_CTRL : (LPMCU_MISC_REGS Offset: 0x2b4) (R/W 8) Control for QUAD_DEC2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enable Quad Decoder                      */
     uint8_t  CLR_IRQ:1;                 /**< bit:      1  Clear IRQ From Quad Decoder              */
@@ -6174,7 +6174,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP0_COMP : (LPMCU_MISC_REGS Offset: 0x2c0) (R/W 32) Flash Breakpoint Compare Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP0_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6194,7 +6194,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP1_COMP : (LPMCU_MISC_REGS Offset: 0x2c4) (R/W 32) Flash Breakpoint Compare Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP1_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6214,7 +6214,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP2_COMP : (LPMCU_MISC_REGS Offset: 0x2c8) (R/W 32) Flash Breakpoint Compare Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP2_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6234,7 +6234,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP3_COMP : (LPMCU_MISC_REGS Offset: 0x2cc) (R/W 32) Flash Breakpoint Compare Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP3_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6254,7 +6254,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP4_COMP : (LPMCU_MISC_REGS Offset: 0x2d0) (R/W 32) Flash Breakpoint Compare Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP4_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6274,7 +6274,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP5_COMP : (LPMCU_MISC_REGS Offset: 0x2d4) (R/W 32) Flash Breakpoint Compare Register 5 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP5_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6294,7 +6294,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP6_COMP : (LPMCU_MISC_REGS Offset: 0x2d8) (R/W 32) Flash Breakpoint Compare Register 6 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP6_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6314,7 +6314,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP7_COMP : (LPMCU_MISC_REGS Offset: 0x2dc) (R/W 32) Flash Breakpoint Compare Register 7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP7_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6334,7 +6334,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP8_COMP : (LPMCU_MISC_REGS Offset: 0x2e0) (R/W 32) Flash Breakpoint Compare Register 8 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP8_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6354,7 +6354,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP9_COMP : (LPMCU_MISC_REGS Offset: 0x2e4) (R/W 32) Flash Breakpoint Compare Register 9 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP9_COMP:17;          /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6374,7 +6374,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP10_COMP : (LPMCU_MISC_REGS Offset: 0x2e8) (R/W 32) Flash Breakpoint Compare Register 10 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP10_COMP:17;         /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6394,7 +6394,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP11_COMP : (LPMCU_MISC_REGS Offset: 0x2ec) (R/W 32) Flash Breakpoint Compare Register 11 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP11_COMP:17;         /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6414,7 +6414,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP12_COMP : (LPMCU_MISC_REGS Offset: 0x2f0) (R/W 32) Flash Breakpoint Compare Register 12 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP12_COMP:17;         /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6434,7 +6434,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP13_COMP : (LPMCU_MISC_REGS Offset: 0x2f4) (R/W 32) Flash Breakpoint Compare Register 13 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP13_COMP:17;         /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6454,7 +6454,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP14_COMP : (LPMCU_MISC_REGS Offset: 0x2f8) (R/W 32) Flash Breakpoint Compare Register 14 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP14_COMP:17;         /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6474,7 +6474,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP15_COMP : (LPMCU_MISC_REGS Offset: 0x2fc) (R/W 32) Flash Breakpoint Compare Register 15 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP15_COMP:17;         /**< bit:  0..16                                           */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
@@ -6494,7 +6494,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP0_REPLACE : (LPMCU_MISC_REGS Offset: 0x300) (R/W 32) Flash Breakpoint Replace Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP0_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6514,7 +6514,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP1_REPLACE : (LPMCU_MISC_REGS Offset: 0x304) (R/W 32) Flash Breakpoint Replace Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP1_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6534,7 +6534,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP2_REPLACE : (LPMCU_MISC_REGS Offset: 0x308) (R/W 32) Flash Breakpoint Replace Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP2_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6554,7 +6554,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP3_REPLACE : (LPMCU_MISC_REGS Offset: 0x30c) (R/W 32) Flash Breakpoint Replace Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP3_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6574,7 +6574,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP4_REPLACE : (LPMCU_MISC_REGS Offset: 0x310) (R/W 32) Flash Breakpoint Replace Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP4_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6594,7 +6594,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP5_REPLACE : (LPMCU_MISC_REGS Offset: 0x314) (R/W 32) Flash Breakpoint Replace Register 5 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP5_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6614,7 +6614,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP6_REPLACE : (LPMCU_MISC_REGS Offset: 0x318) (R/W 32) Flash Breakpoint Replace Register 6 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP6_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6634,7 +6634,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP7_REPLACE : (LPMCU_MISC_REGS Offset: 0x31c) (R/W 32) Flash Breakpoint Replace Register 7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP7_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6654,7 +6654,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP8_REPLACE : (LPMCU_MISC_REGS Offset: 0x320) (R/W 32) Flash Breakpoint Replace Register 8 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP8_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6674,7 +6674,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP9_REPLACE : (LPMCU_MISC_REGS Offset: 0x324) (R/W 32) Flash Breakpoint Replace Register 9 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP9_REPLACE:19;       /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6694,7 +6694,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP10_REPLACE : (LPMCU_MISC_REGS Offset: 0x328) (R/W 32) Flash Breakpoint Replace Register 10 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP10_REPLACE:19;      /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6714,7 +6714,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP11_REPLACE : (LPMCU_MISC_REGS Offset: 0x32c) (R/W 32) Flash Breakpoint Replace Register 11 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP11_REPLACE:19;      /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6734,7 +6734,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP12_REPLACE : (LPMCU_MISC_REGS Offset: 0x330) (R/W 32) Flash Breakpoint Replace Register 12 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP12_REPLACE:19;      /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6754,7 +6754,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP13_REPLACE : (LPMCU_MISC_REGS Offset: 0x334) (R/W 32) Flash Breakpoint Replace Register 13 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP13_REPLACE:19;      /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6774,7 +6774,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP14_REPLACE : (LPMCU_MISC_REGS Offset: 0x338) (R/W 32) Flash Breakpoint Replace Register 14 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP14_REPLACE:19;      /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6794,7 +6794,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP15_REPLACE : (LPMCU_MISC_REGS Offset: 0x33c) (R/W 32) Flash Breakpoint Replace Register 14 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t FP_COMP15_REPLACE:19;      /**< bit:  0..18                                           */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
@@ -6814,7 +6814,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_FP_COMP_ENABLE : (LPMCU_MISC_REGS Offset: 0x340) (R/W 16) Flash Breakpoint Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t CMP_0_EN:1;                /**< bit:      0  Enable Compare 0                         */
     uint16_t CMP_1_EN:1;                /**< bit:      1  Enable Compare 1                         */
@@ -6893,7 +6893,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_PMU_READ_REGS : (LPMCU_MISC_REGS Offset: 0x410) (R/ 32) PMU Status Registers -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t READREG1:8;                /**< bit:   0..7  PMU Read Register 1                      */
     uint32_t READREG2:8;                /**< bit:  8..15  PMU Read Register 2                      */
@@ -6921,7 +6921,7 @@ typedef union {
 
 /* -------- LPMCU_MISC_REGS_MS_GPIO : (LPMCU_MISC_REGS Offset: 0x414) (R/W 8) Control for Mixed Signal GPIOs -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PULL_TYPE_44:1;            /**< bit:      0  Mixed Signal LP_GPIO_44 Pull Type Select. 1: PD, 0: PU. */
     uint8_t  PULL_TYPE_45:1;            /**< bit:      1  Mixed Signal LP_GPIO_45 Pull Type Select. 1: PD, 0: PU. */
@@ -6969,16 +6969,16 @@ typedef union {
 #define LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE_47 LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE_47_Msk     /**< \deprecated Old style mask definition for 1 bit bitfield. Use LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE_47_Msk instead */
 #define LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE__Pos 0                                              /**< (LPMCU_MISC_REGS_MS_GPIO Position) Mixed Signal LP_GPIO_44 Pull Type Select. x: PD, x: PU. */
 #define LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE__Msk (0xFu << LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE__Pos)  /**< (LPMCU_MISC_REGS_MS_GPIO Mask) PULL_TYPE_ */
-#define LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE_(value) (LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE__Msk & ((value) << LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE__Pos))  
+#define LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE_(value) (LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE__Msk & ((value) << LPMCU_MISC_REGS_MS_GPIO_PULL_TYPE__Pos))
 #define LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE__Pos 4                                              /**< (LPMCU_MISC_REGS_MS_GPIO Position) Active Low Pull Enable for Mixed Signal LP_GPIO_47 */
 #define LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE__Msk (0xFu << LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE__Pos)  /**< (LPMCU_MISC_REGS_MS_GPIO Mask) PULL_ENABLE_ */
-#define LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE_(value) (LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE__Msk & ((value) << LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE__Pos))  
+#define LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE_(value) (LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE__Msk & ((value) << LPMCU_MISC_REGS_MS_GPIO_PULL_ENABLE__Pos))
 #define LPMCU_MISC_REGS_MS_GPIO_MASK        0xFFu                                          /**< \deprecated (LPMCU_MISC_REGS_MS_GPIO) Register MASK  (Use LPMCU_MISC_REGS_MS_GPIO_Msk instead)  */
 #define LPMCU_MISC_REGS_MS_GPIO_Msk         0xFFu                                          /**< (LPMCU_MISC_REGS_MS_GPIO) Register Mask  */
 
 /* -------- LPMCU_MISC_REGS_AON_SLEEP_TIMER_COUNTER : (LPMCU_MISC_REGS Offset: 0x420) (R/ 32) Current value of the AON Sleep Timer (syncd to ARM clock) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t AON_SLEEP_TIMER_COUNTER:32;  /**< bit:  0..31                                           */
   } bit;                                /**< Structure used for bit  access */

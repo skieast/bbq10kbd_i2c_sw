@@ -177,10 +177,10 @@ static enum status_code _i2c_master_set_config(
 	uint32_t fscl        = 1000 * config->baud_rate;
 	uint32_t fscl_hs     = 1000 * config->baud_rate_high_speed;
 	uint32_t trise       = config->sda_scl_rise_time_ns;
-	
+
 	tmp_baud = (int32_t)(div_ceil(
 			fgclk - fscl * (10 + (fgclk * 0.000000001)* trise), 2 * fscl));
-	
+
 	/* For High speed mode, set the SCL ratio of high:low to 1:2. */
 	if (config->transfer_speed == I2C_MASTER_SPEED_HIGH_SPEED) {
 		tmp_baudlow_hs = (int32_t)((fgclk * 2.0) / (3.0 * fscl_hs) - 1);
@@ -557,7 +557,7 @@ static enum status_code _i2c_master_read_packet(
 	if ((sclsm_flag) && (packet->data_length == 1)) {
 		i2c_module->CTRLB.reg |= SERCOM_I2CM_CTRLB_ACKACT;
 	} else {
-		i2c_module->CTRLB.reg &= ~SERCOM_I2CM_CTRLB_ACKACT;	
+		i2c_module->CTRLB.reg &= ~SERCOM_I2CM_CTRLB_ACKACT;
 	}
 
 	/* Check for address response error unless previous error is

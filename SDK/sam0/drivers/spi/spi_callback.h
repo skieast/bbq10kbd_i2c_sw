@@ -107,4 +107,3 @@ enum status_code spi_transceive_buffer_job(
 #endif
 
 #endif	//SPI_H_INCLUDED
-

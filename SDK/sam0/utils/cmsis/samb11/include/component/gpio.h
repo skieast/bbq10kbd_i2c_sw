@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR GPIO */
 /* ========================================================================== */
-/** \addtogroup SAMB11_GPIO GPIO Controller 
+/** \addtogroup SAMB11_GPIO GPIO Controller
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- GPIO_DATA : (GPIO Offset: 0x00) (R/W 16) Data Value -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Read = Sampled at Pin : Write = To Output Data Register */
   } bit;                                /**< Structure used for bit  access */
@@ -79,7 +79,7 @@ typedef union {
 
 /* -------- GPIO_DATAOUT : (GPIO Offset: 0x04) (R/W 16) Data Output Register Value -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Read = Current Value of Data Output Register : Write = To Output Data Register */
   } bit;                                /**< Structure used for bit  access */
@@ -98,7 +98,7 @@ typedef union {
 
 /* -------- GPIO_OUTENSET : (GPIO Offset: 0x10) (R/W 16) Output Enable Set -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 to set the output enable bit     */
   } bit;                                /**< Structure used for bit  access */
@@ -117,7 +117,7 @@ typedef union {
 
 /* -------- GPIO_OUTENCLR : (GPIO Offset: 0x14) (R/W 16) Output Enable Clear -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 to clear the output enable bit   */
   } bit;                                /**< Structure used for bit  access */
@@ -136,7 +136,7 @@ typedef union {
 
 /* -------- GPIO_INTENSET : (GPIO Offset: 0x20) (R/W 16) Interrupt Enable Set -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 to set the enable bit            */
   } bit;                                /**< Structure used for bit  access */
@@ -155,7 +155,7 @@ typedef union {
 
 /* -------- GPIO_INTENCLR : (GPIO Offset: 0x24) (R/W 16) Interrupt Enable Clear -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 to clear the enable bit          */
   } bit;                                /**< Structure used for bit  access */
@@ -174,7 +174,7 @@ typedef union {
 
 /* -------- GPIO_INTTYPESET : (GPIO Offset: 0x28) (R/W 16) Interrupt Type Set -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 for edge                         */
   } bit;                                /**< Structure used for bit  access */
@@ -193,7 +193,7 @@ typedef union {
 
 /* -------- GPIO_INTTYPECLR : (GPIO Offset: 0x2c) (R/W 16) Interrupt Type Clear -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 to clear the interrupt type      */
   } bit;                                /**< Structure used for bit  access */
@@ -212,7 +212,7 @@ typedef union {
 
 /* -------- GPIO_INTPOLSET : (GPIO Offset: 0x30) (R/W 16) Polarity-level, edge IRQ Configuration -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 for HIGH level or rising edge    */
   } bit;                                /**< Structure used for bit  access */
@@ -231,7 +231,7 @@ typedef union {
 
 /* -------- GPIO_INTPOLCLR : (GPIO Offset: 0x34) (R/W 16) IRQ Configuration Clear -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 to Clear Interrupt Polarity Bit  */
   } bit;                                /**< Structure used for bit  access */
@@ -250,7 +250,7 @@ typedef union {
 
 /* -------- GPIO_INTSTATUSCLEAR : (GPIO Offset: 0x38) (R/W 16) Interrupt Status -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t VALUE:16;                  /**< bit:  0..15  Write 1 to Clear Interrupt               */
   } bit;                                /**< Structure used for bit  access */
@@ -269,7 +269,7 @@ typedef union {
 
 /* -------- GPIO_PID4 : (GPIO Offset: 0xfd0) (R/ 8) Peripheral ID Register 4 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_C_CODE:4;           /**< bit:   0..3  JEP106 C Code                            */
     uint8_t  BLOCK_COUNT:4;             /**< bit:   4..7  Block Count                              */
@@ -292,7 +292,7 @@ typedef union {
 
 /* -------- GPIO_PID5 : (GPIO Offset: 0xfd4) (R/ 8) Peripheral ID Register 5 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PID5:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -311,7 +311,7 @@ typedef union {
 
 /* -------- GPIO_PID6 : (GPIO Offset: 0xfd8) (R/ 8) Peripheral ID Register 6 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PID6:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -330,7 +330,7 @@ typedef union {
 
 /* -------- GPIO_PID7 : (GPIO Offset: 0xfdc) (R/ 8) Peripheral ID Register 7 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PID7:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -349,7 +349,7 @@ typedef union {
 
 /* -------- GPIO_PID0 : (GPIO Offset: 0xfe0) (R/ 8) Peripheral ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:8;             /**< bit:   0..7  Part Number Bits 7:0                     */
   } bit;                                /**< Structure used for bit  access */
@@ -368,7 +368,7 @@ typedef union {
 
 /* -------- GPIO_PID1 : (GPIO Offset: 0xfe4) (R/ 8) Peripheral ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  PART_NUMBER:4;             /**< bit:   0..3  Part Number Bits 11:8                    */
     uint8_t  JEP106_ID_3_0:4;           /**< bit:   4..7  JEP106 ID Bits 3:0                       */
@@ -391,7 +391,7 @@ typedef union {
 
 /* -------- GPIO_PID2 : (GPIO Offset: 0xfe8) (R/ 8) Peripheral ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  JEP106_ID_6_4:3;           /**< bit:   0..2  JEP106 ID Bits 6:4                       */
     uint8_t  JEDEC_USED:1;              /**< bit:      3  JEDEC Used                               */
@@ -418,7 +418,7 @@ typedef union {
 
 /* -------- GPIO_PID3 : (GPIO Offset: 0xfec) (R/ 8) Peripheral ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CUSTOMER_MOD_NUMBER:4;     /**< bit:   0..3  Customer Modification Number             */
     uint8_t  ECO_REV_NUMBER:4;          /**< bit:   4..7  ECO Revision Number                      */
@@ -441,7 +441,7 @@ typedef union {
 
 /* -------- GPIO_CID0 : (GPIO Offset: 0xff0) (R/ 8) Component ID Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID0:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -460,7 +460,7 @@ typedef union {
 
 /* -------- GPIO_CID1 : (GPIO Offset: 0xff4) (R/ 8) Component ID Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID1:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -479,7 +479,7 @@ typedef union {
 
 /* -------- GPIO_CID2 : (GPIO Offset: 0xff8) (R/ 8) Component ID Register 2 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID2:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */
@@ -498,7 +498,7 @@ typedef union {
 
 /* -------- GPIO_CID3 : (GPIO Offset: 0xffc) (R/ 8) Component ID Register 3 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CID3:8;                    /**< bit:   0..7                                           */
   } bit;                                /**< Structure used for bit  access */

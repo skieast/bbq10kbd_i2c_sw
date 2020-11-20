@@ -138,7 +138,7 @@ void timer_disable(void)
  */
 void timer_register_callback(timer_callback_t fun)
 {
-	timer_callback = fun; 
+	timer_callback = fun;
 }
 
 /**
@@ -149,7 +149,7 @@ void timer_register_callback(timer_callback_t fun)
  */
 void timer_unregister_callback(void)
 {
-	timer_callback = NULL; 
+	timer_callback = NULL;
 }
 
 /**
@@ -162,7 +162,7 @@ static void timer_isr_handler(void)
 {
 	if (timer_get_interrupt_status()) {
 		timer_clear_interrupt_status();
-		
+
 		if (timer_callback) {
 			timer_callback();
 		}
@@ -186,7 +186,7 @@ void timer_init(const struct timer_config *config)
 
 	TIMER0->CTRL.reg = config->interrupt_enable << TIMER_CTRL_INTERRUPT_ENABLE_Pos;
 	TIMER0->RELOAD.reg = config->reload_value;
-	
+
 	timer_callback = NULL;
 	system_register_isr(RAM_ISR_TABLE_TIMER0_INDEX, (uint32_t)timer_isr_handler);
 }

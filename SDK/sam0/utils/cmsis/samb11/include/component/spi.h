@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR SPI */
 /* ========================================================================== */
-/** \addtogroup SAMB11_SPI SPI Master/Slave Controller 
+/** \addtogroup SAMB11_SPI SPI Master/Slave Controller
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- SPI_TRANSMIT_DATA : (SPI Offset: 0x00) (/W 8) Writes one byte to SPI Transmit Data FIFO.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_BYTE:8;                 /**< bit:   0..7  Writes data in transmit FIFO.            */
   } bit;                                /**< Structure used for bit  access */
@@ -79,7 +79,7 @@ typedef union {
 
 /* -------- SPI_RECEIVE_DATA : (SPI Offset: 0x04) (R/ 8) Read one byte from SPI Receive Data FIFO.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_BYTE:8;                 /**< bit:   0..7  Oldest data in receive FIFO.             */
   } bit;                                /**< Structure used for bit  access */
@@ -98,7 +98,7 @@ typedef union {
 
 /* -------- SPI_TRANSMIT_STATUS : (SPI Offset: 0x08) (R/ 8) Status of the SPI transmitter. Each field can generate an interrupt if corresponding bit in  the Tx interrupt mask register is set.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_FIFO_NOT_FULL:1;        /**< bit:      0  Active High indication when Tx FIFO can still accepts at least one more character. */
     uint8_t  TX_FIFO_0P25_EMPTY:1;      /**< bit:      1  Active High indication when Tx FIFO is at least quarter empty. Reset when more.  */
@@ -138,7 +138,7 @@ typedef union {
 
 /* -------- SPI_RECEIVE_STATUS : (SPI Offset: 0x0c) (R/ 8) Status of the SPI receiver. Each field can generate an interrupt if corresponding bit in  the Rx interrupt mask register is set.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_FIFO_NOT_EMPTY:1;       /**< bit:      0  Active High indication when data is available in Rx FIFO */
     uint8_t  RX_FIFO_0P25_FULL:1;       /**< bit:      1  Active High indication when FIFO is at least quarter full. Reset when less.  */
@@ -178,7 +178,7 @@ typedef union {
 
 /* -------- SPI_CLOCK_SOURCE_SELECT : (SPI Offset: 0x10) (R/W 8) Clock Source Select -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CLOCK:2;                   /**< bit:   0..1  Clock Used to Generate Divided Clock     */
     uint8_t  :6;                        /**< bit:   2..7  Reserved */
@@ -206,7 +206,7 @@ typedef union {
 
 /* -------- SPI_CLK_DIVIDER : (SPI Offset: 0x14) (R/W 16) Register sets the divide ratio used to generate the sck clock from the module's input clock.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t SPI_DIVIDE_RATIO:16;       /**< bit:  0..15  Clock Divide Ratio. The input clock signal is divided by (n+1) where n is the value set in  this field.  The minimum division is by 2; a value of 0 is illegal.  */
   } bit;                                /**< Structure used for bit  access */
@@ -225,7 +225,7 @@ typedef union {
 
 /* -------- SPI_MODULE_ENABLE : (SPI Offset: 0x18) (R/W 8) SPI Enable -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  ENABLE:1;                  /**< bit:      0  Enables SPI operation                    */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -245,7 +245,7 @@ typedef union {
 
 /* -------- SPI_MASTER_MODE : (SPI Offset: 0x1c) (R/W 8) SPI Master/Slave Mode. When clear, SPI is in Slave Mode.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  MASTER_ENABLE:1;           /**< bit:      0  Active High SPI Master Mode Enable       */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -269,7 +269,7 @@ typedef union {
 
 /* -------- SPI_FAULT_ENABLE : (SPI Offset: 0x20) (R/W 8) SPI Fault Detection Mode. If set, SPI bus contention will be detected, and the fault  bit in the rx_status register will be set, forcing the SPI Module into idle state.  When a fault is detected, the current SPI transaction is abandoned and the interface switches  to slave mode in the wait state.   -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  FAULT_ENABLE:1;            /**< bit:      0  Active High SPI Fault Detect Enable      */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -293,7 +293,7 @@ typedef union {
 
 /* -------- SPI_CONFIGURATION : (SPI Offset: 0x24) (R/W 8) SPI Operation Configuration Register. This register should not be modified while SPI bus is active,  otherwise the SPI Module state shall not be guaranteed.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  SCK_POLARITY:1;            /**< bit:      0  Selects the level of sck in Idle State   */
     uint8_t  SCK_PHASE:1;               /**< bit:      1  Selects clock edge used for data sampling and launching */
@@ -372,7 +372,7 @@ typedef union {
 
 /* -------- SPI_BUS_STATUS : (SPI Offset: 0x28) (R/ 8) Status of SPI bus.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  SPI_ACTIVE:1;              /**< bit:      0  Active High indicatation that the SPI Module is active. While set, SPI configuration should not be modified.  */
     uint8_t  :7;                        /**< bit:   1..7  Reserved */
@@ -392,7 +392,7 @@ typedef union {
 
 /* -------- SPI_TX_INTERRUPT_MASK : (SPI Offset: 0x2c) (R/W 8) Enable or Disable the generation of interrupts by the tx_status register.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  TX_FIFO_NOT_FULL_MASK:1;   /**< bit:      0  Active High Enable of tx_fifo_not_full interrupt  */
     uint8_t  TX_FIFO_0P25_EMPTY_MASK:1;  /**< bit:      1  Active High Enable of tx_fifo_0p25_empty interrupt  */
@@ -427,7 +427,7 @@ typedef union {
 
 /* -------- SPI_RX_INTERRUPT_MASK : (SPI Offset: 0x30) (R/W 8) Enable or Disable the generation of interrupts by the rx_status register.  -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  RX_FIFO_NOT_EMPTY_MASK:1;  /**< bit:      0  Active High Enable of rx_fifo_not_empty interrupt  */
     uint8_t  RX_FIFO_0P25_FULL_MASK:1;  /**< bit:      1  Active High Enable of rx_fifo_0p25_full interrupt  */

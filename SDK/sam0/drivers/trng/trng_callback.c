@@ -239,4 +239,3 @@ void trng_abort_job(
 		module_inst->remaining_number = 0;
 	}
 }
-

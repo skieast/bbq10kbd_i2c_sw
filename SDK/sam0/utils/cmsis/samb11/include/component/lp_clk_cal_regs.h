@@ -47,7 +47,7 @@
 /* ========================================================================== */
 /**  SOFTWARE API DEFINITION FOR LP_CLK_CAL_REGS */
 /* ========================================================================== */
-/** \addtogroup SAMB11_LP_CLK_CAL_REGS Low Power Clock Calibration Registers 
+/** \addtogroup SAMB11_LP_CLK_CAL_REGS Low Power Clock Calibration Registers
  *  @{
  */
 
@@ -60,7 +60,7 @@
 
 /* -------- LP_CLK_CAL_REGS_CONFIG_REG : (LP_CLK_CAL_REGS Offset: 0x00) (R/W 16) Configuration of the calibration clocks and the enable of calibration -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint16_t NUMBER_CALIB_CLKS:4;       /**< bit:   0..3  Multiplier value for the number of calibration clocks (1 shifted left by _value_) */
     uint16_t :2;                        /**< bit:   4..5  Reserved */
@@ -133,7 +133,7 @@ typedef union {
 
 /* -------- LP_CLK_CAL_REGS_CALIB_OSC_COUNT_REG : (LP_CLK_CAL_REGS Offset: 0x04) (R/ 32) Calibration OSC Count Register (Any write sets bit 15 and clears bit 31) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CAL_FRAC_COUNT:15;         /**< bit:  0..14  This is the fractional part of the calibration counter */
     uint32_t NO_CAL_IN_PROGRESS:1;      /**< bit:     15  Indicates no calibration is running (any write sets this to a 1, 0 when calibration done) */
@@ -164,7 +164,7 @@ typedef union {
 
 /* -------- LP_CLK_CAL_REGS_CALIB_RTC_COUNT_REG : (LP_CLK_CAL_REGS Offset: 0x08) (R/ 32) Calibration RTC Count Register (Any write sets bit 15 and clears bit 31) -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint32_t CAL_FRAC_COUNT:15;         /**< bit:  0..14  This is the fractional part of the calibration counter */
     uint32_t NO_CAL_IN_PROGRESS:1;      /**< bit:     15  Indicates no calibration is running (any write sets this to a 1, 0 when calibration done) */
@@ -195,7 +195,7 @@ typedef union {
 
 /* -------- LP_CLK_CAL_REGS_CALIB_STATUS_REG : (LP_CLK_CAL_REGS Offset: 0x0c) (R/ 8) Calibration Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
+typedef union {
   struct {
     uint8_t  CALIBRATION_OSC_DONE:1;    /**< bit:      0  This is the done flag for calibrating the osc clock */
     uint8_t  CALIBRATION_RTC_DONE:1;    /**< bit:      1  This is the done flag for calibrating the rtc clock */
