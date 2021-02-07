@@ -5,6 +5,7 @@
 #include "conf_app.h"
 #include "conf_target.h"
 #include "fifo.h"
+#include "gpio.h"
 #include "i2c.h"
 #include "keyboard.h"
 #include "reg.h"
@@ -47,11 +48,14 @@ static void read_complete_cb(struct i2c_slave_module * const i2c_slave)
 	case REG_ID_DEB:
 	case REG_ID_FRQ:
 	case REG_ID_BKL:
+	case REG_ID_BK2:
+	case REG_ID_GIC:
+	case REG_ID_GIN:
 	{
 		if (is_write) {
 			reg_set_value(reg, self.read_buffer.data);
 
-			if (reg == REG_ID_BKL)
+			if ((reg == REG_ID_BKL) || (reg == REG_ID_BK2))
 				backlight_update();
 		} else {
 			self.write_buffer[0] = reg_get_value(reg);
@@ -85,6 +89,45 @@ static void read_complete_cb(struct i2c_slave_module * const i2c_slave)
 	case REG_ID_RST:
 		NVIC_SystemReset();
 		break;
+
+	case REG_ID_DIR: // gpio direction
+	{
+		if (is_write) {
+			gpio_update_dir(self.read_buffer.data);
+		} else {
+			self.write_buffer[0] = reg_get_value(reg);
+			self.write_packet.data_length = sizeof(uint8_t);
+		}
+		break;
+	}
+
+	case REG_ID_PUE: // gpio input pull enable
+	case REG_ID_PUD: // gpio input pull direction
+	{
+		if (is_write) {
+			if (reg == REG_ID_PUE) {
+				gpio_update_pue_pud(self.read_buffer.data, reg_get_value(REG_ID_PUD));
+			} else {
+				gpio_update_pue_pud(reg_get_value(REG_ID_PUE), self.read_buffer.data);
+			}
+		} else {
+			self.write_buffer[0] = reg_get_value(reg);
+			self.write_packet.data_length = sizeof(uint8_t);
+		}
+		break;
+	}
+
+	case REG_ID_GIO: // gpio value
+	{
+		if (is_write) {
+			gpio_set_value(self.read_buffer.data);
+		} else {
+			self.write_buffer[0] = gpio_get_value();
+			self.write_packet.data_length = sizeof(uint8_t);
+		}
+		break;
+	}
+
 	}
 }
 

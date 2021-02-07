@@ -4,6 +4,7 @@
 
 #include "backlight.h"
 #include "fifo.h"
+#include "gpio.h"
 #include "i2c.h"
 #include "reg.h"
 #include "target.h"
@@ -103,6 +104,23 @@ static void lock_cb(bool caps_changed, bool num_changed)
 	}
 }
 
+static void gpio_cb(uint8_t gpio, uint8_t gpio_idx)
+{
+	if (!reg_is_bit_set(REG_ID_GIC, (1 << gpio_idx)))
+		return;
+
+#ifdef DEBUG
+	printf("gpio, pin: %d, idx: %d\r\n", gpio, gpio_idx);
+#endif
+
+	reg_set_bit(REG_ID_INT, INT_GPIO);
+	reg_set_bit(REG_ID_GIN, (1 << gpio_idx));
+
+	port_pin_set_output_level(int_pin, 0);
+	delay_ms(INT_DURATION_MS);
+	port_pin_set_output_level(int_pin, 1);
+}
+
 static void config_int_pin(void)
 {
 	struct port_config port_init;
@@ -123,11 +141,15 @@ int main(void)
 
 #ifdef DEBUG
 	configure_usart();
+	printf("BBQ10 KB I2C SW v%d.%d\r\n", VERSION_MAJOR, VERSION_MINOR);
 #endif
 
 	config_int_pin();
 	reg_init();
 	backlight_init();
+
+	gpio_init();
+	gpio_set_int_callback(gpio_cb);
 
 	keyboard_init();
 	keyboard_set_key_callback(key_cb);
