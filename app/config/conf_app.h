@@ -1,7 +1,7 @@
 #pragma once
 
 #define VERSION_MAJOR			0
-#define VERSION_MINOR			3
+#define VERSION_MINOR			4
 
 #define SLAVE_ADDRESS			0x1F
 #define INT_DURATION_MS			1

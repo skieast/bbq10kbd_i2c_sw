@@ -11,6 +11,8 @@ include targets/$(TARGET)/target.mk
 SRCS += \
 	SDK/common/utils/interrupt/interrupt_sam_nvic.c \
 	SDK/common2/services/delay/sam0/cycle_counter.c \
+	SDK/sam0/drivers/extint/extint_callback.c \
+	SDK/sam0/drivers/extint/extint_sam_d_r_h/extint.c \
 	SDK/sam0/drivers/port/port.c \
 	SDK/sam0/drivers/sercom/sercom.c \
 	SDK/sam0/drivers/sercom/sercom_interrupt.c \
@@ -33,11 +35,13 @@ SRCS += \
 	app/main.c \
 	app/reg.c \
 	app/time.c \
+	app/gpio.c \
 
 INCS += \
 	SDK/common/utils \
 	SDK/common2/services \
 	SDK/common2/services/delay \
+	SDK/sam0/drivers/extint \
 	SDK/sam0/drivers/gpio \
 	SDK/sam0/drivers/port \
 	SDK/sam0/drivers/sercom \
@@ -64,8 +68,14 @@ INCS += \
 	app
 
 DEFS += \
+	EXTINT_CALLBACK_MODE=true \
 	I2C_SLAVE_CALLBACK_MODE=true \
 	CYCLE_MODE
+
+ifdef DEBUG
+DEFS += \
+	DEBUG=true
+endif
 
 LIBS += \
 
